@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { useStore } from "@/lib/store"
-import SwipeCard from "@/components/SwipeCard"
-import ProgressBar from "@/components/ProgressBar"
-import Badge from "@/components/Badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeft, RotateCcw, Filter, MapPin } from "lucide-react"
-import Link from "next/link"
-import { motion, AnimatePresence } from "framer-motion"
-import { getTranslation } from "@/lib/i18n"
-import LanguageSelector from "@/components/LanguageSelector"
+import { useEffect, useState } from "react";
+import { useStore } from "@/lib/store";
+import SwipeCard from "@/components/SwipeCard";
+import ProgressBar from "@/components/ProgressBar";
+import Badge from "@/components/Badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowLeft, RotateCcw, Filter, MapPin } from "lucide-react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { getTranslation } from "@/lib/i18n";
+import LanguageSelector from "@/components/LanguageSelector";
 
 const germanStates = [
   { id: "baden-wuerttemberg", name: "Baden-Württemberg", emoji: "🏰" },
@@ -30,7 +30,7 @@ const germanStates = [
   { id: "sachsen-anhalt", name: "Sachsen-Anhalt", emoji: "🏰" },
   { id: "schleswig-holstein", name: "Schleswig-Holstein", emoji: "🌊" },
   { id: "thueringen", name: "Thüringen", emoji: "🌿" },
-]
+];
 
 export default function PracticePage() {
   const {
@@ -52,161 +52,173 @@ export default function PracticePage() {
     addBadge,
     language,
     loadQuestions, // Imported loadQuestions from useStore
-  } = useStore()
+  } = useStore();
 
-  const [showAnswer, setShowAnswer] = useState(false)
-  const [lastAnswer, setLastAnswer] = useState<{ correct: boolean; selectedIndex: number } | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [showCorrect, setShowCorrect] = useState(false)
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [showAnswer, setShowAnswer] = useState(false);
+  const [lastAnswer, setLastAnswer] = useState<{
+    correct: boolean;
+    selectedIndex: number;
+  } | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [showCorrect, setShowCorrect] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const t = getTranslation(language)
+  const t = getTranslation(language);
 
   useEffect(() => {
     const initializePractice = async () => {
-      setLoading(true)
-      
+      setLoading(true);
+
       try {
         // Load main questions if not already loaded
         if (questions.length === 0) {
-          await loadQuestions()
+          await loadQuestions();
         }
 
         // Load state questions if available and a state is selected
         if (selectedState) {
           try {
-            const stateResponse = await fetch("/data/state-questions.json")
+            const stateResponse = await fetch("/data/state-questions.json");
             if (stateResponse.ok) {
-              const stateData = await stateResponse.json()
+              const stateData = await stateResponse.json();
               if (stateData[selectedState]) {
-                setStateQuestions(stateData[selectedState])
+                setStateQuestions(stateData[selectedState]);
               }
             }
           } catch (error) {
-            console.error("Failed to load state questions:", error)
-            setStateQuestions([])
+            console.error("Failed to load state questions:", error);
+            setStateQuestions([]);
           }
         } else {
-          setStateQuestions([])
+          setStateQuestions([]);
         }
       } catch (error) {
-        console.error("Failed to initialize practice:", error)
+        console.error("Failed to initialize practice:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
 
-    initializePractice()
-  }, [questions.length, loadQuestions, setStateQuestions, selectedState])
+    initializePractice();
+  }, [questions.length, loadQuestions, setStateQuestions, selectedState]);
 
-
-  const allQuestions = [...questions, ...stateQuestions]
+  const allQuestions = [...questions, ...stateQuestions];
   const filteredQuestions = selectedCategory
     ? allQuestions.filter((q) => q.category === selectedCategory)
-    : allQuestions
-  const currentQuestion = filteredQuestions[currentIndex]
-  const categories = [...new Set(allQuestions.map((q) => q.category))]
+    : allQuestions;
+  const currentQuestion = filteredQuestions[currentIndex];
+  const categories = [...new Set(allQuestions.map((q) => q.category))];
 
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "ArrowRight" || event.key === "d" || event.key === "D") {
-        nextQuestion()
-      } else if (event.key === "ArrowLeft" || event.key === "a" || event.key === "A") {
-        previousQuestion()
+      if (
+        event.key === "ArrowRight" ||
+        event.key === "d" ||
+        event.key === "D"
+      ) {
+        nextQuestion();
+      } else if (
+        event.key === "ArrowLeft" ||
+        event.key === "a" ||
+        event.key === "A"
+      ) {
+        previousQuestion();
       } else if (event.key >= "1" && event.key <= "4" && !showAnswer) {
-        const optionIndex = parseInt(event.key) - 1
+        const optionIndex = parseInt(event.key) - 1;
         if (currentQuestion && optionIndex < currentQuestion.options.length) {
-          handleAnswerSelect(optionIndex)
+          handleAnswerSelect(optionIndex);
         }
       }
-    }
+    };
 
-    window.addEventListener("keydown", handleKeyDown)
-    return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [currentIndex, showAnswer, currentQuestion])
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [currentIndex, showAnswer, currentQuestion]);
 
   const handleFlag = () => {
-    if (!currentQuestion) return
+    if (!currentQuestion) return;
     if (userProgress.flaggedQuestions.includes(currentQuestion.id)) {
-      unflagQuestion(currentQuestion.id)
+      unflagQuestion(currentQuestion.id);
     } else {
-      flagQuestion(currentQuestion.id)
+      flagQuestion(currentQuestion.id);
     }
-  }
+  };
 
   const nextQuestion = () => {
-    setShowAnswer(false)
-    setShowCorrect(false)
-    setLastAnswer(null)
+    setShowAnswer(false);
+    setShowCorrect(false);
+    setLastAnswer(null);
     if (currentIndex < filteredQuestions.length - 1) {
-      setCurrentIndex(currentIndex + 1)
+      setCurrentIndex(currentIndex + 1);
     } else {
       // Optionally handle end of questions, e.g., show a summary
-      alert("You've reached the end of the questions!")
-      setCurrentIndex(0) // Loop back to the start
+      alert("You've reached the end of the questions!");
+      setCurrentIndex(0); // Loop back to the start
     }
-  }
+  };
 
   const previousQuestion = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1)
-      setShowAnswer(false)
-      setShowCorrect(false)
-      setLastAnswer(null)
+      setCurrentIndex(currentIndex - 1);
+      setShowAnswer(false);
+      setShowCorrect(false);
+      setLastAnswer(null);
     }
-  }
+  };
 
   const handleSwipe = (direction: "left" | "right") => {
     if (direction === "right") {
-      nextQuestion()
+      nextQuestion();
     } else {
-      previousQuestion()
+      previousQuestion();
     }
-  }
+  };
 
   const handleAnswerSelect = (selectedAnswerIndex: number) => {
-    if (showAnswer || !currentQuestion) return
+    if (showAnswer || !currentQuestion) return;
 
-    const isCorrect = selectedAnswerIndex === currentQuestion.answerIndex
+    const isCorrect = selectedAnswerIndex === currentQuestion.answerIndex;
 
     // Record answer
-    answerQuestion(currentQuestion.id, selectedAnswerIndex, isCorrect)
+    answerQuestion(currentQuestion.id, selectedAnswerIndex, isCorrect);
 
     if (isCorrect) {
-      addXP(10)
-      updateStreak(true)
-      setShowCorrect(true)
+      addXP(10);
+      updateStreak(true);
+      setShowCorrect(true);
 
       // Check for streak badges
-      if (userProgress.streak === 5) addBadge("streak-5")
-      if (userProgress.streak === 10) addBadge("streak-10")
+      if (userProgress.streak === 5) addBadge("streak-5");
+      if (userProgress.streak === 10) addBadge("streak-10");
 
       // Check for XP badges
-      if (userProgress.xp >= 100 && !userProgress.badges.includes("xp-100")) addBadge("xp-100")
-      if (userProgress.xp >= 500 && !userProgress.badges.includes("xp-500")) addBadge("xp-500")
+      if (userProgress.xp >= 100 && !userProgress.badges.includes("xp-100"))
+        addBadge("xp-100");
+      if (userProgress.xp >= 500 && !userProgress.badges.includes("xp-500"))
+        addBadge("xp-500");
     } else {
-      updateStreak(false)
-      setShowCorrect(false)
+      updateStreak(false);
+      setShowCorrect(false);
     }
 
-    setLastAnswer({ correct: isCorrect, selectedIndex: selectedAnswerIndex })
-    setShowAnswer(true)
+    setLastAnswer({ correct: isCorrect, selectedIndex: selectedAnswerIndex });
+    setShowAnswer(true);
 
     // Auto-advance after showing answer (reduced time for better mobile experience)
     setTimeout(() => {
-      nextQuestion()
-    }, 2000)
-  }
+      nextQuestion();
+    }, 2000);
+  };
 
   const resetProgress = () => {
-    setCurrentIndex(0)
-    setShowAnswer(false)
-    setLastAnswer(null)
-    setShowCorrect(false)
+    setCurrentIndex(0);
+    setShowAnswer(false);
+    setLastAnswer(null);
+    setShowCorrect(false);
     // Add logic to reset streak, XP, etc. if needed
     // For now, assuming store handles resetting progress if necessary
-  }
+  };
 
   if (loading || !currentQuestion) {
     return (
@@ -222,12 +234,16 @@ export default function PracticePage() {
           <CardContent className="p-8 text-center relative z-10">
             <div className="text-8xl mb-6 animate-bounce">🚀</div>
             <div className="animate-spin rounded-full h-16 w-16 border-4 border-cyan-400 border-t-transparent mx-auto mb-8"></div>
-            <p className="text-cyan-300 text-2xl font-black animate-pulse">{t.loadingQuestions}</p>
-            <p className="text-pink-400 text-lg font-bold mt-4 animate-bounce">{t.getReady}</p>
+            <p className="text-cyan-300 text-2xl font-black animate-pulse">
+              {t.loadingQuestions}
+            </p>
+            <p className="text-pink-400 text-lg font-bold mt-4 animate-bounce">
+              {t.getReady}
+            </p>
           </CardContent>
         </Card>
       </div>
-    )
+    );
   }
 
   return (
@@ -270,7 +286,9 @@ export default function PracticePage() {
                 {t.practiceMode.toUpperCase()}
               </span>
             </h1>
-            <div className="text-sm md:text-lg text-pink-300 font-bold">{t.practiceSubtitle} 🚀</div>
+            <div className="text-sm md:text-lg text-pink-300 font-bold">
+              {t.practiceSubtitle} 🚀
+            </div>
           </div>
 
           <div className="flex items-center gap-2 md:gap-4">
@@ -291,12 +309,16 @@ export default function PracticePage() {
             <CardContent className="p-4 md:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-cyan-300 text-xs md:text-sm font-bold uppercase tracking-wider">{t.progress}</p>
+                  <p className="text-cyan-300 text-xs md:text-sm font-bold uppercase tracking-wider">
+                    {t.progress}
+                  </p>
                   <p className="text-xl md:text-3xl font-black text-white">
                     {currentIndex + 1}/{filteredQuestions.length}
                   </p>
                 </div>
-                <div className="text-2xl md:text-4xl group-hover:scale-125 transition-transform animate-pulse">🎯</div>
+                <div className="text-2xl md:text-4xl group-hover:scale-125 transition-transform animate-pulse">
+                  🎯
+                </div>
               </div>
               <div className="mt-2 md:mt-4">
                 <ProgressBar
@@ -313,10 +335,16 @@ export default function PracticePage() {
             <CardContent className="p-4 md:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-yellow-300 text-xs md:text-sm font-bold uppercase tracking-wider">{t.xp}</p>
-                  <p className="text-xl md:text-3xl font-black text-yellow-400">{userProgress.xp}</p>
+                  <p className="text-yellow-300 text-xs md:text-sm font-bold uppercase tracking-wider">
+                    {t.xp}
+                  </p>
+                  <p className="text-xl md:text-3xl font-black text-yellow-400">
+                    {userProgress.xp}
+                  </p>
                 </div>
-                <div className="text-2xl md:text-4xl group-hover:scale-125 transition-transform animate-bounce">⚡</div>
+                <div className="text-2xl md:text-4xl group-hover:scale-125 transition-transform animate-bounce">
+                  ⚡
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -325,10 +353,16 @@ export default function PracticePage() {
             <CardContent className="p-4 md:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-orange-300 text-xs md:text-sm font-bold uppercase tracking-wider">{t.streak}</p>
-                  <p className="text-xl md:text-3xl font-black text-orange-400">{userProgress.streak}</p>
+                  <p className="text-orange-300 text-xs md:text-sm font-bold uppercase tracking-wider">
+                    {t.streak}
+                  </p>
+                  <p className="text-xl md:text-3xl font-black text-orange-400">
+                    {userProgress.streak}
+                  </p>
                 </div>
-                <div className="text-2xl md:text-4xl group-hover:scale-125 transition-transform animate-pulse">🔥</div>
+                <div className="text-2xl md:text-4xl group-hover:scale-125 transition-transform animate-pulse">
+                  🔥
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -337,10 +371,16 @@ export default function PracticePage() {
             <CardContent className="p-4 md:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-green-300 text-xs md:text-sm font-bold uppercase tracking-wider">{t.accuracy}</p>
+                  <p className="text-green-300 text-xs md:text-sm font-bold uppercase tracking-wider">
+                    {t.accuracy}
+                  </p>
                   <p className="text-xl md:text-3xl font-black text-green-400">
                     {userProgress.questionsAnswered > 0
-                      ? Math.round((userProgress.correctAnswers / userProgress.questionsAnswered) * 100)
+                      ? Math.round(
+                          (userProgress.correctAnswers /
+                            userProgress.questionsAnswered) *
+                            100,
+                        )
                       : 0}
                     %
                   </p>
@@ -363,13 +403,15 @@ export default function PracticePage() {
             <CardContent className="p-4 md:p-6">
               <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
                 <Filter className="w-5 h-5 md:w-6 md:h-6 text-purple-400 animate-pulse" />
-                <h3 className="text-lg md:text-xl font-black text-purple-300 uppercase tracking-wider">{t.filterByCategory}</h3>
+                <h3 className="text-lg md:text-xl font-black text-purple-300 uppercase tracking-wider">
+                  {t.filterByCategory}
+                </h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 <button
                   onClick={() => {
-                    setSelectedCategory(null)
-                    setCurrentIndex(0)
+                    setSelectedCategory(null);
+                    setCurrentIndex(0);
                   }}
                   className={`px-3 py-2 md:px-4 md:py-2 rounded-lg font-bold transition-all transform hover:scale-105 text-sm md:text-base touch-manipulation ${
                     !selectedCategory
@@ -383,8 +425,8 @@ export default function PracticePage() {
                   <button
                     key={category}
                     onClick={() => {
-                      setSelectedCategory(category)
-                      setCurrentIndex(0)
+                      setSelectedCategory(category);
+                      setCurrentIndex(0);
                     }}
                     className={`px-3 py-2 md:px-4 md:py-2 rounded-lg font-bold transition-all transform hover:scale-105 text-sm md:text-base touch-manipulation ${
                       selectedCategory === category
@@ -404,13 +446,15 @@ export default function PracticePage() {
             <CardContent className="p-4 md:p-6">
               <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
                 <MapPin className="w-5 h-5 md:w-6 md:h-6 text-pink-400 animate-bounce" />
-                <h3 className="text-lg md:text-xl font-black text-pink-300 uppercase tracking-wider">{t.selectState}</h3>
+                <h3 className="text-lg md:text-xl font-black text-pink-300 uppercase tracking-wider">
+                  {t.selectState}
+                </h3>
               </div>
               <div className="flex flex-wrap gap-2 max-h-32 md:max-h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-pink-500 scrollbar-track-gray-700 p-2 bg-black/30 rounded-lg border border-pink-400/30">
                 <button
                   onClick={() => {
-                    setSelectedState(null)
-                    setCurrentIndex(0)
+                    setSelectedState(null);
+                    setCurrentIndex(0);
                   }}
                   className={`px-2 py-1 md:px-3 md:py-2 rounded-lg font-bold transition-all transform hover:scale-105 text-xs md:text-sm touch-manipulation ${
                     !selectedState
@@ -424,8 +468,8 @@ export default function PracticePage() {
                   <button
                     key={state.id}
                     onClick={() => {
-                      setSelectedState(state.id)
-                      setCurrentIndex(0)
+                      setSelectedState(state.id);
+                      setCurrentIndex(0);
                     }}
                     className={`px-2 py-1 md:px-3 md:py-2 rounded-lg font-bold transition-all transform hover:scale-105 text-xs md:text-sm touch-manipulation ${
                       selectedState === state.id
@@ -449,13 +493,20 @@ export default function PracticePage() {
               initial={{ opacity: 0, y: 50, scale: 0.9, rotateY: -15 }}
               animate={{ opacity: 1, y: 0, scale: 1, rotateY: 0 }}
               exit={{ opacity: 0, y: -50, scale: 0.9, rotateY: 15 }}
-              transition={{ duration: 0.5, type: "spring", stiffness: 300, damping: 25 }}
+              transition={{
+                duration: 0.5,
+                type: "spring",
+                stiffness: 300,
+                damping: 25,
+              }}
             >
               <SwipeCard
                 question={currentQuestion}
                 onSwipe={handleSwipe}
                 onFlag={handleFlag}
-                isFlagged={userProgress.flaggedQuestions.includes(currentQuestion.id)}
+                isFlagged={userProgress.flaggedQuestions.includes(
+                  currentQuestion.id,
+                )}
                 showAnswer={showAnswer}
                 onAnswerSelect={handleAnswerSelect}
               />
@@ -479,7 +530,9 @@ export default function PracticePage() {
             >
               <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
               <CardContent className="p-8 text-center relative z-10">
-                <div className="text-8xl mb-4 animate-bounce">{lastAnswer.correct ? "🎉" : "💪"}</div>
+                <div className="text-8xl mb-4 animate-bounce">
+                  {lastAnswer.correct ? "🎉" : "💪"}
+                </div>
                 <div
                   className={`text-4xl font-black mb-4 animate-pulse ${lastAnswer.correct ? "text-green-400" : "text-red-400"}`}
                 >
@@ -498,7 +551,9 @@ export default function PracticePage() {
           <div className="flex justify-center">
             <Card className="w-full max-w-md border-2 border-yellow-400/50 bg-gradient-to-br from-yellow-900/30 to-orange-900/30 backdrop-blur-xl shadow-lg shadow-yellow-500/25">
               <CardHeader>
-                <CardTitle className="text-center text-yellow-400 font-black text-2xl animate-pulse">{t.achievements}</CardTitle>
+                <CardTitle className="text-center text-yellow-400 font-black text-2xl animate-pulse">
+                  {t.achievements}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex justify-center space-x-4">
@@ -526,13 +581,13 @@ export default function PracticePage() {
           </div>
           <div className="space-y-3 text-lg max-w-2xl mx-auto">
             <p className="text-cyan-300 font-bold">💡 {t.swipeInstructions}</p>
-            <p className="text-green-300 font-bold">➡️ Swipe RIGHT if your answer is correct</p>
-            <p className="text-red-300 font-bold">⬅️ Swipe LEFT if your answer is wrong</p>
             <p className="text-green-300 font-bold">⌨️ {t.keyboardShortcuts}</p>
           </div>
-          <div className="text-2xl font-black text-white animate-bounce mt-8">{t.letsDominate} 🚀</div>
+          <div className="text-2xl font-black text-white animate-bounce mt-8">
+            {t.letsDominate} 🚀
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
