@@ -11,6 +11,7 @@ import { ArrowLeft, RotateCcw, Filter, MapPin } from "lucide-react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { getTranslation } from "@/lib/i18n"
+import LanguageSelector from "@/components/LanguageSelector"
 
 const germanStates = [
   { id: "baden-wuerttemberg", name: "Baden-Württemberg", emoji: "🏰" },
@@ -274,13 +275,16 @@ export default function PracticePage() {
             <div className="text-lg text-pink-300 font-bold">{t.practiceSubtitle} 🚀</div>
           </div>
 
-          <Button
-            onClick={resetProgress}
-            className="bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-0"
-          >
-            <RotateCcw className="w-5 h-5 mr-2" />
-            {t.reset.toUpperCase()}
-          </Button>
+          <div className="flex items-center gap-4">
+            <LanguageSelector />
+            <Button
+              onClick={resetProgress}
+              className="bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-0"
+            >
+              <RotateCcw className="w-5 h-5 mr-2" />
+              {t.reset.toUpperCase()}
+            </Button>
+          </div>
         </div>
 
         {/* NEON Stats Grid */}

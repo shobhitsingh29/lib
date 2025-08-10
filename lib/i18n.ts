@@ -609,6 +609,16 @@ export const translations: Record<Language, Translation> = {
     error: "Erreur",
     failedToLoad: "Échec du chargement",
     tryAgain: "Réessayer",
+
+    // Additional practice mode
+    getReady: "Préparez-vous!",
+    crushingIt: "Excellent!",
+    keepGrinding: "Continuez à pratiquer!",
+    learnFromMistakes: "Apprenez de vos erreurs!",
+    letsDominate: "Dominons!",
+    filterByCategory: "Filtrer par catégorie",
+    selectState: "Sélectionner l'état",
+    allGermany: "Toute l'Allemagne",
   },
 
   it: {
@@ -723,6 +733,16 @@ export const translations: Record<Language, Translation> = {
     error: "Errore",
     failedToLoad: "Caricamento fallito",
     tryAgain: "Riprova",
+
+    // Additional practice mode
+    getReady: "Preparati!",
+    crushingIt: "Eccellente!",
+    keepGrinding: "Continua a praticare!",
+    learnFromMistakes: "Impara dai tuoi errori!",
+    letsDominate: "Dominiamo!",
+    filterByCategory: "Filtra per categoria",
+    selectState: "Seleziona stato",
+    allGermany: "Tutta la Germania",
   },
 
   tr: {
@@ -837,6 +857,16 @@ export const translations: Record<Language, Translation> = {
     error: "Hata",
     failedToLoad: "Yükleme başarısız",
     tryAgain: "Tekrar dene",
+
+    // Additional practice mode
+    getReady: "Hazırlan!",
+    crushingIt: "Harika!",
+    keepGrinding: "Çalışmaya devam!",
+    learnFromMistakes: "Hatalardan öğren!",
+    letsDominate: "Hadi dominasyon kuralım!",
+    filterByCategory: "Kategoriye göre filtrele",
+    selectState: "Eyalet seç",
+    allGermany: "Tüm Almanya",
   },
 
   ar: {
@@ -951,6 +981,16 @@ export const translations: Record<Language, Translation> = {
     error: "خطأ",
     failedToLoad: "فشل في التحميل",
     tryAgain: "حاول مرة أخرى",
+
+    // Additional practice mode
+    getReady: "استعد!",
+    crushingIt: "ممتاز!",
+    keepGrinding: "استمر في الممارسة!",
+    learnFromMistakes: "تعلم من الأخطاء!",
+    letsDominate: "دعنا نهيمن!",
+    filterByCategory: "تصفية حسب الفئة",
+    selectState: "اختر الولاية",
+    allGermany: "كل ألمانيا",
   },
 
   ru: {
@@ -1065,6 +1105,16 @@ export const translations: Record<Language, Translation> = {
     error: "Ошибка",
     failedToLoad: "Не удалось загрузить",
     tryAgain: "Попробовать снова",
+
+    // Additional practice mode
+    getReady: "Приготовься!",
+    crushingIt: "Отлично!",
+    keepGrinding: "Продолжай практиковаться!",
+    learnFromMistakes: "Учись на ошибках!",
+    letsDominate: "Давайте доминировать!",
+    filterByCategory: "Фильтр по категории",
+    selectState: "Выбрать штат",
+    allGermany: "Вся Германия",
   },
 
   zh: {
@@ -1179,6 +1229,16 @@ export const translations: Record<Language, Translation> = {
     error: "错误",
     failedToLoad: "加载失败",
     tryAgain: "重试",
+
+    // Additional practice mode
+    getReady: "准备好了!",
+    crushingIt: "太棒了!",
+    keepGrinding: "继续练习!",
+    learnFromMistakes: "从错误中学习!",
+    letsDominate: "让我们主导!",
+    filterByCategory: "按类别筛选",
+    selectState: "选择州",
+    allGermany: "整个德国",
   },
 }
 

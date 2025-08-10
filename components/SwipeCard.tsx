@@ -28,12 +28,12 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
     setIsDragging(false)
     setDragDirection(null)
 
-    const threshold = 150
+    const threshold = 100
     const velocity = info.velocity.x
     const offset = info.offset.x
 
     // Only allow swiping for navigation if an answer has been selected or answer is shown
-    if ((selectedOption !== null || showAnswer) && (Math.abs(offset) > threshold || Math.abs(velocity) > 800)) {
+    if ((selectedOption !== null || showAnswer) && (Math.abs(offset) > threshold || Math.abs(velocity) > 600)) {
       const direction = offset > 0 ? "right" : "left"
       onSwipe(direction)
     }
@@ -203,13 +203,14 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
           )}
 
           <div className="text-center pt-4 border-t border-purple-400/30">
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-300 text-sm font-medium">
               {selectedOption === null && !showAnswer ? (
-                "Select an answer to enable navigation"
+                <>
+                  <span className="animate-pulse">📝</span> Select an answer to continue
+                </>
               ) : (
                 <>
-                  Swipe <span className="text-blue-400">RIGHT</span> for next or{" "}
-                  <span className="text-purple-400">LEFT</span> for previous
+                  <span className="animate-bounce">👆</span> Swipe <span className="text-blue-400 font-bold">RIGHT</span> for next • <span className="text-purple-400 font-bold">LEFT</span> for previous
                 </>
               )}
             </p>
