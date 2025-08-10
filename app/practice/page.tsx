@@ -102,6 +102,13 @@ export default function PracticePage() {
     loadQuestions()
   }, [setQuestions, setStateQuestions, selectedState])
 
+  const allQuestions = [...questions, ...stateQuestions]
+  const filteredQuestions = selectedCategory
+    ? allQuestions.filter((q) => q.category === selectedCategory)
+    : allQuestions
+  const currentQuestion = filteredQuestions[currentIndex]
+  const categories = [...new Set(allQuestions.map((q) => q.category))]
+
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -120,13 +127,6 @@ export default function PracticePage() {
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
   }, [currentIndex, showAnswer, currentQuestion])
-
-  const allQuestions = [...questions, ...stateQuestions]
-  const filteredQuestions = selectedCategory
-    ? allQuestions.filter((q) => q.category === selectedCategory)
-    : allQuestions
-  const currentQuestion = filteredQuestions[currentIndex]
-  const categories = [...new Set(allQuestions.map((q) => q.category))]
 
   const handleFlag = () => {
     if (!currentQuestion) return
