@@ -101,6 +101,25 @@ export default function PracticePage() {
     loadQuestions()
   }, [setQuestions, setStateQuestions, selectedState])
 
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowRight" || event.key === "d" || event.key === "D") {
+        nextQuestion()
+      } else if (event.key === "ArrowLeft" || event.key === "a" || event.key === "A") {
+        previousQuestion()
+      } else if (event.key >= "1" && event.key <= "4" && !showAnswer) {
+        const optionIndex = parseInt(event.key) - 1
+        if (currentQuestion && optionIndex < currentQuestion.options.length) {
+          handleAnswerSelect(optionIndex)
+        }
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+    return () => window.removeEventListener("keydown", handleKeyDown)
+  }, [currentIndex, showAnswer, currentQuestion])
+
   const allQuestions = [...questions, ...stateQuestions]
   const filteredQuestions = selectedCategory
     ? allQuestions.filter((q) => q.category === selectedCategory)
@@ -157,7 +176,7 @@ export default function PracticePage() {
 
     if (isCorrect) {
       addXP(10)
-      updateStreak(true) // Use updateStreak for both correct and incorrect
+      updateStreak(true)
       setShowCorrect(true)
 
       // Check for streak badges
@@ -175,10 +194,10 @@ export default function PracticePage() {
     setLastAnswer({ correct: isCorrect, selectedIndex: selectedAnswerIndex })
     setShowAnswer(true)
 
-    // Auto-advance after showing answer
+    // Auto-advance after showing answer (reduced time)
     setTimeout(() => {
       nextQuestion()
-    }, 2000)
+    }, 1500)
   }
 
   const resetProgress = () => {
@@ -436,7 +455,7 @@ export default function PracticePage() {
                 onFlag={handleFlag}
                 isFlagged={userProgress.flaggedQuestions.includes(currentQuestion.id)}
                 showAnswer={showAnswer}
-                onAnswerSelect={handleAnswerSelect} // Pass the handler here
+                onAnswerSelect={handleAnswerSelect}
               />
             </motion.div>
           </AnimatePresence>

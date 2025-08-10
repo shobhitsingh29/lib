@@ -112,6 +112,16 @@ export interface Translation {
   error: string
   failedToLoad: string
   tryAgain: string
+
+  // Additional practice mode
+  getReady: string
+  crushingIt: string
+  keepGrinding: string
+  learnFromMistakes: string
+  letsDominate: string
+  filterByCategory: string
+  selectState: string
+  allGermany: string
 }
 
 export const translations: Record<Language, Translation> = {
@@ -227,6 +237,16 @@ export const translations: Record<Language, Translation> = {
     error: "Error",
     failedToLoad: "Failed to load",
     tryAgain: "Try again",
+
+    // Additional practice mode
+    getReady: "Get Ready!",
+    crushingIt: "Crushing It!",
+    keepGrinding: "Keep Grinding!",
+    learnFromMistakes: "Learn from mistakes!",
+    letsDominate: "Let's Dominate!",
+    filterByCategory: "Filter by Category",
+    selectState: "Select State",
+    allGermany: "All Germany",
   },
 
   de: {
@@ -341,6 +361,16 @@ export const translations: Record<Language, Translation> = {
     error: "Fehler",
     failedToLoad: "Laden fehlgeschlagen",
     tryAgain: "Erneut versuchen",
+
+    // Additional practice mode
+    getReady: "Mach dich bereit!",
+    crushingIt: "Großartig!",
+    keepGrinding: "Weiter üben!",
+    learnFromMistakes: "Aus Fehlern lernen!",
+    letsDominate: "Lass uns dominieren!",
+    filterByCategory: "Nach Kategorie filtern",
+    selectState: "Bundesland wählen",
+    allGermany: "Ganz Deutschland",
   },
 
   es: {
@@ -455,6 +485,16 @@ export const translations: Record<Language, Translation> = {
     error: "Error",
     failedToLoad: "Error al cargar",
     tryAgain: "Intentar de nuevo",
+
+    // Additional practice mode
+    getReady: "¡Prepárate!",
+    crushingIt: "¡Excelente!",
+    keepGrinding: "¡Sigue practicando!",
+    learnFromMistakes: "¡Aprende de los errores!",
+    letsDominate: "¡Vamos a dominar!",
+    filterByCategory: "Filtrar por categoría",
+    selectState: "Seleccionar estado",
+    allGermany: "Toda Alemania",
   },
 
   fr: {

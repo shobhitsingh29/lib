@@ -1,3 +1,4 @@
+
 "use client"
 
 import { motion, type PanInfo } from "framer-motion"
@@ -11,13 +12,14 @@ import Image from "next/image"
 
 interface SwipeCardProps {
   question: Question
-  onSwipe: (direction: "left" | "right", selectedIndex: number) => void
+  onSwipe: (direction: "left" | "right") => void
   onFlag: () => void
   isFlagged: boolean
   showAnswer?: boolean
+  onAnswerSelect?: (index: number) => void
 }
 
-export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAnswer = false }: SwipeCardProps) {
+export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAnswer = false, onAnswerSelect }: SwipeCardProps) {
   const [selectedOption, setSelectedOption] = useState<number | null>(null)
   const [isDragging, setIsDragging] = useState(false)
   const [dragDirection, setDragDirection] = useState<"left" | "right" | null>(null)
@@ -30,25 +32,28 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
     const velocity = info.velocity.x
     const offset = info.offset.x
 
-    if (Math.abs(offset) > threshold || Math.abs(velocity) > 800) {
+    // Only allow swiping for navigation if an answer has been selected or answer is shown
+    if ((selectedOption !== null || showAnswer) && (Math.abs(offset) > threshold || Math.abs(velocity) > 800)) {
       const direction = offset > 0 ? "right" : "left"
-      // For navigation: right = next, left = previous
-      onSwipe(direction, selectedOption || 0)
+      onSwipe(direction)
     }
   }
 
   const handleDrag = (event: any, info: PanInfo) => {
-    setIsDragging(true)
-    const direction = info.offset.x > 0 ? "right" : "left"
-    setDragDirection(direction)
+    // Only show drag indicators if answer is selected or shown
+    if (selectedOption !== null || showAnswer) {
+      setIsDragging(true)
+      const direction = info.offset.x > 0 ? "right" : "left"
+      setDragDirection(direction)
+    }
   }
 
   const handleOptionClick = (index: number) => {
+    if (showAnswer) return
     setSelectedOption(index)
-    setTimeout(() => {
-      const isCorrect = index === question.answerIndex
-      onSwipe(isCorrect ? "right" : "left", index)
-    }, 500)
+    if (onAnswerSelect) {
+      onAnswerSelect(index)
+    }
   }
 
   return (
@@ -58,22 +63,22 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
       dragConstraints={{ left: 0, right: 0 }}
       onDrag={handleDrag}
       onDragEnd={handleDragEnd}
-      whileDrag={{ scale: 1.05, rotate: dragDirection === "right" ? 5 : -5 }}
+      whileDrag={{ scale: 1.02 }}
       animate={{
         x: 0,
-        rotate: isDragging ? (dragDirection === "right" ? 5 : -5) : 0,
+        rotate: 0,
       }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
       <Card
         className={`relative overflow-hidden border-4 bg-gradient-to-br from-black/90 to-purple-900/90 backdrop-blur-xl shadow-2xl ${
-          isDragging
+          isDragging && (selectedOption !== null || showAnswer)
             ? "cursor-grabbing border-cyan-400 shadow-cyan-500/50"
             : "cursor-grab border-purple-400/50 shadow-purple-500/25"
         } hover:border-pink-400/50 hover:shadow-pink-500/25 transition-all duration-300`}
       >
-        {/* Swipe indicators */}
-        {isDragging && (
+        {/* Swipe indicators - only show when answer is selected */}
+        {isDragging && (selectedOption !== null || showAnswer) && (
           <>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center z-10 backdrop-blur-sm"
@@ -81,7 +86,7 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
               animate={{ opacity: dragDirection === "right" ? 1 : 0 }}
             >
               <div className="bg-blue-500 rounded-full p-6 shadow-xl">
-                <span className="text-white text-2xl font-bold">→</span>
+                <span className="text-white text-2xl font-bold">→ Next</span>
               </div>
             </motion.div>
             <motion.div
@@ -90,7 +95,7 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
               animate={{ opacity: dragDirection === "left" ? 1 : 0 }}
             >
               <div className="bg-purple-500 rounded-full p-6 shadow-xl">
-                <span className="text-white text-2xl font-bold">←</span>
+                <span className="text-white text-2xl font-bold">← Previous</span>
               </div>
             </motion.div>
           </>
@@ -121,20 +126,23 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
           </div>
           <h3 className="text-2xl font-bold text-white leading-relaxed">{question.question}</h3>
 
-          {/* Image Display */}
+          {/* Improved Image Display */}
           {question.image && (
             <div className="mb-6 relative">
               <div className="relative rounded-lg overflow-hidden border border-gray-600 bg-white/10 backdrop-blur-sm">
-                <Image
-                  src={question.image || "/placeholder.svg"}
-                  alt="Question image"
-                  width={600}
-                  height={300}
-                  className="w-full h-auto object-cover"
-                  style={{ maxHeight: "250px", minHeight: "150px" }}
-                />
+                <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
+                  <Image
+                    src={question.image}
+                    alt="Question image"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+                </div>
                 <div className="absolute top-2 left-2 bg-black/70 backdrop-blur-sm rounded px-2 py-1">
-                  <span className="text-cyan-400 font-bold text-xs">📸 Test Image</span>
+                  <span className="text-cyan-400 font-bold text-xs">📸 Reference Image</span>
                 </div>
               </div>
             </div>
@@ -170,6 +178,9 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
                     <span className="text-3xl animate-bounce">🎉</span>
                   </div>
                 )}
+                {showAnswer && selectedOption === index && index !== question.answerIndex && (
+                  <XCircle className="w-6 h-6 text-red-400" />
+                )}
               </div>
             </motion.button>
           ))}
@@ -191,14 +202,18 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
             </motion.div>
           )}
 
-          {!showAnswer && (
-            <div className="text-center pt-4 border-t border-purple-400/30">
-              <p className="text-gray-300 text-sm">
-                Select an answer, then swipe <span className="text-blue-400">RIGHT</span> for next or{" "}
-                <span className="text-purple-400">LEFT</span> for previous
-              </p>
-            </div>
-          )}
+          <div className="text-center pt-4 border-t border-purple-400/30">
+            <p className="text-gray-300 text-sm">
+              {selectedOption === null && !showAnswer ? (
+                "Select an answer to enable navigation"
+              ) : (
+                <>
+                  Swipe <span className="text-blue-400">RIGHT</span> for next or{" "}
+                  <span className="text-purple-400">LEFT</span> for previous
+                </>
+              )}
+            </p>
+          </div>
         </CardContent>
       </Card>
     </motion.div>
