@@ -61,9 +61,6 @@ export default function HomePage() {
         <div className="min-h-screen flex items-center justify-center px-4 relative">
           <div className="text-center max-w-6xl mx-auto">
             {/* Floating badge */}
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full text-lg font-black mb-12 shadow-2xl hover:scale-105 transition-transform relative overflow-hidden">
-              <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-            </div>
 
             {/* Main title with smooth effects */}
             <div className="mb-12 relative">
@@ -74,8 +71,14 @@ export default function HomePage() {
               </h1>
 
               <h1 className="text-6xl md:text-8xl font-black mb-8 leading-none relative hover:scale-105 transition-transform duration-500">
+                <span className="text-4xl md:text-6xl font-black text-white mr-4">
+                  🇩🇪
+                </span>
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   IN DEUTSCHLAND
+                </span>
+                <span className="text-4xl md:text-6xl font-black text-white ml-4">
+                  🇩🇪
                 </span>
               </h1>
 
@@ -119,9 +122,7 @@ export default function HomePage() {
                 <div className="text-6xl mb-2 group-hover:scale-110 transition-transform">
                   ⏰
                 </div>
-                <div className="text-4xl font-black text-pink-400 mb-1">
-                  60
-                </div>
+                <div className="text-4xl font-black text-pink-400 mb-1">60</div>
                 <div className="text-sm text-gray-300 uppercase tracking-wider">
                   MINUTES
                 </div>
@@ -183,7 +184,8 @@ export default function HomePage() {
                       {t.practice.toUpperCase()}
                     </h3>
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed group-hover:text-white transition-colors">
-                      {t.swipeLearn}: {questions.length || "300+"} questions with instant feedback 🔥
+                      {t.swipeLearn}: {questions.length || "300+"} questions
+                      with instant feedback 🔥
                     </p>
                     <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full font-bold text-center group-hover:scale-105 transition-transform">
                       {t.start.toUpperCase()}! 🚀
@@ -206,7 +208,8 @@ export default function HomePage() {
                       {t.testMode.toUpperCase()}
                     </h3>
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed group-hover:text-white transition-colors">
-                      {t.testSubtitle}! 33 questions, 60 minutes. Real German citizenship test simulation! 😤
+                      {t.testSubtitle}! 33 questions, 60 minutes. Test
+                      simulation! 😤
                     </p>
                     <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full font-bold text-center group-hover:scale-105 transition-transform">
                       {t.start.toUpperCase()}! 💪
@@ -288,8 +291,8 @@ export default function HomePage() {
             </div>
 
             <p className="text-3xl text-white mb-12 font-bold leading-relaxed max-w-4xl mx-auto">
-              🎮 Join 25,000+ students who are CRUSHING the citizenship test
-              with our addictive swipe-based learning!
+              🎮 Join members who are CRUSHING the citizenship test with our
+              addictive swipe-based learning!
               <br />
               <span className="text-yellow-300">
                 No boring textbooks. No endless lectures. Just pure FUN! 🔥
@@ -305,7 +308,8 @@ export default function HomePage() {
             </Link>
 
             <div className="mt-8 text-xl text-gray-300">
-              ⏰ Join now and get instant access to {questions.length || "300+"} questions!
+              ⏰ Join now and get instant access to {questions.length || "300+"}{" "}
+              questions!
             </div>
           </div>
         </div>
