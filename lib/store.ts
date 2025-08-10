@@ -6,10 +6,10 @@ export interface Question {
   id: string
   category: string
   question: string
+  image?: string // Add optional image field
   options: string[]
   answerIndex: number
   explanation: string
-  image?: string // Add optional image field
 }
 
 export interface UserProgress {
@@ -72,6 +72,27 @@ const initialProgress: UserProgress = {
   badges: [],
   lastStudyDate: new Date().toISOString().split("T")[0],
 }
+
+// Fallback questions in case of loading errors
+const fallbackQuestions: Question[] = [
+  {
+    id: "fallback-1",
+    category: "General",
+    question: "What is the capital of Germany?",
+    options: ["Berlin", "Munich", "Hamburg", "Frankfurt"],
+    answerIndex: 0,
+    explanation: "Berlin is the capital and largest city of Germany.",
+  },
+  {
+    id: "fallback-2",
+    category: "General",
+    question: "What is the largest planet in our solar system?",
+    options: ["Earth", "Mars", "Jupiter", "Saturn"],
+    answerIndex: 2,
+    explanation: "Jupiter is the largest planet in our solar system.",
+  },
+]
+
 
 export const useStore = create<AppState>()(
   persist(
@@ -234,27 +255,37 @@ export const useStore = create<AppState>()(
       },
 
       loadQuestions: async () => {
+        console.log("🔥 Loading questions from JSON...");
         try {
-          console.log("🔥 Loading questions from JSON...")
-          const response = await fetch("/data/questions.json")
-          
+          const response = await fetch("/data/questions.json");
           if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`)
+            throw new Error(`HTTP error! status: ${response.status}`);
           }
-
-          const data = await response.json()
-          
-          if (!Array.isArray(data)) {
-            throw new Error("Expected an array of questions")
-          }
-
-          console.log("🚀 Successfully loaded", data.length, "questions!")
-          set({ questions: data })
-          return data
+          const text = await response.text();
+          console.log("Raw response length:", text.length);
+          const questions = JSON.parse(text);
+          console.log("🚀 Successfully loaded", questions.length, "questions!");
+          set({ questions });
         } catch (error) {
-          console.error("Failed to load questions:", error)
-          // Return empty array on error - let components handle the fallback
-          return []
+          console.log("JSON parse error:", error);
+          console.log("Failed to load questions:", error);
+          // Try loading state questions as fallback
+          try {
+            const stateResponse = await fetch("/data/state-questions.json");
+            if (!stateResponse.ok) {
+              throw new Error(`HTTP error! status: ${stateResponse.status}`);
+            }
+            const stateData = await stateResponse.json();
+            // Flatten all state questions into a single array
+            const allQuestions = Object.values(stateData).flat();
+            console.log("🚀 Successfully loaded", allQuestions.length, "state questions!");
+            set({ questions: allQuestions });
+          } catch (stateError) {
+            console.log("Failed to load state questions:", stateError);
+            // Use fallback questions
+            console.log("💪 Using fallback questions for test");
+            set({ questions: fallbackQuestions });
+          }
         }
       },
     }),
