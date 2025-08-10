@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { useStore } from "@/lib/store"
-import { getTranslation } from "@/lib/i18n"
-import LanguageSelector from "@/components/LanguageSelector"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { useStore } from "@/lib/store";
+import { getTranslation } from "@/lib/i18n";
+import LanguageSelector from "@/components/LanguageSelector";
 
 export default function HomePage() {
-  const { language } = useStore()
-  const t = getTranslation(language)
+  const { language } = useStore();
+  const t = getTranslation(language);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden relative">
@@ -32,7 +32,9 @@ export default function HomePage() {
         <div className="absolute top-20 left-20 text-3xl hover:animate-spin transition-transform cursor-pointer">
           🚀
         </div>
-        <div className="absolute top-40 right-32 text-2xl hover:scale-125 transition-transform cursor-pointer">⚡</div>
+        <div className="absolute top-40 right-32 text-2xl hover:scale-125 transition-transform cursor-pointer">
+          ⚡
+        </div>
         <div className="absolute bottom-32 left-32 text-4xl hover:animate-pulse transition-transform cursor-pointer">
           🔥
         </div>
@@ -53,7 +55,6 @@ export default function HomePage() {
             {/* Floating badge */}
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full text-lg font-black mb-12 shadow-2xl hover:scale-105 transition-transform relative overflow-hidden">
               <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-              <span>🇩🇪 {t.officialPrep} 🇩🇪</span>
             </div>
 
             {/* Main title with smooth effects */}
@@ -72,34 +73,50 @@ export default function HomePage() {
 
               {/* Subtitle */}
               <div className="text-2xl md:text-4xl font-bold text-white mb-8 leading-relaxed">
-                <span className="hover:scale-110 transition-transform inline-block cursor-pointer">🚀</span>
+                <span className="hover:scale-110 transition-transform inline-block cursor-pointer">
+                  🚀
+                </span>
                 <span className="mx-2">{t.heroSubtitle}</span>
-                <span className="hover:scale-110 transition-transform inline-block cursor-pointer ml-2">🎯</span>
+                <span className="hover:scale-110 transition-transform inline-block cursor-pointer ml-2">
+                  🎯
+                </span>
               </div>
             </div>
 
             {/* Stats with hover effects */}
             <div className="flex justify-center gap-8 mb-16">
               <div className="text-center group cursor-pointer">
-                <div className="text-6xl mb-2 group-hover:scale-125 transition-transform duration-300">🔥</div>
+                <div className="text-6xl mb-2 group-hover:scale-125 transition-transform duration-300">
+                  🔥
+                </div>
                 <div className="text-4xl font-black text-yellow-400 mb-1 group-hover:scale-110 transition-transform">
                   50+
                 </div>
-                <div className="text-sm text-gray-300 uppercase tracking-wider">{t.totalQuestions}</div>
+                <div className="text-sm text-gray-300 uppercase tracking-wider">
+                  {t.totalQuestions}
+                </div>
               </div>
               <div className="text-center group cursor-pointer">
-                <div className="text-6xl mb-2 group-hover:scale-125 transition-transform duration-300">⚡</div>
+                <div className="text-6xl mb-2 group-hover:scale-125 transition-transform duration-300">
+                  ⚡
+                </div>
                 <div className="text-4xl font-black text-green-400 mb-1 group-hover:scale-110 transition-transform">
                   33
                 </div>
-                <div className="text-sm text-gray-300 uppercase tracking-wider">TEST LENGTH</div>
+                <div className="text-sm text-gray-300 uppercase tracking-wider">
+                  TEST LENGTH
+                </div>
               </div>
               <div className="text-center group cursor-pointer">
-                <div className="text-6xl mb-2 group-hover:scale-125 transition-transform duration-300">⏰</div>
+                <div className="text-6xl mb-2 group-hover:scale-125 transition-transform duration-300">
+                  ⏰
+                </div>
                 <div className="text-4xl font-black text-pink-400 mb-1 group-hover:scale-110 transition-transform">
                   60
                 </div>
-                <div className="text-sm text-gray-300 uppercase tracking-wider">MINUTES</div>
+                <div className="text-sm text-gray-300 uppercase tracking-wider">
+                  MINUTES
+                </div>
               </div>
             </div>
 
@@ -114,7 +131,9 @@ export default function HomePage() {
               </Link>
               <Link href="/test">
                 <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-12 py-6 text-2xl font-black rounded-full shadow-2xl hover:shadow-3xl transition-all transform hover:scale-110 border-0 relative overflow-hidden group">
-                  <span className="relative z-10">🏆 {t.test.toUpperCase()}</span>
+                  <span className="relative z-10">
+                    🏆 {t.test.toUpperCase()}
+                  </span>
                 </Button>
               </Link>
             </div>
@@ -136,7 +155,9 @@ export default function HomePage() {
                   {t.chooseWeapon}
                 </span>
               </h2>
-              <p className="text-2xl text-gray-300">Four epic ways to dominate the citizenship test 💪</p>
+              <p className="text-2xl text-gray-300">
+                Four epic ways to dominate the citizenship test 💪
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -147,8 +168,12 @@ export default function HomePage() {
                     📚
                   </div>
                   <CardContent className="p-8 relative">
-                    <div className="text-6xl mb-4 group-hover:scale-125 transition-transform">🎯</div>
-                    <h3 className="text-3xl font-black text-cyan-400 mb-4">{t.practice.toUpperCase()}</h3>
+                    <div className="text-6xl mb-4 group-hover:scale-125 transition-transform">
+                      🎯
+                    </div>
+                    <h3 className="text-3xl font-black text-cyan-400 mb-4">
+                      {t.practice.toUpperCase()}
+                    </h3>
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed group-hover:text-white transition-colors">
                       {t.swipeLearn}: 50+ questions with instant feedback 🔥
                     </p>
@@ -166,10 +191,15 @@ export default function HomePage() {
                     ⏱️
                   </div>
                   <CardContent className="p-8 relative">
-                    <div className="text-6xl mb-4 group-hover:scale-125 transition-transform">⚡</div>
-                    <h3 className="text-3xl font-black text-orange-400 mb-4">{t.testMode.toUpperCase()}</h3>
+                    <div className="text-6xl mb-4 group-hover:scale-125 transition-transform">
+                      ⚡
+                    </div>
+                    <h3 className="text-3xl font-black text-orange-400 mb-4">
+                      {t.testMode.toUpperCase()}
+                    </h3>
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed group-hover:text-white transition-colors">
-                      {t.testSubtitle}! 33 questions, 60 minutes. Can you handle it? 😤
+                      {t.testSubtitle}! 33 questions, 60 minutes. Can you handle
+                      it? 😤
                     </p>
                     <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full font-bold text-center group-hover:scale-105 transition-transform">
                       {t.start.toUpperCase()}! 💪
@@ -185,10 +215,15 @@ export default function HomePage() {
                     🏃
                   </div>
                   <CardContent className="p-8 relative">
-                    <div className="text-6xl mb-4 group-hover:scale-125 transition-transform">🧠</div>
-                    <h3 className="text-3xl font-black text-yellow-400 mb-4">{t.review.toUpperCase()}</h3>
+                    <div className="text-6xl mb-4 group-hover:scale-125 transition-transform">
+                      🧠
+                    </div>
+                    <h3 className="text-3xl font-black text-yellow-400 mb-4">
+                      {t.review.toUpperCase()}
+                    </h3>
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed group-hover:text-white transition-colors">
-                      Study your mistakes, track progress, become unstoppable! 📈
+                      Study your mistakes, track progress, become unstoppable!
+                      📈
                     </p>
                     <div className="bg-gradient-to-r from-yellow-500 to-amber-500 text-black px-6 py-3 rounded-full font-bold text-center group-hover:scale-105 transition-transform">
                       LEVEL UP! ⬆️
@@ -204,10 +239,15 @@ export default function HomePage() {
                     ⚙️
                   </div>
                   <CardContent className="p-8 relative">
-                    <div className="text-6xl mb-4 group-hover:scale-125 transition-transform">🎮</div>
-                    <h3 className="text-3xl font-black text-purple-400 mb-4">{t.settings.toUpperCase()}</h3>
+                    <div className="text-6xl mb-4 group-hover:scale-125 transition-transform">
+                      🎮
+                    </div>
+                    <h3 className="text-3xl font-black text-purple-400 mb-4">
+                      {t.settings.toUpperCase()}
+                    </h3>
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed group-hover:text-white transition-colors">
-                      Customize everything! Dark mode, language, stats, and more! ✨
+                      Customize everything! Dark mode, language, stats, and
+                      more! ✨
                     </p>
                     <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-bold text-center group-hover:scale-105 transition-transform">
                       CUSTOMIZE! 🎨
@@ -224,7 +264,9 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-black/40"></div>
 
           <div className="relative max-w-6xl mx-auto text-center">
-            <div className="text-8xl mb-8 hover:scale-125 transition-transform cursor-pointer">🇩🇪</div>
+            <div className="text-8xl mb-8 hover:scale-125 transition-transform cursor-pointer">
+              🇩🇪
+            </div>
 
             <div className="relative mb-8">
               <h2 className="text-6xl md:text-8xl font-black mb-4 leading-tight relative hover:scale-105 transition-transform duration-500">
@@ -239,21 +281,28 @@ export default function HomePage() {
             </div>
 
             <p className="text-3xl text-white mb-12 font-bold leading-relaxed max-w-4xl mx-auto">
-              🎮 Join 25,000+ students who are CRUSHING the citizenship test with our addictive swipe-based learning!
+              🎮 Join 25,000+ students who are CRUSHING the citizenship test
+              with our addictive swipe-based learning!
               <br />
-              <span className="text-yellow-300">No boring textbooks. No endless lectures. Just pure FUN! 🔥</span>
+              <span className="text-yellow-300">
+                No boring textbooks. No endless lectures. Just pure FUN! 🔥
+              </span>
             </p>
 
             <Link href="/practice">
               <Button className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:from-yellow-500 hover:via-orange-600 hover:to-red-600 text-black px-16 py-8 text-3xl font-black rounded-full shadow-2xl hover:shadow-3xl transition-all transform hover:scale-110 border-0 relative overflow-hidden group">
-                <span className="relative z-10">🚀 {t.start.toUpperCase()} NOW - IT'S FREE! 🚀</span>
+                <span className="relative z-10">
+                  🚀 {t.start.toUpperCase()} NOW - IT'S FREE! 🚀
+                </span>
               </Button>
             </Link>
 
-            <div className="mt-8 text-xl text-gray-300">⏰ Join now and get instant access to 50+ questions!</div>
+            <div className="mt-8 text-xl text-gray-300">
+              ⏰ Join now and get instant access to 50+ questions!
+            </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
