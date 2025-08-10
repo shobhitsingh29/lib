@@ -28,12 +28,12 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
     setIsDragging(false)
     setDragDirection(null)
 
-    const threshold = 80 // Reduced threshold for mobile
+    const threshold = 50 // Lower threshold for better mobile experience
     const velocity = info.velocity.x
     const offset = info.offset.x
 
-    // Only allow swiping for navigation if an answer has been selected or answer is shown
-    if ((selectedOption !== null || showAnswer) && (Math.abs(offset) > threshold || Math.abs(velocity) > 400)) {
+    // Allow swiping for navigation if an answer has been selected or answer is shown
+    if ((selectedOption !== null || showAnswer) && (Math.abs(offset) > threshold || Math.abs(velocity) > 300)) {
       const direction = offset > 0 ? "right" : "left"
       onSwipe(direction)
     }
@@ -61,17 +61,21 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
       className="relative w-full max-w-4xl mx-auto"
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
-      dragElastic={0.1}
+      dragElastic={0.2}
       dragMomentum={false}
       onDrag={handleDrag}
       onDragEnd={handleDragEnd}
-      whileDrag={{ scale: 1.02 }}
+      whileDrag={{ scale: 1.01 }}
       animate={{
         x: 0,
         rotate: 0,
       }}
-      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      style={{ touchAction: "pan-x" }}
+      transition={{ type: "spring", stiffness: 400, damping: 40 }}
+      style={{ 
+        touchAction: "pan-x",
+        WebkitUserSelect: "none",
+        userSelect: "none"
+      }}
     >
       <Card
         className={`relative overflow-hidden border-4 bg-gradient-to-br from-black/90 to-purple-900/90 backdrop-blur-xl shadow-2xl ${

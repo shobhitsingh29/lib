@@ -1,3 +1,6 @@
+` tags.
+
+<replit_final_file>
 [
   {
     "id": "q001",
@@ -226,13 +229,34 @@
   {
     "id": "q022",
     "category": "Geography",
+    "question": "Was für eine Staatsform hat Deutschland?",
+    "options": ["Monarchie", "Diktatur", "Republik", "Fürstentum"],
+    "answerIndex": 2,
+    "explanation": "Deutschland ist eine Bundesrepublik, eine demokratische Staatsform ohne Monarchen."
+  },
+  {
+    "id": "q023",
+    "category": "Politics",
+    "question": "In Deutschland sind die meisten Erwerbstätigen …",
+    "options": [
+      "in kleinen Familienunternehmen beschäftigt.",
+      "ehrenamtlich für ein Bundesland tätig.",
+      "selbstständig mit einer eigenen Firma tätig.",
+      "bei einer Firma oder Behörde beschäftigt."
+    ],
+    "answerIndex": 3,
+    "explanation": "Die meisten Deutschen arbeiten als Angestellte in Unternehmen oder öffentlichen Einrichtungen."
+  },
+  {
+    "id": "q024",
+    "category": "Geography",
     "question": "Wie viele Bundesländer hat die Bundesrepublik Deutschland?",
     "options": ["14", "15", "16", "17"],
     "answerIndex": 2,
     "explanation": "Deutschland besteht aus 16 Bundesländern, einschließlich der drei Stadtstaaten Berlin, Hamburg und Bremen."
   },
   {
-    "id": "q023",
+    "id": "q025",
     "category": "Geography",
     "question": "Was ist kein Bundesland der Bundesrepublik Deutschland?",
     "options": ["Elsass-Lothringen", "Nordrhein-Westfalen", "Mecklenburg-Vorpommern", "Sachsen-Anhalt"],
@@ -240,7 +264,7 @@
     "explanation": "Elsass-Lothringen gehört zu Frankreich, nicht zu Deutschland."
   },
   {
-    "id": "q024",
+    "id": "q026",
     "category": "Politics",
     "question": "Deutschland ist …",
     "options": [
@@ -253,7 +277,15 @@
     "explanation": "Deutschland ist laut Grundgesetz ein demokratischer und sozialer Bundesstaat."
   },
   {
-    "id": "q025",
+    "id": "q027",
+    "category": "Politics",
+    "question": "Deutschland ist …",
+    "options": ["ein sozialistischer Staat.", "ein Bundesstaat.", "eine Diktatur.", "eine Monarchie."],
+    "answerIndex": 1,
+    "explanation": "Deutschland ist ein föderaler Bundesstaat mit 16 Bundesländern."
+  },
+  {
+    "id": "q028",
     "category": "Politics",
     "question": "Wer wählt in Deutschland die Abgeordneten zum Bundestag?",
     "options": ["das Militär", "die Wirtschaft", "das wahlberechtigte Volk", "die Verwaltung"],
@@ -261,7 +293,7 @@
     "explanation": "Die Bundestagsabgeordneten werden vom wahlberechtigten Volk in freien, geheimen und direkten Wahlen gewählt."
   },
   {
-    "id": "q026",
+    "id": "q029",
     "category": "Culture",
     "question": "Welches Tier ist das Wappentier der Bundesrepublik Deutschland?",
     "options": ["Löwe", "Adler", "Bär", "Pferd"],
@@ -269,7 +301,7 @@
     "explanation": "Der Bundesadler ist das Wappentier Deutschlands und Symbol der Bundesrepublik."
   },
   {
-    "id": "q027",
+    "id": "q030",
     "category": "Politics",
     "question": "Was ist kein Merkmal unserer Demokratie?",
     "options": ["regelmäßige Wahlen", "Pressezensur", "Meinungsfreiheit", "verschiedene Parteien"],
@@ -277,7 +309,7 @@
     "explanation": "Pressezensur widerspricht den demokratischen Grundprinzipien. In einer Demokratie herrscht Pressefreiheit."
   },
   {
-    "id": "q028",
+    "id": "q031",
     "category": "Politics",
     "question": "Die Zusammenarbeit von Parteien zur Bildung einer Regierung nennt man in Deutschland …",
     "options": ["Einheit.", "Koalition.", "Ministerium.", "Fraktion."],
@@ -285,7 +317,7 @@
     "explanation": "Eine Koalition ist ein Bündnis mehrerer Parteien zur gemeinsamen Regierungsbildung."
   },
   {
-    "id": "q029",
+    "id": "q032",
     "category": "Politics",
     "question": "Was ist keine staatliche Gewalt in Deutschland?",
     "options": ["Gesetzgebung", "Regierung", "Presse", "Rechtsprechung"],
@@ -293,7 +325,7 @@
     "explanation": "Die Presse ist keine staatliche Gewalt, sondern ein wichtiges Kontrollorgan der Demokratie (vierte Gewalt)."
   },
   {
-    "id": "q030",
+    "id": "q033",
     "category": "Politics",
     "question": "Welche Aussage ist richtig? In Deutschland …",
     "options": [
@@ -306,7 +338,7 @@
     "explanation": "Deutschland praktiziert die Trennung von Staat und Kirche, auch wenn es Kooperationen gibt (z.B. Kirchensteuer)."
   },
   {
-    "id": "q031",
+    "id": "q034",
     "category": "Politics",
     "question": "Was ist Deutschland nicht?",
     "options": ["eine Demokratie", "ein Rechtsstaat", "eine Monarchie", "ein Sozialstaat"],
@@ -314,7 +346,7 @@
     "explanation": "Deutschland ist eine Republik, keine Monarchie. Es gibt keinen König oder Kaiser."
   },
   {
-    "id": "q032",
+    "id": "q035",
     "category": "Politics",
     "question": "Womit finanziert der deutsche Staat die Sozialversicherung?",
     "options": ["Kirchensteuer", "Sozialabgaben", "Spendengeldern", "Vereinsbeiträgen"],
@@ -322,7 +354,7 @@
     "explanation": "Die Sozialversicherung wird hauptsächlich durch Beiträge von Arbeitnehmern und Arbeitgebern finanziert."
   },
   {
-    "id": "q033",
+    "id": "q036",
     "category": "Politics",
     "question": "Welche Maßnahme schafft in Deutschland soziale Sicherheit?",
     "options": [
@@ -335,7 +367,7 @@
     "explanation": "Die Krankenversicherung ist Teil des sozialen Sicherungssystems und schützt vor den finanziellen Folgen von Krankheit."
   },
   {
-    "id": "q034",
+    "id": "q037",
     "category": "Politics",
     "question": "Wie werden die Regierungschefinnen/Regierungschefs der meisten Bundesländer in Deutschland genannt?",
     "options": [
@@ -348,7 +380,7 @@
     "explanation": "Die Regierungschefs der Bundesländer heißen Ministerpräsident/in (außer in den Stadtstaaten)."
   },
   {
-    "id": "q035",
+    "id": "q038",
     "category": "Politics",
     "question": "Die Bundesrepublik Deutschland ist ein demokratischer und sozialer …",
     "options": ["Staatenverbund.", "Bundesstaat.", "Staatenbund.", "Zentralstaat."],
@@ -356,7 +388,7 @@
     "explanation": "Deutschland ist ein Bundesstaat - die Länder haben eigene Kompetenzen, aber der Bund hat die Oberhoheit."
   },
   {
-    "id": "q036",
+    "id": "q039",
     "category": "Politics",
     "question": "Was hat jedes deutsche Bundesland?",
     "options": [
@@ -369,7 +401,7 @@
     "explanation": "Jedes Bundesland hat eine eigene Landesregierung mit einem Ministerpräsidenten an der Spitze."
   },
   {
-    "id": "q037",
+    "id": "q040",
     "category": "Culture",
     "question": "Mit welchen Worten beginnt die deutsche Nationalhymne?",
     "options": [
@@ -380,286 +412,5 @@
     ],
     "answerIndex": 1,
     "explanation": "Die deutsche Nationalhymne beginnt mit 'Einigkeit und Recht und Freiheit' (dritte Strophe des Deutschlandlieds)."
-  },
-  {
-    "id": "q038",
-    "category": "Politics",
-    "question": "Warum gibt es in einer Demokratie mehr als eine Partei?",
-    "options": [
-      "weil dadurch die unterschiedlichen Meinungen der Bürgerinnen und Bürger vertreten werden",
-      "damit Bestechung in der Politik begrenzt wird",
-      "um politische Demonstrationen zu verhindern",
-      "um wirtschaftlichen Wettbewerb anzuregen"
-    ],
-    "answerIndex": 0,
-    "explanation": "Mehrere Parteien ermöglichen es, die Vielfalt der politischen Meinungen in der Gesellschaft zu repräsentieren."
-  },
-  {
-    "id": "q039",
-    "category": "Politics",
-    "question": "Wer beschließt in Deutschland ein neues Gesetz?",
-    "options": ["die Regierung", "das Parlament", "die Gerichte", "die Polizei"],
-    "answerIndex": 1,
-    "explanation": "Gesetze werden vom Parlament (Bundestag und meist auch Bundesrat) beschlossen, nicht von der Regierung."
-  },
-  {
-    "id": "q040",
-    "category": "Politics",
-    "question": "Wann kann in Deutschland eine Partei verboten werden?",
-    "options": [
-      "wenn ihr Wahlkampf zu teuer ist",
-      "wenn sie gegen die Verfassung kämpft",
-      "wenn sie Kritik am Staatsoberhaupt äußert",
-      "wenn ihr Programm eine neue Richtung vorschlägt"
-    ],
-    "answerIndex": 1,
-    "explanation": "Parteien können nur verboten werden, wenn sie die verfassungsmäßige Ordnung bekämpfen oder beseitigen wollen."
-  },
-  {
-    "id": "q041",
-    "category": "Politics",
-    "question": "Wen kann man als Bürgerin/Bürger in Deutschland nicht direkt wählen?",
-    "options": [
-      "Abgeordnete des EU-Parlaments",
-      "Die Bundespräsidentin/den Bundespräsidenten",
-      "Landtagsabgeordnete",
-      "Bundestagsabgeordnete"
-    ],
-    "answerIndex": 1,
-    "explanation": "Der Bundespräsident wird von der Bundesversammlung gewählt, nicht direkt vom Volk."
-  },
-  {
-    "id": "q042",
-    "category": "Politics",
-    "question": "Zu welcher Versicherung gehört die Pflegeversicherung?",
-    "options": [
-      "Sozialversicherung",
-      "Unfallversicherung",
-      "Hausratsversicherung",
-      "Haftpflicht- und Feuerversicherung"
-    ],
-    "answerIndex": 0,
-    "explanation": "Die Pflegeversicherung ist Teil der gesetzlichen Sozialversicherung in Deutschland."
-  },
-  {
-    "id": "q043",
-    "category": "Politics",
-    "question": "Der deutsche Staat hat viele Aufgaben. Welche Aufgabe gehört dazu?",
-    "options": [
-      "Er baut Straßen und Schulen.",
-      "Er verkauft Lebensmittel und Kleidung.",
-      "Er versorgt alle Einwohnerinnen und Einwohner kostenlos mit Zeitungen.",
-      "Er produziert Autos und Busse."
-    ],
-    "answerIndex": 0,
-    "explanation": "Der Staat ist für die öffentliche Infrastruktur wie Straßen und Schulen zuständig."
-  },
-  {
-    "id": "q044",
-    "category": "Politics",
-    "question": "Der deutsche Staat hat viele Aufgaben. Welche Aufgabe gehört nicht dazu?",
-    "options": [
-      "Er bezahlt für alle Staatsangehörigen Urlaubsreisen.",
-      "Er zahlt Kindergeld.",
-      "Er unterstützt Museen.",
-      "Er fördert Sportlerinnen und Sportler."
-    ],
-    "answerIndex": 0,
-    "explanation": "Der Staat finanziert keine privaten Urlaubsreisen. Das ist Privatsache der Bürger."
-  },
-  {
-    "id": "q045",
-    "category": "Politics",
-    "question": "Welches Organ gehört nicht zu den Verfassungsorganen Deutschlands?",
-    "options": ["der Bundesrat", "die Bundespräsidentin/der Bundespräsident", "die Bürgerversammlung", "die Regierung"],
-    "answerIndex": 2,
-    "explanation": "Die Bürgerversammlung ist kein Verfassungsorgan. Die Verfassungsorgane sind: Bundestag, Bundesrat, Bundespräsident, Bundesregierung und Bundesverfassungsgericht."
-  },
-  {
-    "id": "q046",
-    "category": "Politics",
-    "question": "Wer bestimmt in Deutschland die Schulpolitik?",
-    "options": ["die Lehrer und Lehrerinnen", "die Bundesländer", "das Familienministerium", "die Universitäten"],
-    "answerIndex": 1,
-    "explanation": "Bildung ist Ländersache - die Bundesländer sind für die Schulpolitik zuständig."
-  },
-  {
-    "id": "q047",
-    "category": "Politics",
-    "question": "Die Wirtschaftsform in Deutschland nennt man …",
-    "options": [
-      "freie Zentralwirtschaft.",
-      "soziale Marktwirtschaft.",
-      "gelenkte Zentralwirtschaft.",
-      "Planwirtschaft."
-    ],
-    "answerIndex": 1,
-    "explanation": "Deutschland hat eine soziale Marktwirtschaft - freier Markt mit sozialer Absicherung."
-  },
-  {
-    "id": "q048",
-    "category": "Law",
-    "question": "Zu einem demokratischen Rechtsstaat gehört es nicht, dass …",
-    "options": [
-      "Menschen sich kritisch über die Regierung äußern können.",
-      "Bürger friedlich demonstrieren gehen dürfen.",
-      "Menschen von einer Privatpolizei ohne Grund verhaftet werden.",
-      "jemand ein Verbrechen begeht und deshalb verhaftet wird."
-    ],
-    "answerIndex": 2,
-    "explanation": "Willkürliche Verhaftungen durch private Gruppen sind rechtswidrig. Nur staatliche Behörden dürfen rechtmäßig verhaften."
-  },
-  {
-    "id": "q049",
-    "category": "Politics",
-    "question": "Was bedeutet 'Volkssouveränität'? Alle Staatsgewalt geht vom …",
-    "options": ["Volke aus.", "Bundestag aus.", "preußischen König aus.", "Bundesverfassungsgericht aus."],
-    "answerIndex": 0,
-    "explanation": "Volkssouveränität bedeutet, dass alle Staatsgewalt vom Volk ausgeht - ein Grundprinzip der Demokratie."
-  },
-  {
-    "id": "q050",
-    "category": "Law",
-    "question": "Was bedeutet 'Rechtsstaat' in Deutschland?",
-    "options": [
-      "Der Staat hat Recht.",
-      "Es gibt nur rechte Parteien.",
-      "Die Bürgerinnen und Bürger entscheiden über Gesetze.",
-      "Der Staat muss die Gesetze einhalten."
-    ],
-    "answerIndex": 3,
-    "explanation": "In einem Rechtsstaat ist auch der Staat an seine eigenen Gesetze gebunden und kann nicht willkürlich handeln."
-  },
-  {
-    "id": "q051",
-    "category": "Politics",
-    "question": "Was zeigt dieses Bild?",
-    "image": "/images/bundestag-building.jpg",
-    "options": [
-      "den Bundestagssitz in Berlin",
-      "das Bundesverfassungsgericht in Karlsruhe",
-      "das Bundesratsgebäude in Berlin",
-      "das Bundeskanzleramt in Berlin"
-    ],
-    "answerIndex": 0,
-    "explanation": "Das Bild zeigt das Reichstagsgebäude in Berlin, welches der Sitz des Deutschen Bundestags ist. Das charakteristische Gebäude mit der Glaskuppel ist seit 1999 wieder Parlamentssitz."
-  },
-  {
-    "id": "q052",
-    "category": "Politics",
-    "question": "Der deutsche Bundespräsident gibt Helmut Schmidt 1974 die Ernennungsurkunde zum deutschen Bundeskanzler. Was gehört zu den Aufgaben der deutschen Bundespräsidentin/des deutschen Bundespräsidenten?",
-    "image": "/images/federal-president-duties.jpg",
-    "options": [
-      "Sie/Er führt die Regierungsgeschäfte.",
-      "Sie/Er kontrolliert die Regierungspartei.",
-      "Sie/Er wählt die Ministerinnen/Minister aus.",
-      "Sie/Er schlägt die Kanzlerin/den Kanzler zur Wahl vor."
-    ],
-    "answerIndex": 3,
-    "explanation": "Der Bundespräsident schlägt nach der Bundestagswahl die Bundeskanzlerin oder den Bundeskanzler zur Wahl vor und ernennt sie/ihn nach der Wahl durch den Bundestag. Das Bild zeigt eine solche Ernennungszeremonie."
-  },
-  {
-    "id": "q053",
-    "category": "History",
-    "question": "Welcher deutsche Staat hatte eine schwarz-rot-goldene Flagge mit Hammer, Zirkel und Ährenkranz?",
-    "image": "/images/east-german-flag.jpg",
-    "options": ["Preußen", "Bundesrepublik Deutschland", "Drittes Reich", "DDR"],
-    "answerIndex": 3,
-    "explanation": "Die Deutsche Demokratische Republik (DDR) hatte ab 1959 eine schwarz-rot-goldene Flagge mit dem Staatswappen (Hammer, Zirkel und Ährenkranz) in der Mitte."
-  },
-  {
-    "id": "q054",
-    "category": "Geography",
-    "question": "Welches Bundesland ist Baden-Württemberg?",
-    "image": "/images/germany-map-baden-wurttemberg.jpg",
-    "options": ["1", "2", "3", "4"],
-    "answerIndex": 0,
-    "explanation": "Baden-Württemberg ist das Bundesland im Südwesten Deutschlands (Nummer 1 auf der Karte), das an Frankreich und die Schweiz grenzt."
-  },
-  {
-    "id": "q055",
-    "category": "History",
-    "question": "Wie waren die Besatzungszonen Deutschlands nach 1945 verteilt?",
-    "image": "/images/germany-occupation-zones-1945.jpg",
-    "options": [
-      "1=Großbritannien, 2=Sowjetunion, 3=Frankreich, 4=USA",
-      "1=Sowjetunion, 2=Großbritannien, 3=USA, 4=Frankreich",
-      "1=Großbritannien, 2=Sowjetunion, 3=USA, 4=Frankreich",
-      "1=Großbritannien, 2=USA, 3=Sowjetunion, 4=Frankreich"
-    ],
-    "answerIndex": 2,
-    "explanation": "Nach 1945 wurde Deutschland in vier Besatzungszonen aufgeteilt: Großbritannien (Nordwesten), Sowjetunion (Osten), USA (Süden) und Frankreich (Südwesten)."
-  },
-  {
-    "id": "q056",
-    "category": "History",
-    "question": "Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen jüdischen Ghetto in Warschau ausdrücken?",
-    "image": "/images/willy-brandt-warsaw.jpg",
-    "options": [
-      "Er hat sich den ehemaligen Alliierten unterworfen.",
-      "Er bat Polen und die polnischen Juden um Vergebung.",
-      "Er zeigte seine Demut vor dem Warschauer Pakt.",
-      "Er sprach ein Gebet am Grab des Unbekannten Soldaten."
-    ],
-    "answerIndex": 1,
-    "explanation": "Willy Brandts spontaner Kniefall am Denkmal für die Opfer des Warschauer Ghettos war eine Geste der Demut und Bitte um Vergebung für die deutschen Verbrechen während des Zweiten Weltkriegs."
-  },
-  {
-    "id": "q057",
-    "category": "Politics",
-    "question": "Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?",
-    "image": "/images/mitterrand-kohl-verdun.jpg",
-    "options": [
-      "Freundschaft zwischen England und Deutschland",
-      "Reisefreiheit in alle Länder der EU",
-      "Frieden und Sicherheit in den Ländern der EU",
-      "einheitliche Feiertage in den Ländern der EU"
-    ],
-    "answerIndex": 2,
-    "explanation": "Das gemeinsame Gedenken in Verdun 1984 symbolisierte die deutsch-französische Aussöhnung und das EU-Ziel von Frieden und Sicherheit in Europa nach jahrhundertelangen Kriegen."
-  },
-  {
-    "id": "q058",
-    "category": "History",
-    "question": "Welches war das Wappen der Deutschen Demokratischen Republik?",
-    "image": "/images/east-german-coat-of-arms.jpg",
-    "options": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
-    "answerIndex": 3,
-    "explanation": "Das Wappen der DDR (Bild 4) zeigte Hammer und Zirkel (für Arbeiter und Intellektuelle) umgeben von einem Ährenkranz (für die Bauern) auf rotem Grund."
-  },
-  {
-    "id": "q059",
-    "category": "Politics",
-    "question": "Welches Symbol ist im Plenarsaal des Deutschen Bundestages zu sehen?",
-    "image": "/images/bundestag-interior-eagle.jpg",
-    "options": ["der Bundesadler", "die Fahne der Stadt Berlin", "der Reichsadler", "die Reichskrone"],
-    "answerIndex": 0,
-    "explanation": "Im Plenarsaal des Bundestages ist der Bundesadler zu sehen - das offizielle Wappentier der Bundesrepublik Deutschland."
-  },
-  {
-    "id": "q060",
-    "category": "Politics",
-    "question": "Welche ist die Flagge der Europäischen Union?",
-    "image": "/images/eu-flag-identification.jpg",
-    "options": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
-    "answerIndex": 1,
-    "explanation": "Die EU-Flagge (Bild 2) zeigt einen Kreis aus zwölf goldenen Sternen auf blauem Grund. Die Zahl zwölf steht für Vollkommenheit und Einheit."
-  },
-  {
-    "id": "q061",
-    "category": "Politics",
-    "question": "Welcher Stimmzettel wäre bei einer Bundestagswahl gültig?",
-    "image": "/images/german-ballot-examples.jpg",
-    "options": ["1", "2", "3", "4"],
-    "answerIndex": 0,
-    "explanation": "Stimmzettel 1 ist gültig, da nur die erlaubten Kreuze in den vorgesehenen Kreisen gemacht wurden. Alle anderen Stimmzettel sind durch zusätzliche Markierungen oder falsche Kennzeichnung ungültig."
-  },
-  {
-    "id": "q062",
-    "category": "History",
-    "question": "In welchem Jahr wurde die Mauer in Berlin gebaut?",
-    "options": ["1953", "1956", "1959", "1961"],
-    "answerIndex": 3,
-    "explanation": "Die Berliner Mauer wurde am 13. August 1961 von der DDR-Regierung errichtet, um die Flucht von Ost- nach West-Berlin zu verhindern."
   }
 ]
