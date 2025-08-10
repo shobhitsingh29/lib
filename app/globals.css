@@ -8,6 +8,11 @@
   }
 }
 
+:root {
+  --font-geist-sans: var(--font-sans);
+  --font-geist-mono: var(--font-mono);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
