@@ -58,6 +58,7 @@ export interface AppState {
   addBadge: (badge: string) => void
   exportProgress: () => string
   importProgress: (data: string) => void
+  loadQuestions: () => Promise<Question[]>
 }
 
 const initialProgress: UserProgress = {
@@ -229,6 +230,31 @@ export const useStore = create<AppState>()(
           }
         } catch (error) {
           console.error("Failed to import progress:", error)
+        }
+      },
+
+      loadQuestions: async () => {
+        try {
+          console.log("🔥 Loading questions from JSON...")
+          const response = await fetch("/data/questions.json")
+          
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+          }
+
+          const data = await response.json()
+          
+          if (!Array.isArray(data)) {
+            throw new Error("Expected an array of questions")
+          }
+
+          console.log("🚀 Successfully loaded", data.length, "questions!")
+          set({ questions: data })
+          return data
+        } catch (error) {
+          console.error("Failed to load questions:", error)
+          // Return empty array on error - let components handle the fallback
+          return []
         }
       },
     }),

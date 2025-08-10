@@ -20,6 +20,7 @@ export default function TestPage() {
     testAnswers,
     answerQuestion,
     addBadge,
+    loadQuestions,
   } = useStore()
 
   const [testQuestions, setTestQuestions] = useState<any[]>([])
@@ -29,34 +30,20 @@ export default function TestPage() {
   const [showResults, setShowResults] = useState(false)
 
   useEffect(() => {
-    // Load questions and start test with better error handling
-    const loadQuestions = async () => {
+    const loadAndStartTest = async () => {
       try {
         console.log("🔥 LOADING EPIC TEST QUESTIONS...")
-        const response = await fetch("/data/questions.json")
+        const loadedQuestions = await loadQuestions() // Use the loadQuestions function from the store
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
+        if (!loadedQuestions || loadedQuestions.length === 0) {
+          throw new Error("No questions loaded from the store or file.")
         }
 
-        const text = await response.text()
-        let data
-        try {
-          data = JSON.parse(text)
-        } catch (parseError) {
-          console.error("JSON parse error:", parseError)
-          throw new Error(`Invalid JSON: ${parseError.message}`)
-        }
-
-        if (!Array.isArray(data)) {
-          throw new Error("Expected an array of questions")
-        }
-
-        console.log("🚀 Successfully loaded", data.length, "INSANE questions for test!")
-        setQuestions(data)
-        // Select 310 random questions for the test
-        const shuffled = [...data].sort(() => 0.5 - Math.random())
-        const selected = shuffled.slice(0, Math.min(310, data.length))
+        console.log("🚀 Successfully loaded", loadedQuestions.length, "INSANE questions for test!")
+        setQuestions(loadedQuestions)
+        // Select random questions for the test, capped at 310
+        const shuffled = [...loadedQuestions].sort(() => 0.5 - Math.random())
+        const selected = shuffled.slice(0, Math.min(310, loadedQuestions.length))
         setTestQuestions(selected)
         startTest()
       } catch (err) {
@@ -95,13 +82,17 @@ export default function TestPage() {
       }
     }
 
-    // Load questions and start test mode
+    // Load questions only if we don't have any yet
     if (questions.length === 0) {
-      loadQuestions();
+      loadAndStartTest();
+    } else {
+      // If questions are already loaded (e.g., from a previous render or client-side navigation),
+      // ensure the test is started if it hasn't been.
+      if (!testMode) {
+        startTest();
+      }
     }
-
-    startTest()
-  }, [questions.length, setQuestions, startTest])
+  }, [questions.length, setQuestions, startTest, loadQuestions, testMode]) // Added testMode to dependencies
 
   useEffect(() => {
     if (!testMode || !testStartTime) return

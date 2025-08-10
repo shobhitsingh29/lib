@@ -63,46 +63,41 @@ export default function PracticePage() {
   const t = getTranslation(language)
 
   useEffect(() => {
-    const loadAndSetQuestions = async () => {
-      setLoading(true);
+    const initializePractice = async () => {
+      setLoading(true)
+      
       try {
-        await loadQuestions(); // Use the loadQuestions function from the store
+        // Load main questions if not already loaded
+        if (questions.length === 0) {
+          await loadQuestions()
+        }
 
         // Load state questions if available and a state is selected
-        const stateResponse = await fetch("/data/state-questions.json");
-        if (stateResponse.ok) {
-          const stateData = await stateResponse.json();
-          if (selectedState && stateData[selectedState]) {
-            setStateQuestions(stateData[selectedState]);
+        if (selectedState) {
+          try {
+            const stateResponse = await fetch("/data/state-questions.json")
+            if (stateResponse.ok) {
+              const stateData = await stateResponse.json()
+              if (stateData[selectedState]) {
+                setStateQuestions(stateData[selectedState])
+              }
+            }
+          } catch (error) {
+            console.error("Failed to load state questions:", error)
+            setStateQuestions([])
           }
+        } else {
+          setStateQuestions([])
         }
       } catch (error) {
-        console.error("Failed to load questions:", error);
-        // Fallback questions in case of error
-        const fallbackQuestions = [
-          {
-            id: "q001",
-            category: "Politics",
-            question: "What is the capital of Germany?",
-            options: ["Berlin", "Munich", "Frankfurt", "Hamburg"],
-            answerIndex: 0,
-            explanation: "Berlin has been the federal capital of Germany since reunification in 1990.",
-          },
-        ];
-        setQuestions(fallbackQuestions);
-        setStateQuestions([]); // Clear state questions on error
+        console.error("Failed to initialize practice:", error)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
-
-    // Only load questions if the questions array is initially empty
-    if (questions.length === 0) {
-      loadAndSetQuestions();
-    } else {
-      setLoading(false); // If questions are already loaded, set loading to false
     }
-  }, [questions.length, loadQuestions, setQuestions, setStateQuestions, selectedState]);
+
+    initializePractice()
+  }, [questions.length, loadQuestions, setStateQuestions, selectedState])
 
 
   const allQuestions = [...questions, ...stateQuestions]

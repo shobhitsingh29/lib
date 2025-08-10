@@ -109,7 +109,7 @@ export default function HomePage() {
                   ⚡
                 </div>
                 <div className="text-4xl font-black text-green-400 mb-1">
-                  {questions.length || "310"}
+                  33
                 </div>
                 <div className="text-sm text-gray-300 uppercase tracking-wider">
                   TEST LENGTH
@@ -206,8 +206,7 @@ export default function HomePage() {
                       {t.testMode.toUpperCase()}
                     </h3>
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed group-hover:text-white transition-colors">
-                      {t.testSubtitle}! {questions.length || "310"} questions, 60 minutes. Can you handle
-                      it? 😤
+                      {t.testSubtitle}! 33 questions, 60 minutes. Real German citizenship test simulation! 😤
                     </p>
                     <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full font-bold text-center group-hover:scale-105 transition-transform">
                       {t.start.toUpperCase()}! 💪
