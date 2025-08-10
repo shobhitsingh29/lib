@@ -671,7 +671,7 @@
     "id": "q055",
     "category": "Politics",
     "question": "Was zeigt dieses Bild?",
-    "image": "/images/bundestag.jpg",
+    "image": "/images/bundestag-building.jpg",
     "options": [
       "den Bundestagssitz in Berlin",
       "das Bundesverfassungsgericht in Karlsruhe",
@@ -847,7 +847,7 @@
     "id": "q070",
     "category": "Politics",
     "question": "Der deutsche Bundespräsident Gustav Heinemann gibt Helmut Schmidt 1974 die Ernennungsurkunde zum deutschen Bundeskanzler. Was gehört zu den Aufgaben der deutschen Bundespräsidentin/des deutschen Bundespräsidenten?",
-    "image": "/images/heinemann_schmidt.jpg",
+    "image": "/images/federal-president-duties.jpg",
     "options": [
       "Sie/Er führt die Regierungsgeschäfte.",
       "Sie/Er kontrolliert die Regierungspartei.",
@@ -1588,7 +1588,7 @@
     "id": "q130",
     "category": "Politics",
     "question": "Welcher Stimmzettel wäre bei einer Bundestagswahl gültig?",
-    "image": "/images/stimmzettel.jpg",
+    "image": "/images/german-ballot-examples.jpg",
     "options": ["1", "2", "3", "4"],
     "answerIndex": 1,
     "explanation": "Stimmzettel 2 ist gültig, weil er in jeder Spalte nur ein Kreuz hat."
@@ -2127,7 +2127,7 @@
     "id": "q176",
     "category": "History",
     "question": "Wie waren die Besatzungszonen Deutschlands nach 1945 verteilt?",
-    "image": "/images/besatzungszonen.jpg",
+    "image": "/images/germany-occupation-zones-1945.jpg",
     "options": [
       "1=Großbritannien, 2=Sowjetunion, 3=Frankreich, 4=USA",
       "1=Sowjetunion, 2=Großbritannien, 3=USA, 4=Frankreich",
@@ -2188,7 +2188,7 @@
     "id": "q181",
     "category": "History",
     "question": "Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen jüdischen Ghetto in Warschau ausdrücken?",
-    "image": "/images/willy_brandt.jpg",
+    "image": "/images/willy-brandt-warsaw.jpg",
     "options": [
       "Er hat sich den ehemaligen Alliierten unterworfen.",
       "Er bat Polen und die polnischen Juden um Vergebung.",
@@ -2252,7 +2252,7 @@
     "id": "q187",
     "category": "History",
     "question": "Welcher deutsche Staat hatte eine schwarz-rot-goldene Flagge mit Hammer, Zirkel und Ährenkranz?",
-    "image": "/images/ddr_flagge.jpg",
+    "image": "/images/east-german-flag.jpg",
     "options": [
       "Preußen",
       "Bundesrepublik Deutschland",
@@ -2499,7 +2499,7 @@
     "id": "q209",
     "category": "History",
     "question": "Welches war das Wappen der Deutschen Demokratischen Republik?",
-    "image": "/images/ddr_wappen.jpg",
+    "image": "/images/east-german-coat-of-arms.jpg",
     "options": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
     "answerIndex": 1,
     "explanation": "Das Wappen der DDR (Bild 2) zeigt einen Hammer, einen Zirkel und einen Ährenkranz[cite: 2357]."
@@ -2581,7 +2581,7 @@
     "id": "q216",
     "category": "Politics",
     "question": "Welches Symbol ist im Plenarsaal des Deutschen Bundestages zu sehen?",
-    "image": "/images/bundesadler_plenarsaal.jpg",
+    "image": "/images/bundestag-interior-eagle.jpg",
     "options": [
       "der Bundesadler",
       "die Fahne der Stadt Berlin",
@@ -2687,7 +2687,7 @@
     "id": "q226",
     "category": "Politics",
     "question": "Welche ist die Flagge der Europäischen Union?",
-    "image": "/images/eu-flag.jpg",
+    "image": "/images/eu-flag-identification.jpg",
     "options": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
     "answerIndex": 2,
     "explanation": "Die Flagge der Europäischen Union (Bild 3) ist blau mit 12 goldenen Sternen[cite: 2542]."
@@ -2775,7 +2775,7 @@
     "id": "q235",
     "category": "History",
     "question": "Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?",
-    "image": "/images/mitterrand_kohl.jpg",
+    "image": "/images/mitterrand-kohl-verdun.jpg",
     "options": [
       "Freundschaft zwischen England und Deutschland",
       "Reisefreiheit in alle Länder der EU",

@@ -4,7 +4,7 @@
       "id": "bw001",
       "category": "State",
       "question": "Welches Wappen gehört zum Bundesland Baden-Württemberg?",
-      "image": "(not provided in source)",
+      "image": "/images/baden-wurttemberg-coat-of-arms.jpg",
       "options": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
       "answerIndex": 0,
       "explanation": "Das Wappen Baden-Württembergs (Bild 1) zeigt drei schwarze Löwen auf goldenem Grund - das traditionelle Wappen der Staufer."
@@ -76,7 +76,7 @@
       "id": "bw008",
       "category": "State",
       "question": "Welches Bundesland ist Baden-Württemberg?",
-      "image": "(not provided in source)",
+      "image": "/images/germany-map-baden-wurttemberg.jpg",
       "options": ["1", "2", "3", "4"],
       "answerIndex": 1,
       "explanation": "Auf der Karte ist Baden-Württemberg mit der Nummer 2 gekennzeichnet."
@@ -113,7 +113,7 @@
       "id": "by001",
       "category": "State",
       "question": "Welches Wappen gehört zum Freistaat Bayern?",
-      "image": "(not provided in source)",
+      "image": "/images/baden-wurttemberg-coat-of-arms.jpg",
       "options": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
       "answerIndex": 1,
       "explanation": "Das Wappen des Freistaats Bayern (Bild 2) zeigt eine blau-weiße Rautenflagge."
@@ -180,7 +180,7 @@
       "id": "by008",
       "category": "State",
       "question": "Welches Bundesland ist Bayern?",
-      "image": "(not provided in source)",
+      "image": "/images/germany-map-baden-wurttemberg.jpg",
       "options": ["1", "2", "3", "4"],
       "answerIndex": 3,
       "explanation": "Auf der Karte ist Bayern mit der Nummer 4 gekennzeichnet."
@@ -217,7 +217,7 @@
       "id": "be001",
       "category": "State",
       "question": "Welches Wappen gehört zum Bundesland Berlin?",
-      "image": "(not provided in source)",
+      "image": "/images/coat-of-arms.jpg",
       "options": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
       "answerIndex": 3,
       "explanation": "Das Wappen des Bundeslandes Berlin (Bild 4) zeigt einen Bären."
@@ -284,7 +284,7 @@
       "id": "be008",
       "category": "State",
       "question": "Welches Bundesland ist Berlin?",
-      "image": "(not provided in source)",
+      "image": "/images/map.jpg",
       "options": ["1", "2", "3", "4"],
       "answerIndex": 3,
       "explanation": "Auf der Karte ist Berlin mit der Nummer 4 gekennzeichnet."
@@ -321,7 +321,7 @@
       "id": "bb001",
       "category": "State",
       "question": "Welches Wappen gehört zum Bundesland Brandenburg?",
-      "image": "(not provided in source)",
+      "image": "/images/coatofarms.jpg",
       "options": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
       "answerIndex": 0,
       "explanation": "Das Wappen des Bundeslandes Brandenburg (Bild 1) zeigt einen roten Adler."
@@ -388,7 +388,7 @@
       "id": "bb008",
       "category": "State",
       "question": "Welches Bundesland ist Brandenburg?",
-      "image": "(not provided in source)",
+      "image": "/images/bremen.jpg",
       "options": ["1", "2", "3", "4"],
       "answerIndex": 2,
       "explanation": "Auf der Karte ist Brandenburg mit der Nummer 3 gekennzeichnet."
@@ -425,7 +425,7 @@
       "id": "hb001",
       "category": "State",
       "question": "Welches Wappen gehört zur Freien Hansestadt Bremen?",
-      "image": "(not provided in source)",
+      "image": "/images/coatarms.jpg",
       "options": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
       "answerIndex": 2,
       "explanation": "Das Wappen der Freien Hansestadt Bremen (Bild 3) zeigt einen roten Schlüssel auf weißem Schild."
@@ -487,7 +487,7 @@
       "id": "hb008",
       "category": "State",
       "question": "Welches Bundesland ist Bremen?",
-      "image": "(not provided in source)",
+      "image": "/images/bremen.jpg",
       "options": ["1", "2", "3", "4"],
       "answerIndex": 0,
       "explanation": "Auf der Karte ist Bremen mit der Nummer 1 gekennzeichnet."
@@ -524,7 +524,7 @@
       "id": "hh001",
       "category": "State",
       "question": "Welches Wappen gehört zur Freien und Hansestadt Hamburg?",
-      "image": "(not provided in source)",
+      "image": "/images/hamburg.jpg",
       "options": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
       "answerIndex": 1,
       "explanation": "Das Wappen der Freien und Hansestadt Hamburg (Bild 2) zeigt eine Burg mit drei Türmen."
@@ -591,7 +591,7 @@
       "id": "hh008",
       "category": "State",
       "question": "Welches Bundesland ist Hamburg?",
-      "image": "(not provided in source)",
+      "image": "/images/map.jpg",
       "options": ["1", "2", "3", "4"],
       "answerIndex": 2,
       "explanation": "Auf der Karte ist Hamburg mit der Nummer 3 gekennzeichnet."
