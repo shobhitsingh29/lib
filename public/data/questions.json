@@ -1,6 +1,3 @@
-` tags.
-
-<replit_final_file>
 [
   {
     "id": "q001",
@@ -19,7 +16,12 @@
     "id": "q002",
     "category": "Politics",
     "question": "In Deutschland können Eltern bis zum 14. Lebensjahr ihres Kindes entscheiden, ob es in der Schule am … teilnimmt.",
-    "options": ["Geschichtsunterricht", "Religionsunterricht", "Politikunterricht", "Sprachunterricht"],
+    "options": [
+      "Geschichtsunterricht",
+      "Religionsunterricht",
+      "Politikunterricht",
+      "Sprachunterricht"
+    ],
     "answerIndex": 1,
     "explanation": "Eltern haben das Recht zu entscheiden, ob ihr Kind am Religionsunterricht teilnimmt. Dies ist Teil der Religionsfreiheit in Deutschland."
   },
@@ -40,7 +42,12 @@
     "id": "q004",
     "category": "Politics",
     "question": "Welches Recht gehört zu den Grundrechten in Deutschland?",
-    "options": ["Waffenbesitz", "Faustrecht", "Meinungsfreiheit", "Selbstjustiz"],
+    "options": [
+      "Waffenbesitz",
+      "Faustrecht",
+      "Meinungsfreiheit",
+      "Selbstjustiz"
+    ],
     "answerIndex": 2,
     "explanation": "Die Meinungsfreiheit ist ein fundamentales Grundrecht in Deutschland und im Grundgesetz verankert."
   },
@@ -61,7 +68,12 @@
     "id": "q006",
     "category": "Politics",
     "question": "Wie heißt die deutsche Verfassung?",
-    "options": ["Volksgesetz", "Bundesgesetz", "Deutsches Gesetz", "Grundgesetz"],
+    "options": [
+      "Volksgesetz",
+      "Bundesgesetz",
+      "Deutsches Gesetz",
+      "Grundgesetz"
+    ],
     "answerIndex": 3,
     "explanation": "Das Grundgesetz ist die Verfassung der Bundesrepublik Deutschland und wurde 1949 verabschiedet."
   },
@@ -69,7 +81,12 @@
     "id": "q007",
     "category": "Politics",
     "question": "Welches Recht gehört zu den Grundrechten, die nach der deutschen Verfassung garantiert werden? Das Recht auf …",
-    "options": ["Glaubens- und Gewissensfreiheit", "Unterhaltung", "Arbeit", "Wohnung"],
+    "options": [
+      "Glaubens- und Gewissensfreiheit",
+      "Unterhaltung",
+      "Arbeit",
+      "Wohnung"
+    ],
     "answerIndex": 0,
     "explanation": "Die Glaubens- und Gewissensfreiheit ist ein im Grundgesetz garantiertes Grundrecht (Artikel 4)."
   },
@@ -90,7 +107,12 @@
     "id": "q009",
     "category": "Politics",
     "question": "Welches Grundrecht gilt in Deutschland nur für Ausländerinnen/Ausländer? Das Grundrecht auf …",
-    "options": ["Schutz der Familie", "Menschenwürde", "Asyl", "Meinungsfreiheit"],
+    "options": [
+      "Schutz der Familie",
+      "Menschenwürde",
+      "Asyl",
+      "Meinungsfreiheit"
+    ],
     "answerIndex": 2,
     "explanation": "Das Asylrecht gilt nur für Ausländer, da deutsche Staatsangehörige bereits Schutz durch ihre Staatsangehörigkeit haben."
   },
@@ -98,7 +120,12 @@
     "id": "q010",
     "category": "Law",
     "question": "Was ist mit dem deutschen Grundgesetz vereinbar?",
-    "options": ["die Prügelstrafe", "die Folter", "die Todesstrafe", "die Geldstrafe"],
+    "options": [
+      "die Prügelstrafe",
+      "die Folter",
+      "die Todesstrafe",
+      "die Geldstrafe"
+    ],
     "answerIndex": 3,
     "explanation": "Geldstrafen sind rechtmäßige Sanktionen im deutschen Rechtssystem. Körperstrafen und Todesstrafe sind verfassungswidrig."
   },
@@ -106,7 +133,12 @@
     "id": "q011",
     "category": "Politics",
     "question": "Wie wird die Verfassung der Bundesrepublik Deutschland genannt?",
-    "options": ["Grundgesetz", "Bundesverfassung", "Gesetzbuch", "Verfassungsvertrag"],
+    "options": [
+      "Grundgesetz",
+      "Bundesverfassung",
+      "Gesetzbuch",
+      "Verfassungsvertrag"
+    ],
     "answerIndex": 0,
     "explanation": "Die deutsche Verfassung heißt 'Grundgesetz' und wurde 1949 verabschiedet."
   },
@@ -153,7 +185,12 @@
     "id": "q015",
     "category": "Politics",
     "question": "Was verbietet das deutsche Grundgesetz?",
-    "options": ["Militärdienst", "Zwangsarbeit", "freie Berufswahl", "Arbeit im Ausland"],
+    "options": [
+      "Militärdienst",
+      "Zwangsarbeit",
+      "freie Berufswahl",
+      "Arbeit im Ausland"
+    ],
     "answerIndex": 1,
     "explanation": "Das Grundgesetz verbietet Zwangsarbeit explizit. Jeder hat das Recht auf freie Berufswahl."
   },
@@ -213,7 +250,12 @@
     "id": "q020",
     "category": "Politics",
     "question": "Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann …",
-    "options": ["tolerant.", "rechtsstaatlich orientiert.", "gesetzestreu.", "verfassungswidrig."],
+    "options": [
+      "tolerant.",
+      "rechtsstaatlich orientiert.",
+      "gesetzestreu.",
+      "verfassungswidrig."
+    ],
     "answerIndex": 3,
     "explanation": "Parteien, die die demokratische Grundordnung abschaffen wollen, sind verfassungswidrig und können verboten werden."
   },
@@ -259,7 +301,12 @@
     "id": "q025",
     "category": "Geography",
     "question": "Was ist kein Bundesland der Bundesrepublik Deutschland?",
-    "options": ["Elsass-Lothringen", "Nordrhein-Westfalen", "Mecklenburg-Vorpommern", "Sachsen-Anhalt"],
+    "options": [
+      "Elsass-Lothringen",
+      "Nordrhein-Westfalen",
+      "Mecklenburg-Vorpommern",
+      "Sachsen-Anhalt"
+    ],
     "answerIndex": 0,
     "explanation": "Elsass-Lothringen gehört zu Frankreich, nicht zu Deutschland."
   },
@@ -280,7 +327,12 @@
     "id": "q027",
     "category": "Politics",
     "question": "Deutschland ist …",
-    "options": ["ein sozialistischer Staat.", "ein Bundesstaat.", "eine Diktatur.", "eine Monarchie."],
+    "options": [
+      "ein sozialistischer Staat.",
+      "ein Bundesstaat.",
+      "eine Diktatur.",
+      "eine Monarchie."
+    ],
     "answerIndex": 1,
     "explanation": "Deutschland ist ein föderaler Bundesstaat mit 16 Bundesländern."
   },
@@ -288,7 +340,12 @@
     "id": "q028",
     "category": "Politics",
     "question": "Wer wählt in Deutschland die Abgeordneten zum Bundestag?",
-    "options": ["das Militär", "die Wirtschaft", "das wahlberechtigte Volk", "die Verwaltung"],
+    "options": [
+      "das Militär",
+      "die Wirtschaft",
+      "das wahlberechtigte Volk",
+      "die Verwaltung"
+    ],
     "answerIndex": 2,
     "explanation": "Die Bundestagsabgeordneten werden vom wahlberechtigten Volk in freien, geheimen und direkten Wahlen gewählt."
   },
@@ -304,7 +361,12 @@
     "id": "q030",
     "category": "Politics",
     "question": "Was ist kein Merkmal unserer Demokratie?",
-    "options": ["regelmäßige Wahlen", "Pressezensur", "Meinungsfreiheit", "verschiedene Parteien"],
+    "options": [
+      "regelmäßige Wahlen",
+      "Pressezensur",
+      "Meinungsfreiheit",
+      "verschiedene Parteien"
+    ],
     "answerIndex": 1,
     "explanation": "Pressezensur widerspricht den demokratischen Grundprinzipien. In einer Demokratie herrscht Pressefreiheit."
   },
@@ -341,7 +403,12 @@
     "id": "q034",
     "category": "Politics",
     "question": "Was ist Deutschland nicht?",
-    "options": ["eine Demokratie", "ein Rechtsstaat", "eine Monarchie", "ein Sozialstaat"],
+    "options": [
+      "eine Demokratie",
+      "ein Rechtsstaat",
+      "eine Monarchie",
+      "ein Sozialstaat"
+    ],
     "answerIndex": 2,
     "explanation": "Deutschland ist eine Republik, keine Monarchie. Es gibt keinen König oder Kaiser."
   },
@@ -349,7 +416,12 @@
     "id": "q035",
     "category": "Politics",
     "question": "Womit finanziert der deutsche Staat die Sozialversicherung?",
-    "options": ["Kirchensteuer", "Sozialabgaben", "Spendengeldern", "Vereinsbeiträgen"],
+    "options": [
+      "Kirchensteuer",
+      "Sozialabgaben",
+      "Spendengeldern",
+      "Vereinsbeiträgen"
+    ],
     "answerIndex": 1,
     "explanation": "Die Sozialversicherung wird hauptsächlich durch Beiträge von Arbeitnehmern und Arbeitgebern finanziert."
   },
@@ -383,7 +455,12 @@
     "id": "q038",
     "category": "Politics",
     "question": "Die Bundesrepublik Deutschland ist ein demokratischer und sozialer …",
-    "options": ["Staatenverbund.", "Bundesstaat.", "Staatenbund.", "Zentralstaat."],
+    "options": [
+      "Staatenverbund.",
+      "Bundesstaat.",
+      "Staatenbund.",
+      "Zentralstaat."
+    ],
     "answerIndex": 1,
     "explanation": "Deutschland ist ein Bundesstaat - die Länder haben eigene Kompetenzen, aber der Bund hat die Oberhoheit."
   },
@@ -412,5 +489,1713 @@
     ],
     "answerIndex": 1,
     "explanation": "Die deutsche Nationalhymne beginnt mit 'Einigkeit und Recht und Freiheit' (dritte Strophe des Deutschlandlieds)."
+  },
+  {
+    "id": "q041",
+    "category": "Politics",
+    "question": "Warum gibt es in einer Demokratie mehr als eine Partei?",
+    "options": [
+      "weil dadurch die unterschiedlichen Meinungen der Bürgerinnen und Bürger vertreten werden",
+      "damit Bestechung in der Politik begrenzt wird",
+      "um politische Demonstrationen zu verhindern",
+      "um wirtschaftlichen Wettbewerb anzuregen"
+    ],
+    "answerIndex": 0,
+    "explanation": "Mehrere Parteien sind notwendig, um die Vielfalt der politischen Meinungen in einer Demokratie widerzuspiegeln."
+  },
+  {
+    "id": "q042",
+    "category": "Politics",
+    "question": "Wer beschließt in Deutschland ein neues Gesetz?",
+    "options": [
+      "die Regierung",
+      "das Parlament",
+      "die Gerichte",
+      "die Polizei"
+    ],
+    "answerIndex": 1,
+    "explanation": "Neue Gesetze werden in Deutschland vom Parlament (Bundestag und Bundesrat) beschlossen."
+  },
+  {
+    "id": "q043",
+    "category": "Politics",
+    "question": "Wann kann in Deutschland eine Partei verboten werden?",
+    "options": [
+      "wenn ihr Wahlkampf zu teuer ist",
+      "wenn sie gegen die Verfassung kämpft",
+      "wenn sie Kritik am Staatsoberhaupt äußert",
+      "wenn ihr Programm eine neue Richtung vorschlägt"
+    ],
+    "answerIndex": 1,
+    "explanation": "Eine Partei kann vom Bundesverfassungsgericht verboten werden, wenn sie sich aktiv gegen die freiheitlich-demokratische Grundordnung richtet."
+  },
+  {
+    "id": "q044",
+    "category": "Politics",
+    "question": "Wen kann man als Bürgerin/Bürger in Deutschland nicht direkt wählen?",
+    "options": [
+      "Abgeordnete des EU-Parlaments",
+      "Die Bundespräsidentin/den Bundespräsidenten",
+      "Landtagsabgeordnete",
+      "Bundestagsabgeordnete"
+    ],
+    "answerIndex": 1,
+    "explanation": "Die Bundespräsidentin/der Bundespräsident wird nicht direkt vom Volk, sondern von der Bundesversammlung gewählt."
+  },
+  {
+    "id": "q045",
+    "category": "Politics",
+    "question": "Zu welcher Versicherung gehört die Pflegeversicherung?",
+    "options": [
+      "Sozialversicherung",
+      "Unfallversicherung",
+      "Hausratsversicherung",
+      "Haftpflicht- und Feuerversicherung"
+    ],
+    "answerIndex": 0,
+    "explanation": "Die Pflegeversicherung ist ein gesetzlicher Zweig der Sozialversicherung und soll die finanzielle Belastung im Pflegefall abfedern."
+  },
+  {
+    "id": "q046",
+    "category": "Politics",
+    "question": "Der deutsche Staat hat viele Aufgaben. Welche Aufgabe gehört dazu?",
+    "options": [
+      "Er baut Straßen und Schulen.",
+      "Er verkauft Lebensmittel und Kleidung.",
+      "Er versorgt alle Einwohnerinnen und Einwohner kostenlos mit Zeitungen.",
+      "Er produziert Autos und Busse."
+    ],
+    "answerIndex": 0,
+    "explanation": "Der Bau und die Instandhaltung von Infrastruktur wie Straßen und Schulen sind Kernaufgaben des Staates."
+  },
+  {
+    "id": "q047",
+    "category": "Politics",
+    "question": "Der deutsche Staat hat viele Aufgaben. Welche Aufgabe gehört nicht dazu?",
+    "options": [
+      "Er bezahlt für alle Staatsangehörigen Urlaubsreisen.",
+      "Er zahlt Kindergeld.",
+      "Er unterstützt Museen.",
+      "Er fördert Sportlerinnen und Sportler."
+    ],
+    "answerIndex": 0,
+    "explanation": "Urlaubsreisen zu bezahlen gehört nicht zu den Aufgaben des Staates. Er unterstützt aber durch Kindergeld, Kultur- und Sportförderung."
+  },
+  {
+    "id": "q048",
+    "category": "Politics",
+    "question": "Welches Organ gehört nicht zu den Verfassungsorganen Deutschlands?",
+    "options": [
+      "der Bundesrat",
+      "die Bundespräsidentin/der Bundespräsident",
+      "die Bürgerversammlung",
+      "die Regierung"
+    ],
+    "answerIndex": 2,
+    "explanation": "Verfassungsorgane sind der Bundestag, der Bundesrat, der Bundespräsident, die Bundesregierung und das Bundesverfassungsgericht. Eine Bürgerversammlung ist kein Verfassungsorgan."
+  },
+  {
+    "id": "q049",
+    "category": "Politics",
+    "question": "Wer bestimmt in Deutschland die Schulpolitik?",
+    "options": [
+      "die Lehrer und Lehrerinnen",
+      "die Bundesländer",
+      "das Familienministerium",
+      "die Universitäten"
+    ],
+    "answerIndex": 1,
+    "explanation": "Die Schulpolitik liegt in Deutschland in der Kompetenz der einzelnen Bundesländer."
+  },
+  {
+    "id": "q050",
+    "category": "Politics",
+    "question": "Die Wirtschaftsform in Deutschland nennt man …",
+    "options": [
+      "freie Zentralwirtschaft.",
+      "soziale Marktwirtschaft.",
+      "gelenkte Zentralwirtschaft.",
+      "Planwirtschaft."
+    ],
+    "answerIndex": 1,
+    "explanation": "Die soziale Marktwirtschaft ist die Wirtschaftsordnung in Deutschland, die die freie Marktwirtschaft mit sozialen Aspekten verbindet."
+  },
+  {
+    "id": "q051",
+    "category": "Law",
+    "question": "Zu einem demokratischen Rechtsstaat gehört es nicht, dass …",
+    "options": [
+      "Menschen sich kritisch über die Regierung äußern können.",
+      "Bürger friedlich demonstrieren gehen dürfen.",
+      "Menschen von einer Privatpolizei ohne Grund verhaftet werden.",
+      "jemand ein Verbrechen begeht und deshalb verhaftet wird."
+    ],
+    "answerIndex": 2,
+    "explanation": "Die willkürliche Verhaftung durch eine Privatpolizei widerspricht dem Rechtsstaatsprinzip. Nur staatliche Organe wie die Polizei dürfen jemanden aufgrund eines Haftbefehls verhaften."
+  },
+  {
+    "id": "q052",
+    "category": "Politics",
+    "question": "Was bedeutet 'Volkssouveränität'? Alle Staatsgewalt geht vom ...",
+    "options": [
+      "Volke aus.",
+      "Bundestag aus.",
+      "preußischen König aus.",
+      "Bundesverfassungsgericht aus."
+    ],
+    "answerIndex": 0,
+    "explanation": "Volkssouveränität ist ein demokratisches Prinzip, das besagt, dass die Staatsgewalt vom Volk ausgeht."
+  },
+  {
+    "id": "q053",
+    "category": "Law",
+    "question": "Was bedeutet 'Rechtsstaat' in Deutschland?",
+    "options": [
+      "Der Staat hat Recht.",
+      "Es gibt nur rechte Parteien.",
+      "Die Bürgerinnen und Bürger entscheiden über Gesetze.",
+      "Der Staat muss die Gesetze einhalten."
+    ],
+    "answerIndex": 3,
+    "explanation": "Im Rechtsstaat ist der Staat selbst an Recht und Gesetz gebunden."
+  },
+  {
+    "id": "q054",
+    "category": "Politics",
+    "question": "Was ist keine staatliche Gewalt in Deutschland?",
+    "options": ["Legislative", "Judikative", "Exekutive", "Direktive"],
+    "answerIndex": 3,
+    "explanation": "Die drei Staatsgewalten sind Legislative (Gesetzgebung), Exekutive (ausführende Gewalt) und Judikative (Rechtsprechung). 'Direktive' ist keine staatliche Gewalt."
+  },
+  {
+    "id": "q055",
+    "category": "Politics",
+    "question": "Was zeigt dieses Bild?",
+    "image": "/images/bundestag.jpg",
+    "options": [
+      "den Bundestagssitz in Berlin",
+      "das Bundesverfassungsgericht in Karlsruhe",
+      "das Bundesratsgebäude in Berlin",
+      "das Bundeskanzleramt in Berlin"
+    ],
+    "answerIndex": 0,
+    "explanation": "Das Bild zeigt das Reichstagsgebäude in Berlin, den Sitz des Deutschen Bundestages."
+  },
+  {
+    "id": "q056",
+    "category": "Politics",
+    "question": "Welches Amt gehört in Deutschland zur Gemeindeverwaltung?",
+    "options": ["Pfarramt", "Ordnungsamt", "Finanzamt", "Auswärtiges Amt"],
+    "answerIndex": 1,
+    "explanation": "Das Ordnungsamt ist eine kommunale Behörde und gehört zur Gemeindeverwaltung."
+  },
+  {
+    "id": "q057",
+    "category": "Politics",
+    "question": "Wer wird meistens zur Präsidentin/zum Präsidenten des Deutschen Bundestages gewählt?",
+    "options": [
+      "die/der älteste Abgeordnete im Parlament",
+      "die Ministerpräsidentin/der Ministerpräsident des größten Bundeslandes",
+      "eine ehemalige Bundeskanzlerin/ein ehemaliger Bundeskanzler",
+      "eine Abgeordnete/ein Abgeordneter der stärksten Fraktion"
+    ],
+    "answerIndex": 3,
+    "explanation": "Normalerweise wird der Bundestagspräsident aus den Reihen der stärksten Fraktion gewählt."
+  },
+  {
+    "id": "q058",
+    "category": "Politics",
+    "question": "Wer ernennt in Deutschland die Ministerinnen/die Minister der Bundesregierung?",
+    "options": [
+      "die Präsidentin/der Präsident des Bundesverfassungsgerichtes",
+      "die Bundespräsidentin/der Bundespräsident",
+      "die Bundesratspräsidentin/der Bundesratspräsident",
+      "die Bundestagspräsidentin/der Bundestagspräsident"
+    ],
+    "answerIndex": 1,
+    "explanation": "Die Bundespräsidentin/der Bundespräsident ernennt die Bundesminister auf Vorschlag des Bundeskanzlers."
+  },
+  {
+    "id": "q059",
+    "category": "History",
+    "question": "Vor wie vielen Jahren gab es erstmals eine jüdische Gemeinde auf dem Gebiet des heutigen Deutschlands?",
+    "options": [
+      "vor etwa 300 Jahren",
+      "vor etwa 700 Jahren",
+      "vor etwa 1150 Jahren",
+      "vor etwa 1700 Jahren"
+    ],
+    "answerIndex": 3,
+    "explanation": "Jüdische Gemeinden in Deutschland existieren seit der Römerzeit, der erste schriftliche Beleg stammt aus dem Jahr 321 nach Christus."
+  },
+  {
+    "id": "q060",
+    "category": "Politics",
+    "question": "In Deutschland gehören der Bundestag und der Bundesrat zur …",
+    "options": ["Exekutive.", "Legislative.", "Direktive.", "Judikative."],
+    "answerIndex": 1,
+    "explanation": "Bundestag und Bundesrat sind die gesetzgebenden Organe (Legislative)."
+  },
+  {
+    "id": "q061",
+    "category": "Politics",
+    "question": "Was bedeutet 'Volkssouveränität'?",
+    "options": [
+      "Die Königin/der König herrscht über das Volk.",
+      "Das Bundesverfassungsgericht steht über der Verfassung.",
+      "Die Interessenverbände üben die Souveränität zusammen mit der Regierung aus.",
+      "Die Staatsgewalt geht vom Volke aus."
+    ],
+    "answerIndex": 3,
+    "explanation": "Volkssouveränität ist das Prinzip, dass die oberste Gewalt im Staat vom Volk ausgeht."
+  },
+  {
+    "id": "q062",
+    "category": "Politics",
+    "question": "Wenn das Parlament eines deutschen Bundeslandes gewählt wird, nennt man das …",
+    "options": ["Kommunalwahl", "Landtagswahl", "Europawahl", "Bundestagswahl"],
+    "answerIndex": 1,
+    "explanation": "Das Parlament auf Landesebene heißt Landtag, daher wird die Wahl als Landtagswahl bezeichnet."
+  },
+  {
+    "id": "q063",
+    "category": "Politics",
+    "question": "Was gehört in Deutschland nicht zur Exekutive?",
+    "options": [
+      "die Polizei",
+      "die Gerichte",
+      "das Finanzamt",
+      "die Ministerien"
+    ],
+    "answerIndex": 1,
+    "explanation": "Die Gerichte gehören zur Judikative, während Polizei, Finanzamt und Ministerien zur Exekutive (ausführende Gewalt) gehören."
+  },
+  {
+    "id": "q064",
+    "category": "Politics",
+    "question": "Die Bundesrepublik Deutschland ist heute gegliedert in …",
+    "options": [
+      "vier Besatzungszonen.",
+      "einen Oststaat und einen Weststaat.",
+      "16 Kantone.",
+      "Bund, Länder und Kommunen."
+    ],
+    "answerIndex": 3,
+    "explanation": "Deutschland ist föderal aufgebaut und besteht aus drei Ebenen: dem Bund, den Ländern und den Kommunen."
+  },
+  {
+    "id": "q065",
+    "category": "Politics",
+    "question": "Es gehört nicht zu den Aufgaben des Deutschen Bundestages, …",
+    "options": [
+      "Gesetze zu entwerfen.",
+      "die Bundesregierung zu kontrollieren.",
+      "die Bundeskanzlerin/den Bundeskanzler zu wählen.",
+      "das Bundeskabinett zu bilden."
+    ],
+    "answerIndex": 3,
+    "explanation": "Das Bundeskabinett wird vom Bundeskanzler gebildet und nicht vom Bundestag."
+  },
+  {
+    "id": "q066",
+    "category": "History",
+    "question": "Welche Städte haben die größten jüdischen Gemeinden in Deutschland?",
+    "options": [
+      "Berlin und München",
+      "Hamburg und Essen",
+      "Nürnberg und Stuttgart",
+      "Worms und Speyer"
+    ],
+    "answerIndex": 0,
+    "explanation": "Die größten jüdischen Gemeinden in Deutschland gibt es in Berlin und München."
+  },
+  {
+    "id": "q067",
+    "category": "Politics",
+    "question": "Was ist in Deutschland vor allem eine Aufgabe der Bundesländer?",
+    "options": [
+      "Verteidigungspolitik",
+      "Außenpolitik",
+      "Wirtschaftspolitik",
+      "Schulpolitik"
+    ],
+    "answerIndex": 3,
+    "explanation": "Die Schulpolitik fällt in die Zuständigkeit der Bundesländer."
+  },
+  {
+    "id": "q068",
+    "category": "Politics",
+    "question": "Warum kontrolliert der Staat in Deutschland das Schulwesen?",
+    "options": [
+      "weil es in Deutschland nur staatliche Schulen gibt",
+      "weil alle Schülerinnen und Schüler einen Schulabschluss haben müssen",
+      "weil es in den Bundesländern verschiedene Schulen gibt",
+      "weil es nach dem Grundgesetz seine Aufgabe ist"
+    ],
+    "answerIndex": 3,
+    "explanation": "Der Staat hat nach dem Grundgesetz die Aufsicht über das gesamte Schulwesen."
+  },
+  {
+    "id": "q069",
+    "category": "Politics",
+    "question": "Die Bundesrepublik Deutschland hat einen dreistufigen Verwaltungsaufbau. Wie heißt die unterste politische Stufe?",
+    "options": ["Stadträte", "Landräte", "Gemeinden", "Bezirksämter"],
+    "answerIndex": 2,
+    "explanation": "Die unterste politische Stufe im Verwaltungsaufbau Deutschlands sind die Gemeinden."
+  },
+  {
+    "id": "q070",
+    "category": "Politics",
+    "question": "Der deutsche Bundespräsident Gustav Heinemann gibt Helmut Schmidt 1974 die Ernennungsurkunde zum deutschen Bundeskanzler. Was gehört zu den Aufgaben der deutschen Bundespräsidentin/des deutschen Bundespräsidenten?",
+    "image": "/images/heinemann_schmidt.jpg",
+    "options": [
+      "Sie/Er führt die Regierungsgeschäfte.",
+      "Sie/Er kontrolliert die Regierungspartei.",
+      "Sie/Er wählt die Ministerinnen/Minister aus.",
+      "Sie/Er schlägt die Kanzlerin/den Kanzler zur Wahl vor."
+    ],
+    "answerIndex": 3,
+    "explanation": "Der Bundespräsident schlägt dem Bundestag den Kanzler zur Wahl vor."
+  },
+  {
+    "id": "q071",
+    "category": "Politics",
+    "question": "Wo hält sich die deutsche Bundeskanzlerin/der deutsche Bundeskanzler am häufigsten auf? Am häufigsten ist sie/er …",
+    "options": [
+      "in Bonn, weil sich dort das Bundeskanzleramt und der Bundestag befinden.",
+      "auf Schloss Meseberg, dem Gästehaus der Bundesregierung, um Staatsgäste zu empfangen.",
+      "auf Schloss Bellevue, dem Amtssitz der Bundespräsidentin/des Bundespräsidenten, um Staatsgäste zu empfangen.",
+      "in Berlin, weil sich dort das Bundeskanzleramt und der Bundestag befinden."
+    ],
+    "answerIndex": 3,
+    "explanation": "Der Hauptsitz der Bundesregierung und des Bundestages ist Berlin."
+  },
+  {
+    "id": "q072",
+    "category": "Politics",
+    "question": "Wie heißt die jetzige Bundeskanzlerin/der jetzige Bundeskanzler von Deutschland?",
+    "options": [
+      "Gerhard Schröder",
+      "Angela Merkel",
+      "Ursula von der Leyen",
+      "Friedrich Merz"
+    ],
+    "answerIndex": 3,
+    "explanation": "Friedrich Merz ist der aktuelle Bundeskanzler von Deutschland."
+  },
+  {
+    "id": "q073",
+    "category": "Politics",
+    "question": "Die beiden größten Fraktionen im Deutschen Bundestag heißen zurzeit …",
+    "options": [
+      "CDU/CSU und AfD.",
+      "Die Linke und Bündnis 90/Die Grünen.",
+      "Bündnis 90/Die Grünen und SPD.",
+      "Die Linke und CDU/CSU."
+    ],
+    "answerIndex": 0,
+    "explanation": "Die größten Fraktionen im Deutschen Bundestag sind CDU/CSU und AfD."
+  },
+  {
+    "id": "q074",
+    "category": "Politics",
+    "question": "Wie heißt das Parlament für ganz Deutschland?",
+    "options": [
+      "Bundesversammlung",
+      "Volkskammer",
+      "Bundestag",
+      "Bundesgerichtshof"
+    ],
+    "answerIndex": 2,
+    "explanation": "Der Bundestag ist das deutsche Parlament auf Bundesebene."
+  },
+  {
+    "id": "q075",
+    "category": "Politics",
+    "question": "Wie heißt Deutschlands heutiges Staatsoberhaupt?",
+    "options": [
+      "Frank-Walter Steinmeier",
+      "Bärbel Bas",
+      "Bodo Ramelow",
+      "Joachim Gauck"
+    ],
+    "answerIndex": 0,
+    "explanation": "Frank-Walter Steinmeier ist das Staatsoberhaupt der Bundesrepublik Deutschland."
+  },
+  {
+    "id": "q076",
+    "category": "Politics",
+    "question": "Was bedeutet die Abkürzung CDU in Deutschland?",
+    "options": [
+      "Christliche Deutsche Union",
+      "Club Deutscher Unternehmer",
+      "Christlicher Deutscher Umweltschutz",
+      "Christlich Demokratische Union"
+    ],
+    "answerIndex": 3,
+    "explanation": "CDU steht für Christlich Demokratische Union."
+  },
+  {
+    "id": "q077",
+    "category": "Politics",
+    "question": "Was ist die Bundeswehr?",
+    "options": [
+      "die deutsche Polizei",
+      "ein deutscher Hafen",
+      "eine deutsche Bürgerinitiative",
+      "die deutsche Armee"
+    ],
+    "answerIndex": 3,
+    "explanation": "Die Bundeswehr ist die Armee Deutschlands."
+  },
+  {
+    "id": "q078",
+    "category": "Politics",
+    "question": "Was bedeutet die Abkürzung SPD?",
+    "options": [
+      "Sozialistische Partei Deutschlands",
+      "Sozialpolitische Partei Deutschlands",
+      "Sozialdemokratische Partei Deutschlands",
+      "Sozialgerechte Partei Deutschlands"
+    ],
+    "answerIndex": 2,
+    "explanation": "SPD steht für Sozialdemokratische Partei Deutschlands."
+  },
+  {
+    "id": "q079",
+    "category": "Politics",
+    "question": "Was bedeutet die Abkürzung FDP in Deutschland?",
+    "options": [
+      "Friedliche Demonstrative Partei",
+      "Freie Deutschland Partei",
+      "Führende Demokratische Partei",
+      "Freie Demokratische Partei"
+    ],
+    "answerIndex": 3,
+    "explanation": "FDP steht für Freie Demokratische Partei."
+  },
+  {
+    "id": "q080",
+    "category": "Law",
+    "question": "Welches Gericht in Deutschland ist zuständig für die Auslegung des Grundgesetzes?",
+    "options": [
+      "Oberlandesgericht",
+      "Amtsgericht",
+      "Bundesverfassungsgericht",
+      "Verwaltungsgericht"
+    ],
+    "answerIndex": 2,
+    "explanation": "Das Bundesverfassungsgericht ist das höchste Gericht in Deutschland und zuständig für die Auslegung des Grundgesetzes."
+  },
+  {
+    "id": "q081",
+    "category": "Politics",
+    "question": "Wer wählt die Bundeskanzlerin/den Bundeskanzler in Deutschland?",
+    "options": [
+      "der Bundesrat",
+      "die Bundesversammlung",
+      "das Volk",
+      "der Bundestag"
+    ],
+    "answerIndex": 3,
+    "explanation": "Der Bundestag wählt den Bundeskanzler."
+  },
+  {
+    "id": "q082",
+    "category": "Politics",
+    "question": "Wer leitet das deutsche Bundeskabinett?",
+    "options": [
+      "die Bundestagspräsidentin/der Bundestagspräsident",
+      "die Bundespräsidentin/der Bundespräsident",
+      "die Bundesratspräsidentin/der Bundesratspräsident",
+      "die Bundeskanzlerin/der Bundeskanzler"
+    ],
+    "answerIndex": 3,
+    "explanation": "Der Bundeskanzler leitet das Bundeskabinett, das aus den Bundesministern besteht."
+  },
+  {
+    "id": "q083",
+    "category": "Politics",
+    "question": "Wer wählt die deutsche Bundeskanzlerin/den deutschen Bundeskanzler?",
+    "options": [
+      "das Volk",
+      "die Bundesversammlung",
+      "der Bundestag",
+      "die Bundesregierung"
+    ],
+    "answerIndex": 2,
+    "explanation": "Der Bundeskanzler wird vom Bundestag gewählt."
+  },
+  {
+    "id": "q084",
+    "category": "Politics",
+    "question": "Welche Hauptaufgabe hat die deutsche Bundespräsidentin/der deutsche Bundespräsident? Sie/Er …",
+    "options": [
+      "regiert das Land.",
+      "entwirft die Gesetze.",
+      "repräsentiert das Land.",
+      "überwacht die Einhaltung der Gesetze."
+    ],
+    "answerIndex": 2,
+    "explanation": "Die Hauptaufgabe des Bundespräsidenten ist die repräsentative Vertretung Deutschlands nach innen und außen."
+  },
+  {
+    "id": "q085",
+    "category": "Politics",
+    "question": "Wer bildet den deutschen Bundesrat?",
+    "options": [
+      "die Abgeordneten des Bundestages",
+      "die Ministerinnen und Minister der Bundesregierung",
+      "die Regierungsvertreter der Bundesländer",
+      "die Parteimitglieder"
+    ],
+    "answerIndex": 2,
+    "explanation": "Der Bundesrat setzt sich aus Mitgliedern der Landesregierungen zusammen."
+  },
+  {
+    "id": "q086",
+    "category": "Politics",
+    "question": "Wer wählt in Deutschland die Bundespräsidentin/den Bundespräsidenten?",
+    "options": [
+      "die Bundesversammlung",
+      "der Bundesrat",
+      "das Bundesparlament",
+      "das Bundesverfassungsgericht"
+    ],
+    "answerIndex": 0,
+    "explanation": "Die Bundespräsidentin/der Bundespräsident wird von der Bundesversammlung gewählt, die sich aus Bundestagsabgeordneten und Vertretern der Länder zusammensetzt."
+  },
+  {
+    "id": "q087",
+    "category": "Politics",
+    "question": "Wer ist das Staatsoberhaupt der Bundesrepublik Deutschland?",
+    "options": [
+      "die Bundeskanzlerin/der Bundeskanzler",
+      "die Bundespräsidentin/der Bundespräsident",
+      "die Bundesratspräsidentin/der Bundesratspräsident",
+      "die Bundestagspräsidentin/der Bundestagspräsident"
+    ],
+    "answerIndex": 1,
+    "explanation": "Das Staatsoberhaupt Deutschlands ist die Bundespräsidentin/der Bundespräsident."
+  },
+  {
+    "id": "q088",
+    "category": "Politics",
+    "question": "Die parlamentarische Opposition im Deutschen Bundestag …",
+    "options": [
+      "kontrolliert die Regierung.",
+      "entscheidet, wer Bundesministerin/Bundesminister wird.",
+      "bestimmt, wer im Bundesrat sitzt.",
+      "schlägt die Regierungschefinnen/Regierungschefs der Länder vor."
+    ],
+    "answerIndex": 0,
+    "explanation": "Die Hauptaufgabe der Opposition ist die Kontrolle der Regierung."
+  },
+  {
+    "id": "q089",
+    "category": "Politics",
+    "question": "Wie nennt man in Deutschland die Vereinigung von Abgeordneten einer Partei im Parlament?",
+    "options": ["Verband", "Ältestenrat", "Fraktion", "Opposition"],
+    "answerIndex": 2,
+    "explanation": "Eine Fraktion ist eine Gruppe von Abgeordneten, die derselben Partei angehören."
+  },
+  {
+    "id": "q090",
+    "category": "Politics",
+    "question": "Die deutschen Bundesländer wirken an der Gesetzgebung des Bundes mit durch …",
+    "options": [
+      "den Bundesrat.",
+      "die Bundesversammlung.",
+      "den Bundestag.",
+      "die Bundesregierung."
+    ],
+    "answerIndex": 0,
+    "explanation": "Der Bundesrat vertritt die Interessen der Länder bei der Gesetzgebung des Bundes."
+  },
+  {
+    "id": "q091",
+    "category": "Politics",
+    "question": "In Deutschland kann ein Regierungswechsel in einem Bundesland Auswirkungen auf die Bundespolitik haben. Das Regieren wird …",
+    "options": [
+      "schwieriger, wenn sich dadurch die Mehrheit im Bundestag ändert.",
+      "leichter, wenn dadurch neue Parteien in den Bundesrat kommen.",
+      "schwieriger, wenn dadurch die Mehrheit im Bundesrat verändert wird.",
+      "leichter, wenn es sich um ein reiches Bundesland handelt."
+    ],
+    "answerIndex": 2,
+    "explanation": "Ein Regierungswechsel in einem Bundesland kann die Mehrheitsverhältnisse im Bundesrat beeinflussen und dadurch die Bundespolitik erschweren."
+  },
+  {
+    "id": "q092",
+    "category": "Politics",
+    "question": "Was bedeutet die Abkürzung CSU in Deutschland?",
+    "options": [
+      "Christlich Sichere Union",
+      "Christlich Süddeutsche Union",
+      "Christlich Sozialer Unternehmerverband",
+      "Christlich Soziale Union"
+    ],
+    "answerIndex": 3,
+    "explanation": "CSU steht für Christlich Soziale Union, die bayerische Schwesterpartei der CDU."
+  },
+  {
+    "id": "q093",
+    "category": "Politics",
+    "question": "Je mehr 'Zweitstimmen' eine Partei bei einer Bundestagswahl bekommt, desto …",
+    "options": [
+      "weniger Erststimmen kann sie haben.",
+      "mehr Direktkandidaten der Partei ziehen ins Parlament ein.",
+      "größer ist das Risiko, eine Koalition bilden zu müssen.",
+      "mehr Sitze erhält die Partei im Parlament."
+    ],
+    "answerIndex": 3,
+    "explanation": "Die Zweitstimme ist entscheidend für die Sitzverteilung im Bundestag."
+  },
+  {
+    "id": "q094",
+    "category": "Politics",
+    "question": "Ab welchem Alter darf man in Deutschland an der Wahl zum Deutschen Bundestag teilnehmen?",
+    "options": ["16", "18", "21", "23"],
+    "answerIndex": 1,
+    "explanation": "Das Mindestalter für die Teilnahme an der Bundestagswahl ist 18 Jahre."
+  },
+  {
+    "id": "q095",
+    "category": "Education",
+    "question": "Was gilt für die meisten Kinder in Deutschland?",
+    "options": [
+      "Wahlpflicht",
+      "Schulpflicht",
+      "Schweigepflicht",
+      "Religionspflicht"
+    ],
+    "answerIndex": 1,
+    "explanation": "In Deutschland besteht für Kinder ab einem bestimmten Alter die Schulpflicht."
+  },
+  {
+    "id": "q096",
+    "category": "Law",
+    "question": "Wie kann jemand, der den Holocaust leugnet, bestraft werden?",
+    "options": [
+      "Kürzung sozialer Leistungen",
+      "bis zu 100 Sozialstunden",
+      "gar nicht, Holocaustleugnung ist erlaubt",
+      "mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe"
+    ],
+    "answerIndex": 3,
+    "explanation": "Die Leugnung des Holocaust ist in Deutschland eine Straftat und kann mit einer Geld- oder Freiheitsstrafe geahndet werden."
+  },
+  {
+    "id": "q097",
+    "category": "Economy",
+    "question": "Was bezahlt man in Deutschland automatisch, wenn man fest angestellt ist?",
+    "options": ["Sozialversicherung", "Sozialhilfe", "Kindergeld", "Wohngeld"],
+    "answerIndex": 0,
+    "explanation": "Fest Angestellte zahlen automatisch Beiträge zur Sozialversicherung (Kranken-, Pflege-, Renten-, Arbeitslosen- und Unfallversicherung)."
+  },
+  {
+    "id": "q098",
+    "category": "Politics",
+    "question": "Wenn Abgeordnete im Deutschen Bundestag ihre Fraktion wechseln, …",
+    "options": [
+      "dürfen sie nicht mehr an den Sitzungen des Parlaments teilnehmen.",
+      "kann die Regierung ihre Mehrheit verlieren.",
+      "muss die Bundespräsidentin/der Bundespräsident zuvor ihr/sein Einverständnis geben.",
+      "dürfen die Wählerinnen/Wähler dieser Abgeordneten noch einmal wählen."
+    ],
+    "answerIndex": 1,
+    "explanation": "Ein Fraktionswechsel kann die Mehrheit der Regierungsparteien im Parlament verändern."
+  },
+  {
+    "id": "q099",
+    "category": "Economy",
+    "question": "Wer bezahlt in Deutschland die Sozialversicherungen?",
+    "options": [
+      "Arbeitgeberinnen/Arbeitgeber und Arbeitnehmerinnen/Arbeitnehmer",
+      "nur Arbeitnehmerinnen/Arbeitnehmer",
+      "alle Staatsangehörigen",
+      "nur Arbeitgeberinnen/Arbeitgeber"
+    ],
+    "answerIndex": 0,
+    "explanation": "Sozialversicherungsbeiträge werden in Deutschland zur Hälfte von Arbeitgebern und Arbeitnehmern bezahlt."
+  },
+  {
+    "id": "q100",
+    "category": "Economy",
+    "question": "Was gehört nicht zur gesetzlichen Sozialversicherung?",
+    "options": [
+      "die Lebensversicherung",
+      "die gesetzliche Rentenversicherung",
+      "die Arbeitslosenversicherung",
+      "die Pflegeversicherung"
+    ],
+    "answerIndex": 0,
+    "explanation": "Die Lebensversicherung ist eine private Vorsorge und gehört nicht zur gesetzlichen Sozialversicherung."
+  },
+  {
+    "id": "q101",
+    "category": "Politics",
+    "question": "Gewerkschaften sind Interessenverbände der …",
+    "options": [
+      "Jugendlichen.",
+      "Arbeitnehmerinnen und Arbeitnehmer.",
+      "Rentnerinnen und Rentner.",
+      "Arbeitgeberinnen und Arbeitgeber."
+    ],
+    "answerIndex": 1,
+    "explanation": "Gewerkschaften vertreten die Interessen der Arbeitnehmer."
+  },
+  {
+    "id": "q102",
+    "category": "Culture",
+    "question": "Womit kann man in der Bundesrepublik Deutschland geehrt werden, wenn man auf politischem, wirtschaftlichem, kulturellem, geistigem oder sozialem Gebiet eine besondere Leistung erbracht hat? Mit dem …",
+    "options": [
+      "Bundesverdienstkreuz",
+      "Bundesadler",
+      "Vaterländischen Verdienstorden",
+      "Ehrentitel 'Held der Deutschen Demokratischen Republik'"
+    ],
+    "answerIndex": 0,
+    "explanation": "Das Bundesverdienstkreuz ist die höchste Anerkennung der Bundesrepublik Deutschland für Verdienste um das Gemeinwohl."
+  },
+  {
+    "id": "q103",
+    "category": "Politics",
+    "question": "Was wird in Deutschland als 'Ampelkoalition' bezeichnet? Die Zusammenarbeit …",
+    "options": [
+      "der Bundestagsfraktionen von CDU und CSU",
+      "von SPD, FDP und Bündnis 90/Die Grünen in einer Regierung",
+      "von CSU, Die LINKE und Bündnis 90/Die Grünen in einer Regierung",
+      "der Bundestagsfraktionen von CDU und SPD"
+    ],
+    "answerIndex": 1,
+    "explanation": "Eine Ampelkoalition besteht aus den Parteien, deren Farben den Farben einer Ampel entsprechen: Rot (SPD), Gelb (FDP) und Grün (Bündnis 90/Die Grünen)."
+  },
+  {
+    "id": "q104",
+    "category": "Law",
+    "question": "Eine Frau in Deutschland verliert ihre Arbeit. Was darf nicht der Grund für diese Entlassung sein?",
+    "options": [
+      "Die Frau ist lange krank und arbeitsunfähig.",
+      "Die Frau kam oft zu spät zur Arbeit.",
+      "Die Frau erledigt private Sachen während der Arbeitszeit.",
+      "Die Frau bekommt ein Kind und ihr Chef weiß das."
+    ],
+    "answerIndex": 3,
+    "explanation": "Der Kündigungsschutz für Schwangere ist gesetzlich geregelt. Die Schwangerschaft darf kein Grund für eine Kündigung sein."
+  },
+  {
+    "id": "q105",
+    "category": "Politics",
+    "question": "Was ist eine Aufgabe von Wahlhelferinnen/Wahlhelfern in Deutschland?",
+    "options": [
+      "Sie helfen alten Menschen bei der Stimmabgabe in der Wahlkabine.",
+      "Sie schreiben die Wahlbenachrichtigungen vor der Wahl.",
+      "Sie geben Zwischenergebnisse an die Medien weiter.",
+      "Sie zählen die Stimmen nach dem Ende der Wahl."
+    ],
+    "answerIndex": 3,
+    "explanation": "Wahlhelfer zählen die Stimmen nach der Wahl aus und sind für einen ordnungsgemäßen Ablauf zuständig."
+  },
+  {
+    "id": "q106",
+    "category": "Politics",
+    "question": "In Deutschland helfen ehrenamtliche Wahlhelferinnen und Wahlhelfer bei den Wahlen. Was ist eine Aufgabe von Wahlhelferinnen/Wahlhelfern?",
+    "options": [
+      "Sie helfen Kindern und alten Menschen beim Wählen.",
+      "Sie schreiben Karten und Briefe mit der Angabe des Wahllokals.",
+      "Sie geben Zwischenergebnisse an Journalisten weiter.",
+      "Sie zählen die Stimmen nach dem Ende der Wahl."
+    ],
+    "answerIndex": 3,
+    "explanation": "Die Stimmenauszählung nach der Wahl gehört zu den Aufgaben der Wahlhelfer."
+  },
+  {
+    "id": "q107",
+    "category": "Politics",
+    "question": "Für wie viele Jahre wird der Bundestag in Deutschland gewählt?",
+    "options": ["2 Jahre", "4 Jahre", "6 Jahre", "8 Jahre"],
+    "answerIndex": 1,
+    "explanation": "Der Bundestag wird für eine Legislaturperiode von vier Jahren gewählt."
+  },
+  {
+    "id": "q108",
+    "category": "Politics",
+    "question": "Bei einer Bundestagswahl in Deutschland darf jede/jeder wählen, die/der …",
+    "options": [
+      "in der Bundesrepublik Deutschland wohnt und wählen möchte.",
+      "Bürgerin/Bürger der Bundesrepublik Deutschland ist und mindestens 18 Jahre alt ist.",
+      "seit mindestens 3 Jahren in der Bundesrepublik Deutschland lebt.",
+      "Bürgerin/Bürger der Bundesrepublik Deutschland ist und mindestens 21 Jahre alt ist."
+    ],
+    "answerIndex": 1,
+    "explanation": "Wahlberechtigt sind deutsche Staatsbürger, die mindestens 18 Jahre alt sind."
+  },
+  {
+    "id": "q109",
+    "category": "Politics",
+    "question": "Wie oft gibt es normalerweise Bundestagswahlen in Deutschland?",
+    "options": [
+      "alle drei Jahre",
+      "alle vier Jahre",
+      "alle fünf Jahre",
+      "alle sechs Jahre"
+    ],
+    "answerIndex": 1,
+    "explanation": "Bundestagswahlen finden in der Regel alle vier Jahre statt."
+  },
+  {
+    "id": "q110",
+    "category": "Politics",
+    "question": "Für wie viele Jahre wird der Bundestag in Deutschland gewählt?",
+    "options": ["2 Jahre", "3 Jahre", "4 Jahre", "5 Jahre"],
+    "answerIndex": 2,
+    "explanation": "Die Wahlperiode des Bundestages beträgt vier Jahre."
+  },
+  {
+    "id": "q111",
+    "category": "Law",
+    "question": "Welche Handlungen mit Bezug auf den Staat Israel sind in Deutschland verboten?",
+    "options": [
+      "die Politik Israels öffentlich kritisieren",
+      "das Aufhängen einer israelischen Flagge auf dem Privatgrundstück",
+      "eine Diskussion über die Politik Israels",
+      "der öffentliche Aufruf zur Vernichtung Israels"
+    ],
+    "answerIndex": 3,
+    "explanation": "Öffentliche Aufrufe zu Gewalt oder zur Vernichtung von Völkern sind in Deutschland strafbar."
+  },
+  {
+    "id": "q112",
+    "category": "Politics",
+    "question": "Die Wahlen in Deutschland sind …",
+    "options": [
+      "speziell.",
+      "geheim.",
+      "berufsbezogen.",
+      "geschlechtsabhängig."
+    ],
+    "answerIndex": 1,
+    "explanation": "Wahlen in Deutschland sind geheim, das heißt, niemand erfährt, wen ein anderer gewählt hat."
+  },
+  {
+    "id": "q113",
+    "category": "Politics",
+    "question": "Wahlen in Deutschland gewinnt die Partei, die …",
+    "options": [
+      "die meisten Stimmen bekommt.",
+      "die meisten Männer mehrheitlich gewählt haben.",
+      "die meisten Stimmen bei den Arbeiterinnen/Arbeitern bekommen hat.",
+      "die meisten Erststimmen für ihre Kanzlerkandidatin/ihren Kanzlerkandidaten erhalten hat."
+    ],
+    "answerIndex": 0,
+    "explanation": "Gewählt wird die Partei, die die meisten Stimmen erhält, wobei die Zweitstimme für die Verteilung der Sitze im Bundestag entscheidend ist."
+  },
+  {
+    "id": "q114",
+    "category": "Politics",
+    "question": "An demokratischen Wahlen in Deutschland teilzunehmen ist …",
+    "options": ["eine Pflicht.", "ein Recht.", "ein Zwang.", "eine Last."],
+    "answerIndex": 1,
+    "explanation": "Die Teilnahme an Wahlen ist ein Recht, aber keine Pflicht."
+  },
+  {
+    "id": "q115",
+    "category": "Politics",
+    "question": "Was bedeutet 'aktives Wahlrecht' in Deutschland?",
+    "options": [
+      "Man kann gewählt werden.",
+      "Man muss wählen gehen.",
+      "Man kann wählen.",
+      "Man muss zur Auszählung der Stimmen gehen."
+    ],
+    "answerIndex": 2,
+    "explanation": "Das aktive Wahlrecht ist das Recht, selbst an Wahlen teilzunehmen und zu wählen."
+  },
+  {
+    "id": "q116",
+    "category": "Politics",
+    "question": "Wenn Sie bei einer Bundestagswahl in Deutschland wählen dürfen, heißt das …",
+    "options": [
+      "aktive Wahlkampagne.",
+      "aktives Wahlverfahren.",
+      "aktiver Wahlkampf.",
+      "aktives Wahlrecht."
+    ],
+    "answerIndex": 3,
+    "explanation": "Das Recht zu wählen wird als aktives Wahlrecht bezeichnet."
+  },
+  {
+    "id": "q117",
+    "category": "Politics",
+    "question": "Wie viel Prozent der Zweitstimmen müssen Parteien mindestens bekommen, um in den Deutschen Bundestag gewählt zu werden?",
+    "options": ["3%", "4%", "5%", "6%"],
+    "answerIndex": 2,
+    "explanation": "Um in den Bundestag zu kommen, muss eine Partei mindestens 5% der Zweitstimmen erreichen (5%-Hürde)."
+  },
+  {
+    "id": "q118",
+    "category": "Culture",
+    "question": "Wer darf bei den rund 40 jüdischen Makkabi-Sportvereinen Mitglied werden?",
+    "options": [
+      "nur Deutsche",
+      "nur Israelis",
+      "nur religiöse Menschen",
+      "alle Menschen"
+    ],
+    "answerIndex": 3,
+    "explanation": "Die Makkabi-Sportvereine sind offen für alle Menschen, unabhängig von ihrer Religion oder Herkunft."
+  },
+  {
+    "id": "q119",
+    "category": "Politics",
+    "question": "Wahlen in Deutschland sind frei. Was bedeutet das?",
+    "options": [
+      "Alle verurteilten Straftäterinnen/Straftäter dürfen nicht wählen.",
+      "Wenn ich wählen gehen möchte, muss meine Arbeitgeberin/mein Arbeitgeber mir frei geben.",
+      "Jede Person kann ohne Zwang entscheiden, ob sie wählen möchte und wen sie wählen möchte.",
+      "Ich kann frei entscheiden, wo ich wählen gehen möchte."
+    ],
+    "answerIndex": 2,
+    "explanation": "Freiheit der Wahlen bedeutet, dass die Wähler weder unter Zwang noch unter Druck stehen."
+  },
+  {
+    "id": "q120",
+    "category": "Politics",
+    "question": "Das Wahlsystem in Deutschland ist ein …",
+    "options": [
+      "Zensuswahlrecht.",
+      "Dreiklassenwahlrecht.",
+      "Mehrheits- und Verhältniswahlrecht.",
+      "allgemeines Männerwahlrecht."
+    ],
+    "answerIndex": 2,
+    "explanation": "Das deutsche Wahlsystem kombiniert Elemente des Mehrheitswahlrechts (Erststimme) und des Verhältniswahlrechts (Zweitstimme)."
+  },
+  {
+    "id": "q121",
+    "category": "Politics",
+    "question": "Eine Partei möchte in den Deutschen Bundestag. Sie muss aber einen Mindestanteil an Wählerstimmen haben. Das heißt …",
+    "options": ["5%-Hürde.", "Zulassungsgrenze.", "Basiswert.", "Richtlinie."],
+    "answerIndex": 0,
+    "explanation": "Die 5%-Hürde ist die Mindestanzahl an Stimmen, die eine Partei für den Einzug in den Bundestag benötigt."
+  },
+  {
+    "id": "q122",
+    "category": "Politics",
+    "question": "Welchem Grundsatz unterliegen Wahlen in Deutschland? Wahlen in Deutschland sind …",
+    "options": [
+      "frei, gleich, geheim.",
+      "offen, sicher, frei.",
+      "geschlossen, gleich, sicher.",
+      "sicher, offen, freiwillig."
+    ],
+    "answerIndex": 0,
+    "explanation": "Die Grundsätze der Wahlen in Deutschland sind frei, gleich, geheim, unmittelbar und allgemein."
+  },
+  {
+    "id": "q123",
+    "category": "Politics",
+    "question": "Was ist in Deutschland die '5%-Hürde'?",
+    "options": [
+      "Abstimmungsregelung im Bundestag für kleine Parteien",
+      "Anwesenheitskontrolle im Bundestag für Abstimmungen",
+      "Mindestanteil an Wählerstimmen, um ins Parlament zu kommen",
+      "Anwesenheitskontrolle im Bundesrat für Abstimmungen"
+    ],
+    "answerIndex": 2,
+    "explanation": "Die 5%-Hürde soll verhindern, dass zu viele kleine Parteien in den Bundestag einziehen."
+  },
+  {
+    "id": "q124",
+    "category": "Politics",
+    "question": "Die Bundestagswahl in Deutschland ist die Wahl …",
+    "options": [
+      "der Bundeskanzlerin/des Bundeskanzlers.",
+      "der Parlamente der Länder.",
+      "des Parlaments für Deutschland.",
+      "der Bundespräsidentin/des Bundespräsidenten."
+    ],
+    "answerIndex": 2,
+    "explanation": "Bei der Bundestagswahl wird das Parlament für ganz Deutschland gewählt."
+  },
+  {
+    "id": "q125",
+    "category": "Politics",
+    "question": "In einer Demokratie ist eine Funktion von regelmäßigen Wahlen, …",
+    "options": [
+      "die Bürgerinnen und Bürger zu zwingen, ihre Stimme abzugeben.",
+      "nach dem Willen der Wählermehrheit den Wechsel der Regierung zu ermöglichen.",
+      "im Land bestehende Gesetze beizubehalten.",
+      "den Armen mehr Macht zu geben."
+    ],
+    "answerIndex": 1,
+    "explanation": "Wahlen ermöglichen es, die Regierung zu wechseln, wenn eine Mehrheit der Wähler dies wünscht."
+  },
+  {
+    "id": "q126",
+    "category": "Politics",
+    "question": "Was bekommen wahlberechtigte Bürgerinnen und Bürger in Deutschland vor einer Wahl?",
+    "options": [
+      "eine Wahlbenachrichtigung von der Gemeinde",
+      "eine Wahlerlaubnis von der Bundespräsidentin/von dem Bundespräsidenten",
+      "eine Benachrichtigung von der Bundesversammlung",
+      "eine Benachrichtigung vom Pfarramt"
+    ],
+    "answerIndex": 0,
+    "explanation": "Vor einer Wahl erhalten alle Wahlberechtigten eine Wahlbenachrichtigung von ihrer Gemeinde."
+  },
+  {
+    "id": "q127",
+    "category": "Politics",
+    "question": "Warum gibt es die 5%-Hürde im Wahlgesetz der Bundesrepublik Deutschland? Es gibt sie, weil…",
+    "options": [
+      "die Programme von vielen kleinen Parteien viele Gemeinsamkeiten haben.",
+      "die Bürgerinnen und Bürger bei vielen kleinen Parteien die Orientierung verlieren können.",
+      "viele kleine Parteien die Regierungsbildung erschweren.",
+      "die kleinen Parteien nicht so viel Geld haben, um die Politikerinnen und Politiker zu bezahlen."
+    ],
+    "answerIndex": 2,
+    "explanation": "Die 5%-Hürde soll die Zersplitterung des Parlaments verhindern und die Regierungsbildung erleichtern."
+  },
+  {
+    "id": "q128",
+    "category": "Politics",
+    "question": "Parlamentsmitglieder, die von den Bürgerinnen und Bürgern gewählt werden, nennt man …",
+    "options": [
+      "Abgeordnete.",
+      "Kanzlerinnen/Kanzler.",
+      "Botschafterinnen/Botschafter.",
+      "Ministerpräsidentinnen/Ministerpräsidenten."
+    ],
+    "answerIndex": 0,
+    "explanation": "Die direkt gewählten Volksvertreter im Parlament heißen Abgeordnete."
+  },
+  {
+    "id": "q129",
+    "category": "Politics",
+    "question": "Vom Volk gewählt wird in Deutschland …",
+    "options": [
+      "die Bundeskanzlerin/der Bundeskanzler.",
+      "die Ministerpräsidentin/der Ministerpräsident eines Bundeslandes.",
+      "der Bundestag.",
+      "die Bundespräsidentin/der Bundespräsident."
+    ],
+    "answerIndex": 2,
+    "explanation": "Der Bundestag wird direkt vom Volk gewählt. Bundespräsident und Bundeskanzler werden nicht direkt vom Volk gewählt."
+  },
+  {
+    "id": "q130",
+    "category": "Politics",
+    "question": "Welcher Stimmzettel wäre bei einer Bundestagswahl gültig?",
+    "image": "/images/stimmzettel.jpg",
+    "options": ["1", "2", "3", "4"],
+    "answerIndex": 1,
+    "explanation": "Stimmzettel 2 ist gültig, weil er in jeder Spalte nur ein Kreuz hat."
+  },
+  {
+    "id": "q131",
+    "category": "Politics",
+    "question": "In Deutschland ist eine Bürgermeisterin/ein Bürgermeister …",
+    "options": [
+      "die Leiterin/der Leiter einer Schule.",
+      "die Chefin/der Chef einer Bank.",
+      "das Oberhaupt einer Gemeinde.",
+      "die/der Vorsitzende einer Partei."
+    ],
+    "answerIndex": 2,
+    "explanation": "Der Bürgermeister ist das Oberhaupt der Gemeindeverwaltung."
+  },
+  {
+    "id": "q132",
+    "category": "Society",
+    "question": "Viele Menschen in Deutschland arbeiten in ihrer Freizeit ehrenamtlich. Was bedeutet das?",
+    "options": [
+      "Sie arbeiten als Soldatinnen/Soldaten.",
+      "Sie arbeiten freiwillig und unbezahlt in Vereinen und Verbänden.",
+      "Sie arbeiten in der Bundesregierung.",
+      "Sie arbeiten in einem Krankenhaus und verdienen dabei Geld."
+    ],
+    "answerIndex": 1,
+    "explanation": "Ehrenamtliche Arbeit ist freiwillige und unentgeltliche Tätigkeit zum Wohle der Gesellschaft."
+  },
+  {
+    "id": "q133",
+    "category": "Politics",
+    "question": "Was ist bei Bundestags- und Landtagswahlen in Deutschland erlaubt?",
+    "options": [
+      "Der Ehemann wählt für seine Frau mit.",
+      "Man kann durch Briefwahl seine Stimme abgeben.",
+      "Man kann am Wahltag telefonisch seine Stimme abgeben.",
+      "Kinder ab dem Alter von 14 Jahren dürfen wählen."
+    ],
+    "answerIndex": 1,
+    "explanation": "Die Briefwahl ist eine anerkannte Form der Stimmabgabe."
+  },
+  {
+    "id": "q134",
+    "category": "Politics",
+    "question": "Man will die Buslinie abschaffen, mit der Sie immer zur Arbeit fahren. Was können Sie machen, um die Buslinie zu erhalten?",
+    "options": [
+      "Ich beteilige mich an einer Bürgerinitiative für die Erhaltung der Buslinie oder gründe selber eine Initiative.",
+      "Ich werde Mitglied in einem Sportverein und trainiere Radfahren.",
+      "Ich wende mich an das Finanzamt, weil ich als Steuerzahlerin/Steuerzahler ein Recht auf die Buslinie habe.",
+      "Ich schreibe einen Brief an das Forstamt der Gemeinde."
+    ],
+    "answerIndex": 0,
+    "explanation": "Bürgerinitiativen sind ein Weg, um sich politisch zu engagieren und die lokale Politik zu beeinflussen."
+  },
+  {
+    "id": "q135",
+    "category": "Economy",
+    "question": "Wen vertreten die Gewerkschaften in Deutschland?",
+    "options": [
+      "große Unternehmen",
+      "kleine Unternehmen",
+      "Selbstständige",
+      "Arbeitnehmerinnen und Arbeitnehmer"
+    ],
+    "answerIndex": 3,
+    "explanation": "Gewerkschaften vertreten die Interessen der Arbeitnehmer gegenüber den Arbeitgebern."
+  },
+  {
+    "id": "q136",
+    "category": "Law",
+    "question": "Sie gehen in Deutschland zum Arbeitsgericht bei …",
+    "options": [
+      "falscher Nebenkostenabrechnung.",
+      "ungerechtfertigter Kündigung durch Ihre Chefin/Ihren Chef.",
+      "Problemen mit den Nachbarinnen/Nachbarn.",
+      "Schwierigkeiten nach einem Verkehrsunfall."
+    ],
+    "answerIndex": 1,
+    "explanation": "Das Arbeitsgericht ist zuständig für Streitigkeiten zwischen Arbeitnehmern und Arbeitgebern."
+  },
+  {
+    "id": "q137",
+    "category": "Law",
+    "question": "Welches Gericht ist in Deutschland bei Konflikten in der Arbeitswelt zuständig?",
+    "options": [
+      "das Familiengericht",
+      "das Strafgericht",
+      "das Arbeitsgericht",
+      "das Amtsgericht"
+    ],
+    "answerIndex": 2,
+    "explanation": "Arbeitsgerichte sind spezialisierte Gerichte für Streitigkeiten im Arbeitsrecht."
+  },
+  {
+    "id": "q138",
+    "category": "Law",
+    "question": "Was kann ich in Deutschland machen, wenn mir meine Arbeitgeberin/mein Arbeitgeber zu Unrecht gekündigt hat?",
+    "options": [
+      "weiterarbeiten und freundlich zur Chefin/zum Chef sein",
+      "ein Mahnverfahren gegen die Arbeitgeberin/den Arbeitgeber führen",
+      "Kündigungsschutzklage erheben",
+      "die Arbeitgeberin/den Arbeitgeber bei der Polizei anzeigen"
+    ],
+    "answerIndex": 2,
+    "explanation": "Eine Kündigungsschutzklage ist der rechtliche Weg, sich gegen eine unrechtmäßige Kündigung zu wehren."
+  },
+  {
+    "id": "q139",
+    "category": "Law",
+    "question": "Wann kommt es in Deutschland zu einem Prozess vor Gericht? Wenn jemand …",
+    "options": [
+      "zu einer anderen Religion übertritt.",
+      "eine Straftat begangen hat und angeklagt wird.",
+      "eine andere Meinung als die der Regierung vertritt.",
+      "sein Auto falsch geparkt hat und es abgeschleppt wird."
+    ],
+    "answerIndex": 1,
+    "explanation": "Ein Gerichtsverfahren wird eingeleitet, wenn jemand einer Straftat beschuldigt wird."
+  },
+  {
+    "id": "q140",
+    "category": "Law",
+    "question": "Was macht eine Schöffin/ein Schöffe in Deutschland? Sie/Er …",
+    "options": [
+      "entscheidet mit Richterinnen/Richtern über Schuld und Strafe.",
+      "gibt Bürgerinnen/Bürgern rechtlichen Rat.",
+      "stellt Urkunden aus.",
+      "verteidigt die Angeklagte/den Angeklagten."
+    ],
+    "answerIndex": 0,
+    "explanation": "Schöffen sind ehrenamtliche Laienrichter, die gemeinsam mit Berufsrichtern über Schuld und Strafe entscheiden."
+  },
+  {
+    "id": "q141",
+    "category": "Law",
+    "question": "Wer berät in Deutschland Personen bei Rechtsfragen und vertritt sie vor Gericht?",
+    "options": [
+      "eine Rechtsanwältin/ein Rechtsanwalt",
+      "eine Richterin/ein Richter",
+      "eine Schöffin/ein Schöffe",
+      "eine Staatsanwältin/ein Staatsanwalt"
+    ],
+    "answerIndex": 0,
+    "explanation": "Ein Rechtsanwalt ist ein juristischer Berater und vertritt Mandanten vor Gericht."
+  },
+  {
+    "id": "q142",
+    "category": "Law",
+    "question": "Was ist die Hauptaufgabe einer Richterin/eines Richters in Deutschland? Eine Richterin/ein Richter …",
+    "options": [
+      "vertritt Bürgerinnen und Bürger vor einem Gericht.",
+      "arbeitet an einem Gericht und spricht Urteile.",
+      "ändert Gesetze.",
+      "betreut Jugendliche vor Gericht."
+    ],
+    "answerIndex": 1,
+    "explanation": "Die Hauptaufgabe eines Richters ist die Rechtsprechung und das Fällen von Urteilen."
+  },
+  {
+    "id": "q143",
+    "category": "Politics",
+    "question": "Eine Richterin/ein Richter in Deutschland gehört zur …",
+    "options": ["Judikative.", "Exekutive.", "Operative.", "Legislative."],
+    "answerIndex": 0,
+    "explanation": "Richter gehören zur rechtsprechenden Gewalt (Judikative)."
+  },
+  {
+    "id": "q144",
+    "category": "Politics",
+    "question": "Eine Richterin/ein Richter gehört in Deutschland zur …",
+    "options": [
+      "vollziehenden Gewalt.",
+      "rechtsprechenden Gewalt.",
+      "planenden Gewalt.",
+      "gesetzgebenden Gewalt."
+    ],
+    "answerIndex": 1,
+    "explanation": "Richter üben die rechtsprechende Gewalt aus."
+  },
+  {
+    "id": "q145",
+    "category": "Politics",
+    "question": "In Deutschland wird die Staatsgewalt geteilt. Für welche Staatsgewalt arbeitet eine Richterin/ein Richter? Für die …",
+    "options": ["Judikative", "Exekutive", "Presse", "Legislative"],
+    "answerIndex": 0,
+    "explanation": "Richter sind Teil der Judikative."
+  },
+  {
+    "id": "q146",
+    "category": "Law",
+    "question": "Wie nennt man in Deutschland ein Verfahren vor einem Gericht?",
+    "options": ["Programm", "Prozedur", "Protokoll", "Prozess"],
+    "answerIndex": 3,
+    "explanation": "Ein Verfahren vor Gericht wird als Prozess bezeichnet."
+  },
+  {
+    "id": "q147",
+    "category": "Law",
+    "question": "Was ist die Arbeit einer Richterin/eines Richters in Deutschland?",
+    "options": [
+      "Deutschland regieren",
+      "Recht sprechen",
+      "Pläne erstellen",
+      "Gesetze erlassen"
+    ],
+    "answerIndex": 1,
+    "explanation": "Die Aufgabe eines Richters ist es, Recht zu sprechen und Urteile zu fällen."
+  },
+  {
+    "id": "q148",
+    "category": "Law",
+    "question": "Was ist eine Aufgabe der Polizei in Deutschland?",
+    "options": [
+      "das Land zu verteidigen",
+      "die Bürgerinnen und Bürger abzuhören",
+      "die Gesetze zu beschließen",
+      "die Einhaltung von Gesetzen zu überwachen"
+    ],
+    "answerIndex": 3,
+    "explanation": "Die Polizei ist Teil der Exekutive und überwacht die Einhaltung der Gesetze."
+  },
+  {
+    "id": "q149",
+    "category": "History",
+    "question": "Was ist ein Beispiel für antisemitisches Verhalten?",
+    "options": [
+      "ein jüdisches Fest besuchen",
+      "die israelische Regierung kritisieren",
+      "den Holocaust leugnen",
+      "gegen Juden Fußball spielen."
+    ],
+    "answerIndex": 2,
+    "explanation": "Die Leugnung des Holocaust ist ein Beispiel für Antisemitismus."
+  },
+  {
+    "id": "q150",
+    "category": "Law",
+    "question": "Eine Gerichtsschöffin/ein Gerichtsschöffe in Deutschland ist …",
+    "options": [
+      "die Stellvertreterin/der Stellvertreter des Stadtoberhaupts.",
+      "eine ehrenamtliche Richterin/ein ehrenamtlicher Richter.",
+      "ein Mitglied eines Gemeinderats.",
+      "eine Person, die Jura studiert hat."
+    ],
+    "answerIndex": 1,
+    "explanation": "Schöffen sind Laienrichter, die ehrenamtlich an Gerichtsprozessen teilnehmen."
+  },
+  {
+    "id": "q151",
+    "category": "History",
+    "question": "Wer baute die Mauer in Berlin?",
+    "options": [
+      "Großbritannien",
+      "die DDR",
+      "die Bundesrepublik Deutschland",
+      "die USA"
+    ],
+    "answerIndex": 1,
+    "explanation": "Die DDR baute 1961 die Berliner Mauer, um die Flucht aus dem Osten zu verhindern."
+  },
+  {
+    "id": "q152",
+    "category": "History",
+    "question": "Wann waren die Nationalsozialisten mit Adolf Hitler in Deutschland an der Macht?",
+    "options": [
+      "1918 bis 1923",
+      "1932 bis 1950",
+      "1933 bis 1945",
+      "1945 bis 1989"
+    ],
+    "answerIndex": 2,
+    "explanation": "Die Zeit des Nationalsozialismus in Deutschland dauerte von 1933 bis 1945."
+  },
+  {
+    "id": "q153",
+    "category": "History",
+    "question": "Was war am 8. Mai 1945?",
+    "options": [
+      "Tod Adolf Hitlers",
+      "Beginn des Berliner Mauerbaus",
+      "Wahl von Konrad Adenauer zum Bundeskanzler",
+      "Ende des Zweiten Weltkriegs in Europa"
+    ],
+    "answerIndex": 3,
+    "explanation": "Am 8. Mai 1945 endete der Zweite Weltkrieg in Europa mit der bedingungslosen Kapitulation der Wehrmacht."
+  },
+  {
+    "id": "q154",
+    "category": "History",
+    "question": "Wann war der Zweite Weltkrieg zu Ende?",
+    "options": ["1933", "1945", "1949", "1961"],
+    "answerIndex": 1,
+    "explanation": "Der Zweite Weltkrieg endete 1945."
+  },
+  {
+    "id": "q155",
+    "category": "History",
+    "question": "Wann waren die Nationalsozialisten in Deutschland an der Macht?",
+    "options": [
+      "1888 bis 1918",
+      "1921 bis 1934",
+      "1933 bis 1945",
+      "1949 bis 1963"
+    ],
+    "answerIndex": 2,
+    "explanation": "Die Nationalsozialisten regierten von 1933 bis 1945."
+  },
+  {
+    "id": "q156",
+    "category": "History",
+    "question": "In welchem Jahr wurde Hitler Reichskanzler?",
+    "options": ["1923", "1927", "1933", "1936"],
+    "answerIndex": 2,
+    "explanation": "Adolf Hitler wurde 1933 zum Reichskanzler ernannt."
+  },
+  {
+    "id": "q157",
+    "category": "History",
+    "question": "Die Nationalsozialisten mit Adolf Hitler errichteten 1933 in Deutschland …",
+    "options": [
+      "eine Diktatur.",
+      "einen demokratischen Staat.",
+      "eine Monarchie.",
+      "ein Fürstentum."
+    ],
+    "answerIndex": 0,
+    "explanation": "Nach 1933 verwandelte Hitler Deutschland in eine Diktatur."
+  },
+  {
+    "id": "q158",
+    "category": "History",
+    "question": "Das 'Dritte Reich' war eine …",
+    "options": ["Diktatur.", "Demokratie.", "Monarchie.", "Räterepublik."],
+    "answerIndex": 0,
+    "explanation": "Das 'Dritte Reich' unter den Nationalsozialisten war eine Diktatur."
+  },
+  {
+    "id": "q159",
+    "category": "History",
+    "question": "Was gab es in Deutschland nicht während der Zeit des Nationalsozialismus?",
+    "options": [
+      "freie Wahlen",
+      "Pressezensur",
+      "willkürliche Verhaftungen",
+      "Verfolgung von Juden"
+    ],
+    "answerIndex": 0,
+    "explanation": "Während des Nationalsozialismus gab es keine freien Wahlen mehr."
+  },
+  {
+    "id": "q160",
+    "category": "History",
+    "question": "Welcher Krieg dauerte von 1939 bis 1945?",
+    "options": [
+      "der Erste Weltkrieg",
+      "der Zweite Weltkrieg",
+      "der Vietnamkrieg",
+      "der Golfkrieg"
+    ],
+    "answerIndex": 1,
+    "explanation": "Der Zweite Weltkrieg dauerte von 1939 bis 1945."
+  },
+  {
+    "id": "q161",
+    "category": "History",
+    "question": "Was kennzeichnete den NS-Staat? Eine Politik …",
+    "options": [
+      "des staatlichen Rassismus",
+      "der Meinungsfreiheit",
+      "der allgemeinen Religionsfreiheit",
+      "der Entwicklung der Demokratie"
+    ],
+    "answerIndex": 0,
+    "explanation": "Der NS-Staat war durch einen staatlich verordneten Rassismus gekennzeichnet, der zur Verfolgung von Minderheiten führte."
+  },
+  {
+    "id": "q162",
+    "category": "History",
+    "question": "Claus Schenk Graf von Stauffenberg wurde bekannt durch …",
+    "options": [
+      "eine Goldmedaille bei den Olympischen Spielen 1936.",
+      "den Bau des Reichstagsgebäudes.",
+      "den Aufbau der Wehrmacht.",
+      "das Attentat auf Hitler am 20. Juli 1944."
+    ],
+    "answerIndex": 3,
+    "explanation": "Stauffenberg war eine Schlüsselfigur im gescheiterten Attentat auf Hitler vom 20. Juli 1944."
+  },
+  {
+    "id": "q163",
+    "category": "History",
+    "question": "In welchem Jahr zerstörten die Nationalsozialisten Synagogen und jüdische Geschäfte in Deutschland?",
+    "options": ["1925", "1930", "1938", "1945"],
+    "answerIndex": 2,
+    "explanation": "In der Reichspogromnacht am 9. November 1938 wurden Synagogen und jüdische Geschäfte zerstört."
+  },
+  {
+    "id": "q164",
+    "category": "History",
+    "question": "Was passierte am 9. November 1938 in Deutschland?",
+    "options": [
+      "Mit dem Angriff auf Polen beginnt der Zweite Weltkrieg.",
+      "Die Nationalsozialisten verlieren eine Wahl und lösen den Reichstag auf.",
+      "Jüdische Geschäfte und Synagogen werden durch Nationalsozialisten und ihre Anhänger zerstört.",
+      "Hitler wird Reichspräsident und lässt alle Parteien verbieten."
+    ],
+    "answerIndex": 2,
+    "explanation": "Dies war die Reichspogromnacht, auch bekannt als 'Kristallnacht'."
+  },
+  {
+    "id": "q165",
+    "category": "History",
+    "question": "Wie hieß der erste Bundeskanzler der Bundesrepublik Deutschland?",
+    "options": [
+      "Konrad Adenauer",
+      "Kurt Georg Kiesinger",
+      "Helmut Schmidt",
+      "Willy Brandt"
+    ],
+    "answerIndex": 0,
+    "explanation": "Konrad Adenauer war von 1949 bis 1963 der erste Bundeskanzler der Bundesrepublik."
+  },
+  {
+    "id": "q166",
+    "category": "History",
+    "question": "Bei welchen Demonstrationen in Deutschland riefen die Menschen 'Wir sind das Volk'?",
+    "options": [
+      "beim Arbeiteraufstand 1953 in der DDR",
+      "bei den Demonstrationen 1968 in der Bundesrepublik Deutschland",
+      "bei den Anti-Atomkraft-Demonstrationen 1985 in der Bundesrepublik Deutschland",
+      "bei den Montagsdemonstrationen 1989 in der DDR"
+    ],
+    "answerIndex": 3,
+    "explanation": "Der Ruf 'Wir sind das Volk' wurde zum Slogan der Montagsdemonstrationen in der DDR, die den Fall der Mauer einleiteten."
+  },
+  {
+    "id": "q167",
+    "category": "History",
+    "question": "Welche Länder wurden nach dem Zweiten Weltkrieg in Deutschland als 'Alliierte Besatzungsmächte' bezeichnet?",
+    "options": [
+      "Sowjetunion, Großbritannien, Polen, Schweden",
+      "Frankreich, Sowjetunion, Italien, Japan",
+      "USA, Sowjetunion, Spanien, Portugal",
+      "USA, Sowjetunion, Großbritannien, Frankreich"
+    ],
+    "answerIndex": 3,
+    "explanation": "Deutschland wurde nach dem Krieg in Besatzungszonen der USA, Sowjetunion, Großbritanniens und Frankreichs aufgeteilt."
+  },
+  {
+    "id": "q168",
+    "category": "History",
+    "question": "Welches Land war keine 'Alliierte Besatzungsmacht' in Deutschland?",
+    "options": ["USA", "Sowjetunion", "Frankreich", "Japan"],
+    "answerIndex": 3,
+    "explanation": "Japan gehörte zu den Achsenmächten im Zweiten Weltkrieg und war keine Besatzungsmacht."
+  },
+  {
+    "id": "q169",
+    "category": "History",
+    "question": "Wann wurde die Bundesrepublik Deutschland gegründet?",
+    "options": ["1939", "1945", "1949", "1951"],
+    "answerIndex": 2,
+    "explanation": "Die Bundesrepublik Deutschland wurde am 23. Mai 1949 gegründet."
+  },
+  {
+    "id": "q170",
+    "category": "History",
+    "question": "Was gab es während der Zeit des Nationalsozialismus in Deutschland?",
+    "options": [
+      "das Verbot von Parteien",
+      "das Recht zur freien Entfaltung der Persönlichkeit",
+      "Pressefreiheit",
+      "den Schutz der Menschenwürde"
+    ],
+    "answerIndex": 0,
+    "explanation": "Im NS-Staat wurden alle Parteien außer der NSDAP verboten."
+  },
+  {
+    "id": "q171",
+    "category": "Economy",
+    "question": "Soziale Marktwirtschaft bedeutet, die Wirtschaft …",
+    "options": [
+      "steuert sich allein nach Angebot und Nachfrage.",
+      "wird vom Staat geplant und gesteuert, Angebot und Nachfrage werden nicht berücksichtigt.",
+      "richtet sich nach der Nachfrage im Ausland.",
+      "richtet sich nach Angebot und Nachfrage, aber der Staat sorgt für einen sozialen Ausgleich."
+    ],
+    "answerIndex": 3,
+    "explanation": "Die soziale Marktwirtschaft ist ein Kompromiss zwischen freier Wirtschaft und staatlicher sozialer Absicherung."
+  },
+  {
+    "id": "q172",
+    "category": "History",
+    "question": "In welcher Besatzungszone wurde die DDR gegründet? In der …",
+    "options": [
+      "amerikanischen Besatzungszone",
+      "französischen Besatzungszone",
+      "britischen Besatzungszone",
+      "sowjetischen Besatzungszone"
+    ],
+    "answerIndex": 3,
+    "explanation": "Die DDR wurde in der sowjetischen Besatzungszone gegründet."
+  },
+  {
+    "id": "q173",
+    "category": "Politics",
+    "question": "Die Bundesrepublik Deutschland ist ein Gründungsmitglied …",
+    "options": [
+      "des Nordatlantikpakts (NATO).",
+      "der Vereinten Nationen (VN).",
+      "der Europäischen Union (EU).",
+      "des Warschauer Pakts."
+    ],
+    "answerIndex": 2,
+    "explanation": "Deutschland war 1957 an der Gründung der Europäischen Wirtschaftsgemeinschaft (EWG), dem Vorläufer der EU, beteiligt."
+  },
+  {
+    "id": "q174",
+    "category": "History",
+    "question": "Wann wurde die DDR gegründet?",
+    "options": ["1947", "1949", "1953", "1956"],
+    "answerIndex": 1,
+    "explanation": "Die DDR wurde am 7. Oktober 1949 gegründet."
+  },
+  {
+    "id": "q175",
+    "category": "History",
+    "question": "Wie viele Besatzungszonen gab es in Deutschland nach dem Zweiten Weltkrieg?",
+    "options": ["3", "4", "5", "6"],
+    "answerIndex": 1,
+    "explanation": "Deutschland wurde in vier Besatzungszonen aufgeteilt: die amerikanische, britische, französische und sowjetische Zone."
+  },
+  {
+    "id": "q176",
+    "category": "History",
+    "question": "Wie waren die Besatzungszonen Deutschlands nach 1945 verteilt?",
+    "image": "/images/besatzungszonen.jpg",
+    "options": [
+      "1=Großbritannien, 2=Sowjetunion, 3=Frankreich, 4=USA",
+      "1=Sowjetunion, 2=Großbritannien, 3=USA, 4=Frankreich",
+      "1=Großbritannien, 2=Sowjetunion, 3=USA, 4=Frankreich",
+      "1=Großbritannien, 2=USA, 3=Sowjetunion, 4=Frankreich"
+    ],
+    "answerIndex": 2,
+    "explanation": "Die Karte zeigt die Aufteilung Deutschlands nach dem Zweiten Weltkrieg in die britische (1), sowjetische (2), amerikanische (3) und französische (4) Zone."
+  },
+  {
+    "id": "q177",
+    "category": "History",
+    "question": "Welche deutsche Stadt wurde nach dem Zweiten Weltkrieg in vier Sektoren aufgeteilt?",
+    "options": ["München", "Berlin", "Dresden", "Frankfurt/Oder"],
+    "answerIndex": 1,
+    "explanation": "Auch Berlin, die ehemalige Hauptstadt, wurde in vier Besatzungssektoren aufgeteilt."
+  },
+  {
+    "id": "q178",
+    "category": "History",
+    "question": "Vom Juni 1948 bis zum Mai 1949 wurden die Bürgerinnen und Bürger von West-Berlin durch eine Luftbrücke versorgt. Welcher Umstand war dafür verantwortlich?",
+    "options": [
+      "Für Frankreich war eine Versorgung der West-Berliner Bevölkerung mit dem Flugzeug kostengünstiger.",
+      "Die amerikanischen Soldatinnen und Soldaten hatten beim Landtransport Angst vor Überfällen.",
+      "Für Großbritannien war die Versorgung über die Luftbrücke schneller.",
+      "Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege."
+    ],
+    "answerIndex": 3,
+    "explanation": "Die Luftbrücke war eine Reaktion auf die Berlin-Blockade durch die Sowjetunion."
+  },
+  {
+    "id": "q179",
+    "category": "History",
+    "question": "Wie endete der Zweite Weltkrieg in Europa offiziell?",
+    "options": [
+      "mit dem Tod Adolf Hitlers",
+      "durch die bedingungslose Kapitulation Deutschlands",
+      "mit dem Rückzug der Deutschen aus den besetzten Gebieten",
+      "durch eine Revolution in Deutschland"
+    ],
+    "answerIndex": 1,
+    "explanation": "Der Krieg endete mit der bedingungslosen Kapitulation der deutschen Wehrmacht."
+  },
+  {
+    "id": "q180",
+    "category": "History",
+    "question": "Der erste Bundeskanzler der Bundesrepublik Deutschland war …",
+    "options": [
+      "Ludwig Erhard.",
+      "Willy Brandt.",
+      "Konrad Adenauer.",
+      "Gerhard Schröder."
+    ],
+    "answerIndex": 2,
+    "explanation": "Konrad Adenauer war von 1949 bis 1963 der erste Bundeskanzler."
+  },
+  {
+    "id": "q181",
+    "category": "History",
+    "question": "Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen jüdischen Ghetto in Warschau ausdrücken?",
+    "image": "/images/willy_brandt.jpg",
+    "options": [
+      "Er hat sich den ehemaligen Alliierten unterworfen.",
+      "Er bat Polen und die polnischen Juden um Vergebung.",
+      "Er zeigte seine Demut vor dem Warschauer Pakt.",
+      "Er sprach ein Gebet am Grab des Unbekannten Soldaten."
+    ],
+    "answerIndex": 1,
+    "explanation": "Der Kniefall von Willy Brandt war eine Geste der Demut und der Bitte um Vergebung für die Verbrechen des Nationalsozialismus."
   }
 ]
