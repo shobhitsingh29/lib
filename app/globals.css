@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom scrollbar styling */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thumb-pink-500::-webkit-scrollbar-thumb {
+  background-color: rgb(236 72 153);
+  border-radius: 3px;
+}
+
+.scrollbar-track-gray-700::-webkit-scrollbar-track {
+  background-color: rgb(55 65 81);
+  border-radius: 3px;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

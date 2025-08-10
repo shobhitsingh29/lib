@@ -195,10 +195,10 @@ export default function PracticePage() {
     setLastAnswer({ correct: isCorrect, selectedIndex: selectedAnswerIndex })
     setShowAnswer(true)
 
-    // Auto-advance after showing answer (reduced time)
+    // Auto-advance after showing answer (increased time)
     setTimeout(() => {
       nextQuestion()
-    }, 1500)
+    }, 3000)
   }
 
   const resetProgress = () => {
@@ -408,7 +408,7 @@ export default function PracticePage() {
                 <MapPin className="w-6 h-6 text-pink-400 animate-bounce" />
                 <h3 className="text-xl font-black text-pink-300 uppercase tracking-wider">{t.selectState}</h3>
               </div>
-              <div className="flex flex-wrap gap-2 max-h-32 overflow-y-auto">
+              <div className="flex flex-wrap gap-2 max-h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-pink-500 scrollbar-track-gray-700 p-2 bg-black/30 rounded-lg border border-pink-400/30">
                 <button
                   onClick={() => {
                     setSelectedState(null)
@@ -528,8 +528,8 @@ export default function PracticePage() {
           </div>
           <div className="space-y-3 text-lg max-w-2xl mx-auto">
             <p className="text-cyan-300 font-bold">💡 {t.swipeInstructions}</p>
-            <p className="text-pink-300 font-bold">➡️ {t.swipeRight}</p>
-            <p className="text-yellow-300 font-bold">⬅️ {t.swipeLeft}</p>
+            <p className="text-green-300 font-bold">➡️ Swipe RIGHT if your answer is correct</p>
+            <p className="text-red-300 font-bold">⬅️ Swipe LEFT if your answer is wrong</p>
             <p className="text-green-300 font-bold">⌨️ {t.keyboardShortcuts}</p>
           </div>
           <div className="text-2xl font-black text-white animate-bounce mt-8">{t.letsDominate} 🚀</div>

@@ -5,7 +5,7 @@ import { useStore } from "@/lib/store"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import { ArrowLeft, Flag, CheckCircle, RotateCcw } from "lucide-react"
 import Link from "next/link"
 
@@ -361,8 +361,8 @@ export default function ReviewPage() {
             ) : (
               <Card className="border-2 border-gray-600 bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm">
                 <CardContent className="p-12 text-center text-gray-400">
-                  <div className="mb-6">
-                    <div className="text-8xl animate-bounce">🎯</div>
+                  <div className="text-center mb-8">
+                    <div className="text-8xl">🎯</div>
                   </div>
                   <h3 className="text-3xl font-black mb-4 text-white">SELECT A QUESTION</h3>
                   <p className="text-xl">Choose a question from the list to review it in detail</p>

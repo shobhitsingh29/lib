@@ -28,14 +28,14 @@ export default function HomePage() {
           style={{ animationDelay: "6s", animationDuration: "12s" }}
         ></div>
 
-        {/* Static emojis that only animate on hover */}
-        <div className="absolute top-20 left-20 text-3xl hover:animate-spin transition-transform cursor-pointer">
+        {/* Static emojis with subtle hover effects */}
+        <div className="absolute top-20 left-20 text-3xl hover:scale-110 transition-transform cursor-pointer">
           🚀
         </div>
-        <div className="absolute top-40 right-32 text-2xl hover:scale-125 transition-transform cursor-pointer">
+        <div className="absolute top-40 right-32 text-2xl hover:scale-110 transition-transform cursor-pointer">
           ⚡
         </div>
-        <div className="absolute bottom-32 left-32 text-4xl hover:animate-pulse transition-transform cursor-pointer">
+        <div className="absolute bottom-32 left-32 text-4xl hover:scale-110 transition-transform cursor-pointer">
           🔥
         </div>
         <div className="absolute bottom-20 right-20 text-2xl hover:scale-110 transition-transform cursor-pointer">
@@ -86,32 +86,32 @@ export default function HomePage() {
             {/* Stats with hover effects */}
             <div className="flex justify-center gap-8 mb-16">
               <div className="text-center group cursor-pointer">
-                <div className="text-6xl mb-2 group-hover:scale-125 transition-transform duration-300">
+                <div className="text-6xl mb-2 group-hover:scale-110 transition-transform">
                   🔥
                 </div>
-                <div className="text-4xl font-black text-yellow-400 mb-1 group-hover:scale-110 transition-transform">
-                  50+
+                <div className="text-4xl font-black text-yellow-400 mb-1">
+                  310
                 </div>
                 <div className="text-sm text-gray-300 uppercase tracking-wider">
                   {t.totalQuestions}
                 </div>
               </div>
               <div className="text-center group cursor-pointer">
-                <div className="text-6xl mb-2 group-hover:scale-125 transition-transform duration-300">
+                <div className="text-6xl mb-2 group-hover:scale-110 transition-transform">
                   ⚡
                 </div>
-                <div className="text-4xl font-black text-green-400 mb-1 group-hover:scale-110 transition-transform">
-                  33
+                <div className="text-4xl font-black text-green-400 mb-1">
+                  310
                 </div>
                 <div className="text-sm text-gray-300 uppercase tracking-wider">
                   TEST LENGTH
                 </div>
               </div>
               <div className="text-center group cursor-pointer">
-                <div className="text-6xl mb-2 group-hover:scale-125 transition-transform duration-300">
+                <div className="text-6xl mb-2 group-hover:scale-110 transition-transform">
                   ⏰
                 </div>
-                <div className="text-4xl font-black text-pink-400 mb-1 group-hover:scale-110 transition-transform">
+                <div className="text-4xl font-black text-pink-400 mb-1">
                   60
                 </div>
                 <div className="text-sm text-gray-300 uppercase tracking-wider">

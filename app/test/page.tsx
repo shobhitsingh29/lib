@@ -54,9 +54,9 @@ export default function TestPage() {
 
         console.log("🚀 Successfully loaded", data.length, "INSANE questions for test!")
         setQuestions(data)
-        // Select 33 random questions for the test
+        // Select 310 random questions for the test
         const shuffled = [...data].sort(() => 0.5 - Math.random())
-        const selected = shuffled.slice(0, Math.min(33, data.length))
+        const selected = shuffled.slice(0, Math.min(310, data.length))
         setTestQuestions(selected)
         startTest()
       } catch (err) {
@@ -138,8 +138,8 @@ export default function TestPage() {
       answerQuestion(question.id, selectedIndex ?? -1, correct)
     })
 
-    // Award badge if passed (17 or more correct out of 33)
-    if (correctCount >= 17) {
+    // Award badge if passed (155 or more correct out of 310)
+    if (correctCount >= 155) {
       addBadge("test-master")
     }
 
@@ -148,14 +148,14 @@ export default function TestPage() {
   }
 
   const currentQuestion = testQuestions[currentIndex]
-  const progress = ((currentIndex + 1) / testQuestions.length) * 100
+  const progress = testQuestions.length > 0 ? ((currentIndex + 1) / testQuestions.length) * 100 : 0;
 
   if (showResults) {
     const correctCount = testQuestions.reduce((count, question, index) => {
       return count + (selectedAnswers[index] === question.answerIndex ? 1 : 0)
     }, 0)
 
-    const passed = correctCount >= 17
+    const passed = correctCount >= 155
     const percentage = Math.round((correctCount / testQuestions.length) * 100)
 
     return (
@@ -210,7 +210,7 @@ export default function TestPage() {
                     </div>
                     <div className="group cursor-pointer">
                       <div className="text-4xl font-black text-red-400 mb-2 group-hover:scale-125 transition-transform">
-                        {33 - correctCount}
+                        {testQuestions.length - correctCount}
                       </div>
                       <div className="text-lg text-gray-300 font-bold">💥 MISSED</div>
                     </div>
@@ -224,12 +224,12 @@ export default function TestPage() {
 
                   <div className="space-y-4">
                     <div className="flex justify-between text-lg font-bold">
-                      <span className="text-yellow-400">🎯 Required to pass: 17/33 (52%)</span>
+                      <span className="text-yellow-400">🎯 Required to pass: 155/310 (50%)</span>
                       <span className="text-cyan-400">
-                        Your score: {correctCount}/33 ({percentage}%)
+                        Your score: {correctCount}/{testQuestions.length} ({percentage}%)
                       </span>
                     </div>
-                    <Progress value={(correctCount / 33) * 100} className="h-4" />
+                    <Progress value={(correctCount / testQuestions.length) * 100} className="h-4" />
                   </div>
 
                   <div className="flex space-x-4">
