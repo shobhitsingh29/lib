@@ -1,0 +1,81 @@
+{
+  "baden-wuerttemberg": [
+    {
+      "id": "bw001",
+      "category": "State",
+      "question": "Welches Wappen gehört zum Bundesland Baden-Württemberg?",
+      "image": "/images/baden-wurttemberg-coat-of-arms.jpg",
+      "options": ["Bild 1", "Bild 2", "Bild 3", "Bild 4"],
+      "answerIndex": 0,
+      "explanation": "Das Wappen Baden-Württembergs (Bild 1) zeigt drei schwarze Löwen auf goldenem Grund - das traditionelle Wappen der Staufer."
+    },
+    {
+      "id": "bw002",
+      "category": "State",
+      "question": "Für wie viele Jahre wird der Landtag in Baden-Württemberg gewählt?",
+      "options": ["3", "4", "5", "6"],
+      "answerIndex": 2,
+      "explanation": "Der Landtag in Baden-Württemberg wird für 5 Jahre gewählt."
+    },
+    {
+      "id": "bw003",
+      "category": "State",
+      "question": "Ab welchem Alter darf man in Baden-Württemberg bei Kommunalwahlen wählen?",
+      "options": ["14", "16", "18", "20"],
+      "answerIndex": 1,
+      "explanation": "In Baden-Württemberg darf man ab 16 Jahren bei Kommunalwahlen wählen."
+    }
+  ],
+  "bayern": [
+    {
+      "id": "by001",
+      "category": "State",
+      "question": "Welches ist ein Landkreis in Bayern?",
+      "options": ["Prignitz", "Rhön-Grabfeld", "Vogtlandkreis", "Ammerland"],
+      "answerIndex": 1,
+      "explanation": "Rhön-Grabfeld ist ein Landkreis in Bayern."
+    },
+    {
+      "id": "by002",
+      "category": "State",
+      "question": "Für wie viele Jahre wird der Landtag in Bayern gewählt?",
+      "options": ["3", "4", "5", "6"],
+      "answerIndex": 2,
+      "explanation": "Der Landtag in Bayern wird für 5 Jahre gewählt."
+    },
+    {
+      "id": "by003",
+      "category": "State",
+      "question": "Ab welchem Alter darf man in Bayern bei Kommunalwahlen wählen?",
+      "options": ["14", "16", "18", "20"],
+      "answerIndex": 2,
+      "explanation": "In Bayern darf man ab 18 Jahren bei Kommunalwahlen wählen."
+    }
+  ],
+  "berlin": [
+    {
+      "id": "be001",
+      "category": "State",
+      "question": "Welcher Bezirk gehört zu Berlin?",
+      "options": ["Altona", "Prenzlauer Berg", "Eimsbüttel", "Bergedorf"],
+      "answerIndex": 1,
+      "explanation": "Prenzlauer Berg ist ein Bezirk von Berlin."
+    },
+    {
+      "id": "be002",
+      "category": "State",
+      "question": "Für wie viele Jahre wird das Abgeordnetenhaus in Berlin gewählt?",
+      "options": ["3", "4", "5", "6"],
+      "answerIndex": 2,
+      "explanation": "Das Abgeordnetenhaus in Berlin wird für 5 Jahre gewählt."
+    },
+    {
+      "id": "be003",
+      "category": "State",
+      "question": "Ab welchem Alter darf man in Berlin bei Bezirkswahlen wählen?",
+      "options": ["14", "16", "18", "20"],
+      "answerIndex": 1,
+      "explanation": "In Berlin darf man ab 16 Jahren bei Bezirkswahlen wählen."
+    }
+  ]
+}
