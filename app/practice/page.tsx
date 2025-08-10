@@ -56,6 +56,8 @@ export default function PracticePage() {
   const [showAnswer, setShowAnswer] = useState(false)
   const [lastAnswer, setLastAnswer] = useState<{ correct: boolean; selectedIndex: number } | null>(null)
   const [loading, setLoading] = useState(true)
+  const [showCorrect, setShowCorrect] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const t = getTranslation(language)
 
@@ -103,40 +105,8 @@ export default function PracticePage() {
   const filteredQuestions = selectedCategory
     ? allQuestions.filter((q) => q.category === selectedCategory)
     : allQuestions
-  const currentQuestion = filteredQuestions[currentQuestionIndex]
+  const currentQuestion = filteredQuestions[currentIndex]
   const categories = [...new Set(allQuestions.map((q) => q.category))]
-
-  const handleSwipe = (direction: "left" | "right", selectedIndex: number) => {
-    if (!currentQuestion) return
-
-    const correct = selectedIndex === currentQuestion.answerIndex
-    answerQuestion(currentQuestion.id, selectedIndex, correct)
-
-    if (correct) {
-      addXP(10)
-      updateStreak(true)
-    } else {
-      updateStreak(false)
-    }
-
-    // Badge checks
-    if (correct && userProgress.correctAnswers === 0) addBadge("first-correct")
-    if (userProgress.streak >= 5 && !userProgress.badges.includes("streak-5")) addBadge("streak-5")
-    if (userProgress.streak >= 10 && !userProgress.badges.includes("streak-10")) addBadge("streak-10")
-    if (userProgress.xp >= 100 && !userProgress.badges.includes("xp-100")) addBadge("xp-100")
-    if (userProgress.xp >= 500 && !userProgress.badges.includes("xp-500")) addBadge("xp-500")
-
-    setLastAnswer({ correct, selectedIndex })
-    setShowAnswer(true)
-
-    setTimeout(() => {
-      setShowAnswer(false)
-      setLastAnswer(null)
-      if (currentQuestionIndex < filteredQuestions.length - 1) {
-        setCurrentQuestionIndex(currentQuestionIndex + 1)
-      }
-    }, 3000)
-  }
 
   const handleFlag = () => {
     if (!currentQuestion) return
@@ -147,10 +117,77 @@ export default function PracticePage() {
     }
   }
 
-  const resetToStart = () => {
-    setCurrentQuestionIndex(0)
+  const nextQuestion = () => {
+    setShowAnswer(false)
+    setShowCorrect(false)
+    setLastAnswer(null)
+    if (currentIndex < filteredQuestions.length - 1) {
+      setCurrentIndex(currentIndex + 1)
+    } else {
+      // Optionally handle end of questions, e.g., show a summary
+      alert("You've reached the end of the questions!")
+      setCurrentIndex(0) // Loop back to the start
+    }
+  }
+
+  const previousQuestion = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1)
+      setShowAnswer(false)
+      setShowCorrect(false)
+      setLastAnswer(null)
+    }
+  }
+
+  const handleSwipe = (direction: "left" | "right") => {
+    if (direction === "right") {
+      nextQuestion()
+    } else {
+      previousQuestion()
+    }
+  }
+
+  const handleAnswerSelect = (selectedAnswerIndex: number) => {
+    if (showAnswer || !currentQuestion) return
+
+    const isCorrect = selectedAnswerIndex === currentQuestion.answerIndex
+
+    // Record answer
+    answerQuestion(currentQuestion.id, selectedAnswerIndex, isCorrect)
+
+    if (isCorrect) {
+      addXP(10)
+      updateStreak(true) // Use updateStreak for both correct and incorrect
+      setShowCorrect(true)
+
+      // Check for streak badges
+      if (userProgress.streak === 5) addBadge("streak-5")
+      if (userProgress.streak === 10) addBadge("streak-10")
+
+      // Check for XP badges
+      if (userProgress.xp >= 100 && !userProgress.badges.includes("xp-100")) addBadge("xp-100")
+      if (userProgress.xp >= 500 && !userProgress.badges.includes("xp-500")) addBadge("xp-500")
+    } else {
+      updateStreak(false)
+      setShowCorrect(false)
+    }
+
+    setLastAnswer({ correct: isCorrect, selectedIndex: selectedAnswerIndex })
+    setShowAnswer(true)
+
+    // Auto-advance after showing answer
+    setTimeout(() => {
+      nextQuestion()
+    }, 2000)
+  }
+
+  const resetProgress = () => {
+    setCurrentIndex(0)
     setShowAnswer(false)
     setLastAnswer(null)
+    setShowCorrect(false)
+    // Add logic to reset streak, XP, etc. if needed
+    // For now, assuming store handles resetting progress if necessary
   }
 
   if (loading || !currentQuestion) {
@@ -167,8 +204,8 @@ export default function PracticePage() {
           <CardContent className="p-8 text-center relative z-10">
             <div className="text-8xl mb-6 animate-bounce">🚀</div>
             <div className="animate-spin rounded-full h-16 w-16 border-4 border-cyan-400 border-t-transparent mx-auto mb-8"></div>
-            <p className="text-cyan-300 text-2xl font-black animate-pulse">🔥 LOADING EPIC QUESTIONS...</p>
-            <p className="text-pink-400 text-lg font-bold mt-4 animate-bounce">⚡ GET READY TO DOMINATE! ⚡</p>
+            <p className="text-cyan-300 text-2xl font-black animate-pulse">{t.loadingQuestions}</p>
+            <p className="text-pink-400 text-lg font-bold mt-4 animate-bounce">{t.getReady}</p>
           </CardContent>
         </Card>
       </div>
@@ -204,24 +241,26 @@ export default function PracticePage() {
         <div className="flex items-center justify-between mb-8">
           <Link href="/">
             <Button className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white border-2 border-red-400/50 px-6 py-3 rounded-xl shadow-lg shadow-red-500/25 hover:shadow-xl hover:shadow-red-500/40 transition-all transform hover:scale-110 backdrop-blur-sm font-black">
-              <ArrowLeft className="w-5 h-5 mr-2" />🏠 {t.back.toUpperCase()}
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              {t.back.toUpperCase()}
             </Button>
           </Link>
 
           <div className="text-center">
-            <h1 className="text-5xl font-black mb-2 hover:scale-105 transition-transform duration-500">
-              <span className="bg-gradient-to-r from-cyan-400 via-pink-500 to-yellow-400 bg-clip-text text-transparent animate-pulse">
-                🎮 {t.practiceMode.toUpperCase()} 🎮
+            <h1 className="text-4xl font-bold mb-2">
+              <span className="bg-gradient-to-r from-cyan-400 via-pink-500 to-yellow-400 bg-clip-text text-transparent">
+                {t.practiceMode.toUpperCase()}
               </span>
             </h1>
-            <div className="text-lg text-pink-300 font-bold animate-bounce">{t.practiceSubtitle} 🚀</div>
+            <div className="text-lg text-pink-300 font-bold">{t.practiceSubtitle} 🚀</div>
           </div>
 
           <Button
-            onClick={resetToStart}
-            className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black border-2 border-orange-400/50 px-6 py-3 rounded-xl shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 transition-all transform hover:scale-110 backdrop-blur-sm font-black"
+            onClick={resetProgress}
+            className="bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-0"
           >
-            <RotateCcw className="w-5 h-5 mr-2" />🔄 {t.reset.toUpperCase()}
+            <RotateCcw className="w-5 h-5 mr-2" />
+            {t.reset.toUpperCase()}
           </Button>
         </div>
 
@@ -233,14 +272,14 @@ export default function PracticePage() {
                 <div>
                   <p className="text-cyan-300 text-sm font-bold uppercase tracking-wider">{t.progress}</p>
                   <p className="text-3xl font-black text-white">
-                    {currentQuestionIndex + 1}/{filteredQuestions.length}
+                    {currentIndex + 1}/{filteredQuestions.length}
                   </p>
                 </div>
                 <div className="text-4xl group-hover:scale-125 transition-transform animate-pulse">🎯</div>
               </div>
               <div className="mt-4">
                 <ProgressBar
-                  current={currentQuestionIndex + 1}
+                  current={currentIndex + 1}
                   total={filteredQuestions.length}
                   label=""
                   showNumbers={false}
@@ -303,13 +342,13 @@ export default function PracticePage() {
             <CardContent className="p-6">
               <div className="flex items-center gap-4 mb-4">
                 <Filter className="w-6 h-6 text-purple-400 animate-pulse" />
-                <h3 className="text-xl font-black text-purple-300 uppercase tracking-wider">🎯 Filter by Category</h3>
+                <h3 className="text-xl font-black text-purple-300 uppercase tracking-wider">{t.filterByCategory}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 <button
                   onClick={() => {
                     setSelectedCategory(null)
-                    setCurrentQuestionIndex(0)
+                    setCurrentIndex(0)
                   }}
                   className={`px-4 py-2 rounded-lg font-bold transition-all transform hover:scale-105 ${
                     !selectedCategory
@@ -324,7 +363,7 @@ export default function PracticePage() {
                     key={category}
                     onClick={() => {
                       setSelectedCategory(category)
-                      setCurrentQuestionIndex(0)
+                      setCurrentIndex(0)
                     }}
                     className={`px-4 py-2 rounded-lg font-bold transition-all transform hover:scale-105 ${
                       selectedCategory === category
@@ -344,13 +383,13 @@ export default function PracticePage() {
             <CardContent className="p-6">
               <div className="flex items-center gap-4 mb-4">
                 <MapPin className="w-6 h-6 text-pink-400 animate-bounce" />
-                <h3 className="text-xl font-black text-pink-300 uppercase tracking-wider">🗺️ Select Your State</h3>
+                <h3 className="text-xl font-black text-pink-300 uppercase tracking-wider">{t.selectState}</h3>
               </div>
               <div className="flex flex-wrap gap-2 max-h-32 overflow-y-auto">
                 <button
                   onClick={() => {
                     setSelectedState(null)
-                    setCurrentQuestionIndex(0)
+                    setCurrentIndex(0)
                   }}
                   className={`px-3 py-2 rounded-lg font-bold transition-all transform hover:scale-105 text-sm ${
                     !selectedState
@@ -358,14 +397,14 @@ export default function PracticePage() {
                       : "bg-black/50 text-pink-300 hover:bg-black/80 hover:text-white border-2 border-pink-400/30"
                   }`}
                 >
-                  🇩🇪 All Germany
+                  🇩🇪 {t.allGermany}
                 </button>
                 {germanStates.map((state) => (
                   <button
                     key={state.id}
                     onClick={() => {
                       setSelectedState(state.id)
-                      setCurrentQuestionIndex(0)
+                      setCurrentIndex(0)
                     }}
                     className={`px-3 py-2 rounded-lg font-bold transition-all transform hover:scale-105 text-sm ${
                       selectedState === state.id
@@ -397,6 +436,7 @@ export default function PracticePage() {
                 onFlag={handleFlag}
                 isFlagged={userProgress.flaggedQuestions.includes(currentQuestion.id)}
                 showAnswer={showAnswer}
+                onAnswerSelect={handleAnswerSelect} // Pass the handler here
               />
             </motion.div>
           </AnimatePresence>
@@ -422,10 +462,10 @@ export default function PracticePage() {
                 <div
                   className={`text-4xl font-black mb-4 animate-pulse ${lastAnswer.correct ? "text-green-400" : "text-red-400"}`}
                 >
-                  {lastAnswer.correct ? "🔥 CRUSHING IT! 🔥" : "💪 KEEP GRINDING! 💪"}
+                  {lastAnswer.correct ? t.crushingIt : t.keepGrinding}
                 </div>
                 <p className="text-2xl text-white font-bold">
-                  {lastAnswer.correct ? "⚡ +10 XP EARNED! ⚡" : "🎯 LEARN FROM MISTAKES! 🎯"}
+                  {lastAnswer.correct ? t.xpEarned : t.learnFromMistakes}
                 </p>
               </CardContent>
             </Card>
@@ -437,9 +477,7 @@ export default function PracticePage() {
           <div className="flex justify-center">
             <Card className="w-full max-w-md border-2 border-yellow-400/50 bg-gradient-to-br from-yellow-900/30 to-orange-900/30 backdrop-blur-xl shadow-lg shadow-yellow-500/25">
               <CardHeader>
-                <CardTitle className="text-center text-yellow-400 font-black text-2xl animate-pulse">
-                  🏆 {t.achievements.toUpperCase()}! 🏆
-                </CardTitle>
+                <CardTitle className="text-center text-yellow-400 font-black text-2xl animate-pulse">{t.achievements}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex justify-center space-x-4">
@@ -462,7 +500,7 @@ export default function PracticePage() {
         <div className="text-center mt-12 space-y-6">
           <div className="text-3xl font-black animate-pulse">
             <span className="bg-gradient-to-r from-cyan-400 via-pink-500 to-yellow-400 bg-clip-text text-transparent">
-              🎮 {t.howToPractice.toUpperCase()} 🎮
+              {t.howToPractice.toUpperCase()}
             </span>
           </div>
           <div className="space-y-3 text-lg max-w-2xl mx-auto">
@@ -471,7 +509,7 @@ export default function PracticePage() {
             <p className="text-yellow-300 font-bold">⬅️ {t.swipeLeft}</p>
             <p className="text-green-300 font-bold">⌨️ {t.keyboardShortcuts}</p>
           </div>
-          <div className="text-2xl font-black text-white animate-bounce mt-8">🚀 LET'S DOMINATE THIS TEST! 🚀</div>
+          <div className="text-2xl font-black text-white animate-bounce mt-8">{t.letsDominate} 🚀</div>
         </div>
       </div>
     </div>
