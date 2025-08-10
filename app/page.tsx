@@ -6,10 +6,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useStore } from "@/lib/store";
 import { getTranslation } from "@/lib/i18n";
 import LanguageSelector from "@/components/LanguageSelector";
+import { useEffect } from "react";
 
 export default function HomePage() {
-  const { language } = useStore();
+  const { language, questions, loadQuestions } = useStore();
   const t = getTranslation(language);
+
+  useEffect(() => {
+    // Load questions to show correct stats
+    if (questions.length === 0) {
+      loadQuestions();
+    }
+  }, [questions.length, loadQuestions]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden relative">
@@ -90,7 +98,7 @@ export default function HomePage() {
                   🔥
                 </div>
                 <div className="text-4xl font-black text-yellow-400 mb-1">
-                  300+
+                  {questions.length || "300+"}
                 </div>
                 <div className="text-sm text-gray-300 uppercase tracking-wider">
                   {t.totalQuestions}
@@ -101,7 +109,7 @@ export default function HomePage() {
                   ⚡
                 </div>
                 <div className="text-4xl font-black text-green-400 mb-1">
-                  310
+                  {questions.length || "310"}
                 </div>
                 <div className="text-sm text-gray-300 uppercase tracking-wider">
                   TEST LENGTH
@@ -175,7 +183,7 @@ export default function HomePage() {
                       {t.practice.toUpperCase()}
                     </h3>
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed group-hover:text-white transition-colors">
-                      {t.swipeLearn}: 300+ questions with instant feedback 🔥
+                      {t.swipeLearn}: {questions.length || "300+"} questions with instant feedback 🔥
                     </p>
                     <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full font-bold text-center group-hover:scale-105 transition-transform">
                       {t.start.toUpperCase()}! 🚀
@@ -198,7 +206,7 @@ export default function HomePage() {
                       {t.testMode.toUpperCase()}
                     </h3>
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed group-hover:text-white transition-colors">
-                      {t.testSubtitle}! 310 questions, 60 minutes. Can you handle
+                      {t.testSubtitle}! {questions.length || "310"} questions, 60 minutes. Can you handle
                       it? 😤
                     </p>
                     <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full font-bold text-center group-hover:scale-105 transition-transform">
@@ -298,7 +306,7 @@ export default function HomePage() {
             </Link>
 
             <div className="mt-8 text-xl text-gray-300">
-              ⏰ Join now and get instant access to 300+ questions!
+              ⏰ Join now and get instant access to {questions.length || "300+"} questions!
             </div>
           </div>
         </div>

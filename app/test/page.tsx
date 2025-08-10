@@ -95,8 +95,13 @@ export default function TestPage() {
       }
     }
 
-    loadQuestions()
-  }, [setQuestions, startTest])
+    // Load questions and start test mode
+    if (questions.length === 0) {
+      loadQuestions();
+    }
+
+    startTest()
+  }, [questions.length, setQuestions, startTest])
 
   useEffect(() => {
     if (!testMode || !testStartTime) return

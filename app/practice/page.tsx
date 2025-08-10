@@ -39,12 +39,11 @@ export default function PracticePage() {
     setQuestions,
     setStateQuestions,
     currentQuestionIndex,
-    setCurrentQuestionIndex,
-    userProgress,
-    selectedCategory,
-    selectedState,
-    setSelectedCategory,
     setSelectedState,
+    selectedState,
+    selectedCategory,
+    setSelectedCategory,
+    userProgress,
     answerQuestion,
     flagQuestion,
     unflagQuestion,
@@ -52,6 +51,7 @@ export default function PracticePage() {
     updateStreak,
     addBadge,
     language,
+    loadQuestions, // Imported loadQuestions from useStore
   } = useStore()
 
   const [showAnswer, setShowAnswer] = useState(false)
@@ -63,27 +63,22 @@ export default function PracticePage() {
   const t = getTranslation(language)
 
   useEffect(() => {
-    const loadQuestions = async () => {
+    const loadAndSetQuestions = async () => {
+      setLoading(true);
       try {
-        setLoading(true)
+        await loadQuestions(); // Use the loadQuestions function from the store
 
-        // Load main questions
-        const response = await fetch("/data/questions.json")
-        if (!response.ok) throw new Error(`HTTP ${response.status}`)
-        const data = await response.json()
-        if (!Array.isArray(data)) throw new Error(`Expected array, got ${typeof data}`)
-        setQuestions(data)
-
-        // Load state questions
-        const stateResponse = await fetch("/data/state-questions.json")
+        // Load state questions if available and a state is selected
+        const stateResponse = await fetch("/data/state-questions.json");
         if (stateResponse.ok) {
-          const stateData = await stateResponse.json()
+          const stateData = await stateResponse.json();
           if (selectedState && stateData[selectedState]) {
-            setStateQuestions(stateData[selectedState])
+            setStateQuestions(stateData[selectedState]);
           }
         }
       } catch (error) {
-        console.error("Failed to load questions:", error)
+        console.error("Failed to load questions:", error);
+        // Fallback questions in case of error
         const fallbackQuestions = [
           {
             id: "q001",
@@ -93,14 +88,22 @@ export default function PracticePage() {
             answerIndex: 0,
             explanation: "Berlin has been the federal capital of Germany since reunification in 1990.",
           },
-        ]
-        setQuestions(fallbackQuestions)
+        ];
+        setQuestions(fallbackQuestions);
+        setStateQuestions([]); // Clear state questions on error
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
+    };
+
+    // Only load questions if the questions array is initially empty
+    if (questions.length === 0) {
+      loadAndSetQuestions();
+    } else {
+      setLoading(false); // If questions are already loaded, set loading to false
     }
-    loadQuestions()
-  }, [setQuestions, setStateQuestions, selectedState])
+  }, [questions.length, loadQuestions, setQuestions, setStateQuestions, selectedState]);
+
 
   const allQuestions = [...questions, ...stateQuestions]
   const filteredQuestions = selectedCategory
