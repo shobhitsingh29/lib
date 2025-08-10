@@ -195,10 +195,10 @@ export default function PracticePage() {
     setLastAnswer({ correct: isCorrect, selectedIndex: selectedAnswerIndex })
     setShowAnswer(true)
 
-    // Auto-advance after showing answer (increased time)
+    // Auto-advance after showing answer (reduced time for better mobile experience)
     setTimeout(() => {
       nextQuestion()
-    }, 3000)
+    }, 2000)
   }
 
   const resetProgress = () => {
@@ -258,49 +258,49 @@ export default function PracticePage() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-6">
         {/* VIBEY Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-6 md:mb-8 gap-4">
           <Link href="/">
-            <Button className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white border-2 border-red-400/50 px-6 py-3 rounded-xl shadow-lg shadow-red-500/25 hover:shadow-xl hover:shadow-red-500/40 transition-all transform hover:scale-110 backdrop-blur-sm font-black">
-              <ArrowLeft className="w-5 h-5 mr-2" />
+            <Button className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white border-2 border-red-400/50 px-4 py-2 md:px-6 md:py-3 rounded-xl shadow-lg shadow-red-500/25 hover:shadow-xl hover:shadow-red-500/40 transition-all transform hover:scale-110 backdrop-blur-sm font-black text-sm md:text-base touch-manipulation">
+              <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
               {t.back.toUpperCase()}
             </Button>
           </Link>
 
           <div className="text-center">
-            <h1 className="text-4xl font-bold mb-2">
+            <h1 className="text-2xl md:text-4xl font-bold mb-1 md:mb-2">
               <span className="bg-gradient-to-r from-cyan-400 via-pink-500 to-yellow-400 bg-clip-text text-transparent">
                 {t.practiceMode.toUpperCase()}
               </span>
             </h1>
-            <div className="text-lg text-pink-300 font-bold">{t.practiceSubtitle} 🚀</div>
+            <div className="text-sm md:text-lg text-pink-300 font-bold">{t.practiceSubtitle} 🚀</div>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <LanguageSelector />
             <Button
               onClick={resetProgress}
-              className="bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-0"
+              className="bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white font-bold px-4 py-2 md:px-6 md:py-3 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-0 text-sm md:text-base touch-manipulation"
             >
-              <RotateCcw className="w-5 h-5 mr-2" />
+              <RotateCcw className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
               {t.reset.toUpperCase()}
             </Button>
           </div>
         </div>
 
         {/* NEON Stats Grid */}
-        <div className="grid md:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-8">
           <Card className="border-2 border-cyan-400/50 bg-black/60 backdrop-blur-xl hover:bg-black/80 transition-all duration-300 group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40">
-            <CardContent className="p-6">
+            <CardContent className="p-4 md:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-cyan-300 text-sm font-bold uppercase tracking-wider">{t.progress}</p>
-                  <p className="text-3xl font-black text-white">
+                  <p className="text-cyan-300 text-xs md:text-sm font-bold uppercase tracking-wider">{t.progress}</p>
+                  <p className="text-xl md:text-3xl font-black text-white">
                     {currentIndex + 1}/{filteredQuestions.length}
                   </p>
                 </div>
-                <div className="text-4xl group-hover:scale-125 transition-transform animate-pulse">🎯</div>
+                <div className="text-2xl md:text-4xl group-hover:scale-125 transition-transform animate-pulse">🎯</div>
               </div>
-              <div className="mt-4">
+              <div className="mt-2 md:mt-4">
                 <ProgressBar
                   current={currentIndex + 1}
                   total={filteredQuestions.length}
@@ -312,35 +312,35 @@ export default function PracticePage() {
           </Card>
 
           <Card className="border-2 border-yellow-400/50 bg-black/60 backdrop-blur-xl hover:bg-black/80 transition-all duration-300 group shadow-lg shadow-yellow-500/25 hover:shadow-xl hover:shadow-yellow-500/40">
-            <CardContent className="p-6">
+            <CardContent className="p-4 md:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-yellow-300 text-sm font-bold uppercase tracking-wider">{t.xp}</p>
-                  <p className="text-3xl font-black text-yellow-400">{userProgress.xp}</p>
+                  <p className="text-yellow-300 text-xs md:text-sm font-bold uppercase tracking-wider">{t.xp}</p>
+                  <p className="text-xl md:text-3xl font-black text-yellow-400">{userProgress.xp}</p>
                 </div>
-                <div className="text-4xl group-hover:scale-125 transition-transform animate-bounce">⚡</div>
+                <div className="text-2xl md:text-4xl group-hover:scale-125 transition-transform animate-bounce">⚡</div>
               </div>
             </CardContent>
           </Card>
 
           <Card className="border-2 border-orange-400/50 bg-black/60 backdrop-blur-xl hover:bg-black/80 transition-all duration-300 group shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40">
-            <CardContent className="p-6">
+            <CardContent className="p-4 md:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-orange-300 text-sm font-bold uppercase tracking-wider">{t.streak}</p>
-                  <p className="text-3xl font-black text-orange-400">{userProgress.streak}</p>
+                  <p className="text-orange-300 text-xs md:text-sm font-bold uppercase tracking-wider">{t.streak}</p>
+                  <p className="text-xl md:text-3xl font-black text-orange-400">{userProgress.streak}</p>
                 </div>
-                <div className="text-4xl group-hover:scale-125 transition-transform animate-pulse">🔥</div>
+                <div className="text-2xl md:text-4xl group-hover:scale-125 transition-transform animate-pulse">🔥</div>
               </div>
             </CardContent>
           </Card>
 
           <Card className="border-2 border-green-400/50 bg-black/60 backdrop-blur-xl hover:bg-black/80 transition-all duration-300 group shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/40">
-            <CardContent className="p-6">
+            <CardContent className="p-4 md:p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-green-300 text-sm font-bold uppercase tracking-wider">{t.accuracy}</p>
-                  <p className="text-3xl font-black text-green-400">
+                  <p className="text-green-300 text-xs md:text-sm font-bold uppercase tracking-wider">{t.accuracy}</p>
+                  <p className="text-xl md:text-3xl font-black text-green-400">
                     {userProgress.questionsAnswered > 0
                       ? Math.round((userProgress.correctAnswers / userProgress.questionsAnswered) * 100)
                       : 0}
@@ -348,7 +348,7 @@ export default function PracticePage() {
                   </p>
                 </div>
                 <div
-                  className="text-4xl group-hover:scale-125 transition-transform animate-spin"
+                  className="text-2xl md:text-4xl group-hover:scale-125 transition-transform animate-spin"
                   style={{ animationDuration: "3s" }}
                 >
                   📊
@@ -359,13 +359,13 @@ export default function PracticePage() {
         </div>
 
         {/* INSANE Filter Section */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
           {/* Category Filter */}
           <Card className="border-2 border-purple-400/50 bg-black/60 backdrop-blur-xl shadow-lg shadow-purple-500/25">
-            <CardContent className="p-6">
-              <div className="flex items-center gap-4 mb-4">
-                <Filter className="w-6 h-6 text-purple-400 animate-pulse" />
-                <h3 className="text-xl font-black text-purple-300 uppercase tracking-wider">{t.filterByCategory}</h3>
+            <CardContent className="p-4 md:p-6">
+              <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                <Filter className="w-5 h-5 md:w-6 md:h-6 text-purple-400 animate-pulse" />
+                <h3 className="text-lg md:text-xl font-black text-purple-300 uppercase tracking-wider">{t.filterByCategory}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 <button
@@ -373,7 +373,7 @@ export default function PracticePage() {
                     setSelectedCategory(null)
                     setCurrentIndex(0)
                   }}
-                  className={`px-4 py-2 rounded-lg font-bold transition-all transform hover:scale-105 ${
+                  className={`px-3 py-2 md:px-4 md:py-2 rounded-lg font-bold transition-all transform hover:scale-105 text-sm md:text-base touch-manipulation ${
                     !selectedCategory
                       ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/50 border-2 border-cyan-400"
                       : "bg-black/50 text-cyan-300 hover:bg-black/80 hover:text-white border-2 border-cyan-400/30"
@@ -388,7 +388,7 @@ export default function PracticePage() {
                       setSelectedCategory(category)
                       setCurrentIndex(0)
                     }}
-                    className={`px-4 py-2 rounded-lg font-bold transition-all transform hover:scale-105 ${
+                    className={`px-3 py-2 md:px-4 md:py-2 rounded-lg font-bold transition-all transform hover:scale-105 text-sm md:text-base touch-manipulation ${
                       selectedCategory === category
                         ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/50 border-2 border-purple-400"
                         : "bg-black/50 text-purple-300 hover:bg-black/80 hover:text-white border-2 border-purple-400/30"
@@ -403,18 +403,18 @@ export default function PracticePage() {
 
           {/* State Filter */}
           <Card className="border-2 border-pink-400/50 bg-black/60 backdrop-blur-xl shadow-lg shadow-pink-500/25">
-            <CardContent className="p-6">
-              <div className="flex items-center gap-4 mb-4">
-                <MapPin className="w-6 h-6 text-pink-400 animate-bounce" />
-                <h3 className="text-xl font-black text-pink-300 uppercase tracking-wider">{t.selectState}</h3>
+            <CardContent className="p-4 md:p-6">
+              <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                <MapPin className="w-5 h-5 md:w-6 md:h-6 text-pink-400 animate-bounce" />
+                <h3 className="text-lg md:text-xl font-black text-pink-300 uppercase tracking-wider">{t.selectState}</h3>
               </div>
-              <div className="flex flex-wrap gap-2 max-h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-pink-500 scrollbar-track-gray-700 p-2 bg-black/30 rounded-lg border border-pink-400/30">
+              <div className="flex flex-wrap gap-2 max-h-32 md:max-h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-pink-500 scrollbar-track-gray-700 p-2 bg-black/30 rounded-lg border border-pink-400/30">
                 <button
                   onClick={() => {
                     setSelectedState(null)
                     setCurrentIndex(0)
                   }}
-                  className={`px-3 py-2 rounded-lg font-bold transition-all transform hover:scale-105 text-sm ${
+                  className={`px-2 py-1 md:px-3 md:py-2 rounded-lg font-bold transition-all transform hover:scale-105 text-xs md:text-sm touch-manipulation ${
                     !selectedState
                       ? "bg-gradient-to-r from-pink-500 to-red-500 text-white shadow-lg shadow-pink-500/50 border-2 border-pink-400"
                       : "bg-black/50 text-pink-300 hover:bg-black/80 hover:text-white border-2 border-pink-400/30"
@@ -429,7 +429,7 @@ export default function PracticePage() {
                       setSelectedState(state.id)
                       setCurrentIndex(0)
                     }}
-                    className={`px-3 py-2 rounded-lg font-bold transition-all transform hover:scale-105 text-sm ${
+                    className={`px-2 py-1 md:px-3 md:py-2 rounded-lg font-bold transition-all transform hover:scale-105 text-xs md:text-sm touch-manipulation ${
                       selectedState === state.id
                         ? "bg-gradient-to-r from-yellow-500 to-orange-500 text-black shadow-lg shadow-yellow-500/50 border-2 border-yellow-400"
                         : "bg-black/50 text-yellow-300 hover:bg-black/80 hover:text-white border-2 border-yellow-400/30"

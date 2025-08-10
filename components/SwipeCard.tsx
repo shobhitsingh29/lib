@@ -28,12 +28,12 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
     setIsDragging(false)
     setDragDirection(null)
 
-    const threshold = 100
+    const threshold = 80 // Reduced threshold for mobile
     const velocity = info.velocity.x
     const offset = info.offset.x
 
     // Only allow swiping for navigation if an answer has been selected or answer is shown
-    if ((selectedOption !== null || showAnswer) && (Math.abs(offset) > threshold || Math.abs(velocity) > 600)) {
+    if ((selectedOption !== null || showAnswer) && (Math.abs(offset) > threshold || Math.abs(velocity) > 400)) {
       const direction = offset > 0 ? "right" : "left"
       onSwipe(direction)
     }
@@ -61,6 +61,8 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
       className="relative w-full max-w-4xl mx-auto"
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
+      dragElastic={0.1}
+      dragMomentum={false}
       onDrag={handleDrag}
       onDragEnd={handleDragEnd}
       whileDrag={{ scale: 1.02 }}
@@ -69,6 +71,7 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
         rotate: 0,
       }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      style={{ touchAction: "pan-x" }}
     >
       <Card
         className={`relative overflow-hidden border-4 bg-gradient-to-br from-black/90 to-purple-900/90 backdrop-blur-xl shadow-2xl ${
@@ -101,14 +104,14 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
           </>
         )}
 
-        <CardHeader className="bg-gradient-to-r from-purple-900/80 to-black/80 border-b border-purple-400/30 p-6 relative">
+        <CardHeader className="bg-gradient-to-r from-purple-900/80 to-black/80 border-b border-purple-400/30 p-4 md:p-6 relative">
           <div className="flex justify-between items-start mb-4">
-            <div className="flex items-center gap-3">
-              <Badge className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 text-sm font-semibold">
+            <div className="flex items-center gap-2 md:gap-3 flex-wrap">
+              <Badge className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 md:px-4 md:py-2 text-xs md:text-sm font-semibold">
                 {question.category.toUpperCase()}
               </Badge>
               {question.image && (
-                <Badge className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-3 py-1 text-xs font-semibold">
+                <Badge className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-2 py-1 md:px-3 md:py-1 text-xs font-semibold">
                   <ImageIcon className="w-3 h-3 mr-1" />IMAGE
                 </Badge>
               )}
@@ -117,18 +120,18 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
               variant="ghost"
               size="sm"
               onClick={onFlag}
-              className={`hover:bg-yellow-500/20 border border-yellow-500/30 rounded-lg p-2 transition-all ${
+              className={`hover:bg-yellow-500/20 border border-yellow-500/30 rounded-lg p-2 transition-all touch-manipulation ${
                 isFlagged ? "text-yellow-400 bg-yellow-500/20" : "text-gray-400"
               }`}
             >
               <Flag className="w-4 h-4" />
             </Button>
           </div>
-          <h3 className="text-2xl font-bold text-white leading-relaxed">{question.question}</h3>
+          <h3 className="text-lg md:text-2xl font-bold text-white leading-relaxed">{question.question}</h3>
 
           {/* Improved Image Display */}
           {question.image && (
-            <div className="mb-6 relative">
+            <div className="mb-4 md:mb-6 relative">
               <div className="relative rounded-lg overflow-hidden border border-gray-600 bg-white/10 backdrop-blur-sm">
                 <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
                   <Image
@@ -149,7 +152,7 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
           )}
         </CardHeader>
 
-        <CardContent className="p-8 space-y-4 bg-gradient-to-b from-black/80 to-purple-900/80">
+        <CardContent className="p-4 md:p-8 space-y-3 md:space-y-4 bg-gradient-to-b from-black/80 to-purple-900/80">
           {question.options.map((option, index) => (
             <motion.button
               key={index}
@@ -157,7 +160,7 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
               disabled={showAnswer}
               whileHover={{ scale: 1.02, x: 5 }}
               whileTap={{ scale: 0.98 }}
-              className={`w-full text-left p-6 text-lg font-semibold border-2 rounded-xl transition-all duration-300 ${
+              className={`w-full text-left p-4 md:p-6 text-base md:text-lg font-semibold border-2 rounded-xl transition-all duration-300 touch-manipulation min-h-[60px] md:min-h-[auto] ${
                 selectedOption === index
                   ? "border-cyan-400 bg-gradient-to-r from-cyan-900/50 to-blue-900/50 text-cyan-300 shadow-lg shadow-cyan-500/25"
                   : "border-purple-400/50 hover:border-pink-400/50 hover:bg-purple-800/30 text-gray-300 hover:text-white"
@@ -170,16 +173,16 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
               }`}
             >
               <div className="flex items-center">
-                <span className="mr-4 font-black text-2xl w-8 text-yellow-400">{String.fromCharCode(65 + index)}</span>
-                <span className="flex-1">{option}</span>
+                <span className="mr-3 md:mr-4 font-black text-xl md:text-2xl w-6 md:w-8 text-yellow-400 flex-shrink-0">{String.fromCharCode(65 + index)}</span>
+                <span className="flex-1 leading-relaxed">{option}</span>
                 {showAnswer && index === question.answerIndex && (
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-3xl animate-bounce">🎉</span>
+                  <div className="flex items-center gap-2 md:gap-3 flex-shrink-0">
+                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-400" />
+                    <span className="text-2xl md:text-3xl animate-bounce">🎉</span>
                   </div>
                 )}
                 {showAnswer && selectedOption === index && index !== question.answerIndex && (
-                  <XCircle className="w-6 h-6 text-red-400" />
+                  <XCircle className="w-5 h-5 md:w-6 md:h-6 text-red-400 flex-shrink-0" />
                 )}
               </div>
             </motion.button>
@@ -189,21 +192,21 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              className="mt-8 p-6 bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-xl border-2 border-blue-400/50 shadow-lg shadow-blue-500/25 relative overflow-hidden"
+              className="mt-6 md:mt-8 p-4 md:p-6 bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-xl border-2 border-blue-400/50 shadow-lg shadow-blue-500/25 relative overflow-hidden"
             >
-              <div className="absolute top-2 right-2 text-3xl animate-bounce">💡</div>
-              <div className="flex items-start gap-4">
-                <Lightbulb className="w-8 h-8 text-yellow-400 mt-1 flex-shrink-0 animate-pulse" />
+              <div className="absolute top-2 right-2 text-2xl md:text-3xl animate-bounce">💡</div>
+              <div className="flex items-start gap-3 md:gap-4">
+                <Lightbulb className="w-6 h-6 md:w-8 md:h-8 text-yellow-400 mt-1 flex-shrink-0 animate-pulse" />
                 <div>
-                  <h4 className="font-black text-yellow-400 mb-3 text-xl">🧠 EXPLANATION</h4>
-                  <p className="text-blue-100 leading-relaxed text-lg font-medium">{question.explanation}</p>
+                  <h4 className="font-black text-yellow-400 mb-2 md:mb-3 text-lg md:text-xl">🧠 EXPLANATION</h4>
+                  <p className="text-blue-100 leading-relaxed text-base md:text-lg font-medium">{question.explanation}</p>
                 </div>
               </div>
             </motion.div>
           )}
 
           <div className="text-center pt-4 border-t border-purple-400/30">
-            <p className="text-gray-300 text-sm font-medium">
+            <p className="text-gray-300 text-xs md:text-sm font-medium px-2">
               {selectedOption === null && !showAnswer ? (
                 <>
                   <span className="animate-pulse">📝</span> Select an answer to continue
