@@ -24,7 +24,7 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
   const [dragDirection, setDragDirection] = useState<"left" | "right" | null>(null)
 
   const handleDragEnd = (event: any, info: PanInfo) => {
-    setIsDriving(false)
+    setIsDragging(false)
     setDragDirection(null)
 
     const threshold = 50 // Lower threshold for better mobile experience
@@ -134,18 +134,18 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
 
           {/* Improved Image Display */}
           {question.image && (
-            <div className="mb-4 md:mb-6 relative">
-              <div className="relative rounded-lg overflow-hidden border border-gray-600 bg-white/10 backdrop-blur-sm">
-                <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
+            <div className="mb-4 md:mb-6 relative max-w-full">
+              <div className="relative rounded-lg overflow-hidden border border-gray-600 bg-white/10 backdrop-blur-sm mx-auto max-w-2xl">
+                <div className="relative w-full max-h-80" style={{ aspectRatio: '16/9' }}>
                   <Image
                     src={question.image}
                     alt="Question image"
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10" />
                 </div>
                 <div className="absolute top-2 left-2 bg-black/70 backdrop-blur-sm rounded px-2 py-1">
                   <span className="text-cyan-400 font-bold text-xs">📸 Reference Image</span>
