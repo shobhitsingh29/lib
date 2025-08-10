@@ -1,4 +1,3 @@
-
 "use client"
 
 import { motion, type PanInfo } from "framer-motion"
@@ -25,7 +24,7 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
   const [dragDirection, setDragDirection] = useState<"left" | "right" | null>(null)
 
   const handleDragEnd = (event: any, info: PanInfo) => {
-    setIsDragging(false)
+    setIsDriving(false)
     setDragDirection(null)
 
     const threshold = 50 // Lower threshold for better mobile experience

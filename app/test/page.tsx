@@ -344,7 +344,7 @@ export default function TestPage() {
         <div className="flex items-center justify-between mb-8">
           <Link href="/">
             <Button className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white font-black px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-110 border-0">
-              <ArrowLeft className="w-5 h-5 mr-2" />🏠 EXIT TEST
+              <ArrowLeft className="w-5 h-5 mr-2" />EXIT TEST
             </Button>
           </Link>
 
@@ -393,9 +393,27 @@ export default function TestPage() {
                 </div>
                 <div className="text-2xl font-black text-yellow-400">#{currentIndex + 1}</div>
               </div>
-              <CardTitle className="text-3xl font-bold text-white leading-relaxed">
-                {currentQuestion.question}
-              </CardTitle>
+              <div className="text-center">
+                <div className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium mb-4">
+                  {currentQuestion.category}
+                </div>
+                <h2 className="text-2xl font-bold mb-8 text-gray-100">
+                  {currentQuestion.question}
+                </h2>
+                {currentQuestion.image && currentQuestion.image !== "(not provided in source)" && (
+                  <div className="mb-6">
+                    <img
+                      src={currentQuestion.image}
+                      alt="Question illustration"
+                      className="mx-auto rounded-lg shadow-lg max-w-full h-auto max-h-64 object-contain"
+                      onError={(e) => {
+                        console.log("Image failed to load:", currentQuestion.image);
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  </div>
+                )}
+              </div>
             </CardHeader>
 
             <CardContent className="p-8 space-y-4 bg-gradient-to-b from-black/50 to-purple-900/30 relative z-10">
