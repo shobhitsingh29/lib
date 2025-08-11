@@ -113,11 +113,6 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
               <Badge className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 md:px-4 md:py-2 text-xs md:text-sm font-semibold">
                 {question.category.toUpperCase()}
               </Badge>
-              {question.image && (
-                <Badge className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-2 py-1 md:px-3 md:py-1 text-xs font-semibold">
-                  <ImageIcon className="w-3 h-3 mr-1" />IMAGE
-                </Badge>
-              )}
             </div>
             <Button
               variant="ghost"
@@ -146,9 +141,6 @@ export default function SwipeCard({ question, onSwipe, onFlag, isFlagged, showAn
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10" />
-                </div>
-                <div className="absolute top-2 left-2 bg-black/70 backdrop-blur-sm rounded px-2 py-1">
-                  <span className="text-cyan-400 font-bold text-xs">📸 Reference Image</span>
                 </div>
               </div>
             </div>
